@@ -1,0 +1,133 @@
+
+Point3D
+   x : float
+   y : float
+   z : float
+
+Color4D
+   r : float
+   g : float
+   b : float
+   a : float
+
+Render
+   void Draw(Vector<Point3D>);
+
+Polygon : Render
+   mType : enum { Open, Closed }
+   mNormal : Point3D
+   mColor : Color4D
+   mVertices : Vector<Point3D>
+   void Draw();
+   int Load(FILE *fp);
+
+Model
+   mPolygons : Vector<Polygon *>
+   int Load(FILE *fp);
+   void Draw();
+
+WarpPath : Render
+   mShape : Polygon
+   mMovementVariance : float
+   mMovementRadios   : float
+   int Load(const char *filename);
+
+AnimModelGfx
+   nName : char[256]
+   mModels : Vector<Model *>
+   int Load(const char *filename);
+
+AnimModelBank
+   mAnimModelGfxs : Vector<AnimModelGfx *>
+   AnimModelGfx *Find(const char *name);
+   int Load(const char *filename);
+
+AnimModel
+   mCurrentPos   : Point3D
+   mCurrentState : enum {Play, Paused}
+   mCurrentFrame : int
+   mCurrentGfx   : (AnimModelGfx *)
+   void Update();
+   void Draw();  // mAnimation->mModels[mCurrentFrame]->Draw
+   void Play();
+   void Pause();
+   void Stop(); // reset anim
+   void SelectAnim(const char *name); // mCurrentGfx = game->mGfx->Find(name);
+
+
+Enemy : AnimModel
+   void Update();
+
+Flippers : Enemy
+*Tankers : Enemy
+*Spikers : Enemy
+*Fuseballs : Enemy
+*Pulsars : Enemy
+
+PlayerShip : AnimModel
+   void Init(Level *)
+   void Update();
+
+Bullet : AnimModel
+   void Init(Level *)
+   void Update();
+   void Draw();
+
+
+Background : Render
+   void Draw();
+   void Update();
+
+StarField : Background
+   mStars : Vector<Star>
+
+
+Level
+   mState : enum {Enter, Running, Paused, Exit}
+   int Load(const char *filename);
+   void Update();
+   void Draw();   
+   void Input(Input []);
+
+WarpLevel : Level
+   mScore    : int
+   mNumLives : int
+   mWarp     : WarpPath
+   mPlayerShip : PlayerShip
+   mEnemies  : Vector<Enemy *>
+   mPlayerBullets : Vector<Bullet *>
+   mBackgrounds : Vector<Background *>
+   mCurrentBkg  : (Background *)
+   mPlayerState : enum {Init, Action, Dead}
+   Vector< Polygon > GetWarpPath();
+   
+   void Load();   
+   void Update();
+   void Draw();
+   void Input(bool []);
+
+*SoundData // Wave or Midi
+   mName : char[256]
+   mType : enum {Wave, Midi}
+   mData : int[]
+
+*SoundBank
+   mSounds : Vector<SoundData *>
+   void Play(const char *name);
+   void Pause(const char *name);
+   void Stop(const char *name);
+   void AddWave(const char *name, const char *filename);
+   void AddMidi(const char *name, const char *filename);
+   void Load(const char *filename);
+
+GameEngine
+   void Update();
+   void Draw();
+   void Keyboard();
+   void Mouse();
+   mGfx   : (AnimModelBank *)
+   mSound : (SoundBank *)
+   mLevels : Vector<Level *>
+   mCurrentLevel : (Level *)
+   AnimModelBank *GetGfx(const char *name);
+

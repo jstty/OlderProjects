@@ -1,0 +1,888 @@
+/****************************************
+ filename:    graphics.cpp
+ project:     warpattack
+ created by:  Joseph E. Sutton
+ date:        2010/04/18
+ description: 
+ ****************************************/
+#include "global.h"
+
+cGraphics::cGraphics()
+{
+   mGlowEnabled = false;
+   mGlowMag = 0.5;
+
+   mAnimModelBank = new cAnimModelBank();
+}
+
+cGraphics::~cGraphics()
+{
+   for(i = 0; i < mTextureList.size(); ++i)
+   {
+      glDeleteTextures(1, &(mTextureList[i].id));
+   }
+
+   FreeOSBuffers();
+   
+   delete mAnimModelBank;
+}
+
+void cGraphics::FreeOSBuffers()
+{
+   glDeleteFramebuffersEXT(1, &mWindow.fbo);
+   glDeleteRenderbuffersEXT(1, &mWindow.depth);
+   glDeleteTextures(1, &mWindow.texture);
+   memset(&mWindow, 0, sizeof(OSBuffer));
+
+   glDeleteFramebuffersEXT(1, &mScene.fbo);
+   glDeleteRenderbuffersEXT(1, &mScene.depth);
+   glDeleteTextures(1, &mScene.texture);
+   memset(&mScene, 0, sizeof(OSBuffer));
+
+   for(i = 0; i < mTemp1.size(); ++i)
+   {
+      glDeleteFramebuffersEXT(1, &mTemp1[i].fbo);
+      glDeleteTextures(1, &mTemp1[i].texture);
+      memset(&mTemp1[i], 0, sizeof(OSBuffer));
+   }
+   for(i = 0; i < mTemp2.size(); ++i)
+   {
+      glDeleteFramebuffersEXT(1, &mTemp2[i].fbo);
+      glDeleteTextures(1, &mTemp2[i].texture);
+      memset(&mTemp2[i], 0, sizeof(OSBuffer));
+   }
+}
+
+void cGraphics::SelectTexture(const char* name)
+{
+   for(i = 0; i < mTextureList.size(); ++i)
+   {
+      if(strcmp(mTextureList[i].name, name) == 0)
+         glBindTexture(GL_TEXTURE_2D, mTextureList[i].id);
+   }
+}
+
+
+int cGraphics::LoadAnimModel(const char *filename)
+{
+   if(mAnimModelBank != NULL)
+      return mAnimModelBank->Load(filename);
+   
+   return 0;
+}
+
+cAnimModelGfx *cGraphics::FindAnimModel(const char *name)
+{
+   if(mAnimModelBank != NULL)
+      return mAnimModelBank->Find(name);
+   
+   return NULL;
+}
+
+
+void cGraphics::DrawSolid(vector<Point3D> vertices, Color4D color)
+{
+   glBegin(GL_POLYGON);
+   
+   //glNormal3f(normal.x, normal.y, normal.z);
+   glNormal3f(0, 0, -1.0);
+   
+   c[0] = color.r;
+   c[1] = color.g;
+   c[2] = color.b;
+   c[3] = color.a;
+   glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
+   glColor4f(c[0], c[1], c[2], c[3]);
+   
+   for(i = 0; i < vertices.size(); ++i)
+   {
+      glVertex3f(vertices[i].x, vertices[i].y, vertices[i].z);
+   }
+   
+   glEnd();
+}
+
+void cGraphics::Draw(vector<Point3D> vertices, Color4D color)
+{
+   // TODO: use glCallList
+   glBegin(GL_LINE_STRIP);
+   
+   //glNormal3f(normal.x, normal.y, normal.z);
+   glNormal3f(0.0, 0.0, -1.0);
+   
+   c[0] = color.r;
+   c[1] = color.g;
+   c[2] = color.b;
+   c[3] = color.a;
+   glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
+   glColor4f(c[0], c[1], c[2], c[3]);
+   
+   for(i = 0; i < vertices.size(); ++i)
+   {
+      glVertex3f(vertices[i].x, vertices[i].y, vertices[i].z);
+   }
+   
+   glEnd();
+}
+
+void cGraphics::Draw(Point3D *points, uInt32 num_points, Point3D normal, Color4D color)
+{
+   glBegin(GL_POINTS);
+   
+   glNormal3f(normal.x, normal.y, normal.z);
+   
+   c[0] = color.r;
+   c[1] = color.g;
+   c[2] = color.b;
+   c[3] = color.a;
+   glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
+   glColor4f(c[0], c[1], c[2], c[3]);
+   
+   for(i = 0; i < num_points; ++i)
+   {
+      glVertex3f(points[i].x, points[i].y, points[i].z);
+   }
+   
+   glEnd();
+}
+
+
+void cGraphics::Draw(Line3D *lines, uInt32 num_lines)
+{
+   glBegin(GL_LINES);
+
+   for(i = 0; i < num_lines; ++i)
+   {
+      glNormal3f(lines[i].normal.x, lines[i].normal.y, lines[i].normal.z);
+      
+      c[0] = lines[i].c1.r;
+      c[1] = lines[i].c1.g;
+      c[2] = lines[i].c1.b;
+      c[3] = lines[i].c1.a;
+      glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
+      glColor4f(c[0], c[1], c[2], c[3]);
+      glVertex3f(lines[i].p1.x, lines[i].p1.y, lines[i].p1.z);
+      
+      c[0] = lines[i].c2.r;
+      c[1] = lines[i].c2.g;
+      c[2] = lines[i].c2.b;
+      c[3] = lines[i].c2.a;
+      glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
+      glColor4f(c[0], c[1], c[2], c[3]);
+      glVertex3f(lines[i].p2.x, lines[i].p2.y, lines[i].p2.z);
+   }
+
+   glEnd(); 
+}
+
+int cGraphics::LoadTexture(const char *name, const char *filename, uInt32 width)
+{
+   FILE *fp;
+   uInt8 *imgdata, c[3];
+   uInt32 size, numColors;
+   GLuint textureID;
+   TextureGfx tf;
+   
+   numColors = 3;
+   
+   fp = fopen(filename, "r");
+   if(fp == NULL) return 1; // error
+   
+   size = width*width*numColors;
+   imgdata = new uInt8[ size ];
+   
+   i = 0;
+   while(!feof(fp))
+   {
+      fread(c, 3, sizeof(uInt8), fp);
+      imgdata[i*numColors + 0] = c[0];
+      imgdata[i*numColors + 1] = c[1];
+      imgdata[i*numColors + 2] = c[2];
+      //imgdata[i*numColors + 3] = c[0];
+      ++i;
+   }
+   
+   fclose(fp);
+
+   // Generate Texture
+   glGenTextures(1, &textureID);
+   
+   // add texture ID and name to stuct then push on list
+   strcpy(tf.name, name);
+   tf.id = textureID;
+   mTextureList.push_back(tf);
+   
+   // Select Texture
+   glBindTexture(GL_TEXTURE_2D, tf.id);
+
+   //glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR); 
+   
+   //glTexParameteri(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_TRUE);
+   
+   //glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, width, 0, GL_BGRA, GL_UNSIGNED_BYTE, imgdata);
+   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB8, width, width, 0, GL_RGB, GL_UNSIGNED_BYTE, imgdata);
+
+   // Create MIPMAP's
+   //glGenerateMipmapEXT(GL_TEXTURE_2D);
+   
+   //gluBuild2DMipmaps(GL_TEXTURE_2D, 3, width, width, GL_RGB, GL_UNSIGNED_BYTE, imgdata );
+   
+   delete imgdata;
+   return 0;
+}
+
+void cGraphics::DrawTextureLine()
+{
+   GLfloat c[4];
+   float lineWidth;
+   glEnable(GL_TEXTURE_2D);
+   glDisable(GL_TEXTURE_GEN_S);
+   glDisable(GL_TEXTURE_GEN_T);
+   
+   lineWidth = 0.015;
+   
+   SelectTexture("glow");
+   glBegin( GL_QUADS );
+   glNormal3f(0.0, 0.0, -1.0);
+   
+   c[0] = 1.0;
+   c[1] = 1.0;
+   c[2] = 1.0;
+   c[3] = 1.0;
+   glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
+   
+   glTexCoord2f(0.0, 0.0);
+   glVertex3f(-0.5, 0.0, -1.0);
+   
+   glTexCoord2f(0.48, 0.0);
+   glVertex3f(-0.5 + lineWidth, 0.0, -1.0);
+   
+   glTexCoord2f(0.48, 1.0);
+   glVertex3f(-0.5 + lineWidth, lineWidth, -1.0);
+   
+   glTexCoord2f(0.0, 1.0);
+   glVertex3f(-0.5, lineWidth, -1.0);
+   glEnd();
+   
+   glBegin( GL_QUADS );
+   glNormal3f(0.0, 0.0, -1.0);
+   
+   c[0] = 1.0;
+   c[1] = 1.0;
+   c[2] = 1.0;
+   c[3] = 1.0;
+   glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
+   
+   glTexCoord2f(0.48, 0.0);
+   glVertex3f(-0.5 + lineWidth, 0.0, -1.0);
+   
+   glTexCoord2f(0.52, 0.0);
+   glVertex3f(0.5, 0.0, -1.0);
+   
+   glTexCoord2f(0.52, 1.0);
+   glVertex3f(0.5, lineWidth, -1.0);
+   
+   glTexCoord2f(0.48, 1.0);
+   glVertex3f(-0.5 + lineWidth, lineWidth, -1.0);
+   glEnd();
+   
+   SelectTexture("glow");
+   glBegin( GL_QUADS );
+   glNormal3f(0.0, 0.0, -1.0);
+   
+   c[0] = 1.0;
+   c[1] = 1.0;
+   c[2] = 1.0;
+   c[3] = 1.0;
+   glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
+   
+   glTexCoord2f(0.52, 0.0);
+   glVertex3f(0.500, 0.0, -1.0);
+   
+   glTexCoord2f(1.0, 0.0);
+   glVertex3f(0.500 + lineWidth, 0.0, -1.0);
+   
+   glTexCoord2f(1.00, 1.0);
+   glVertex3f(0.500 + lineWidth, lineWidth, -1.0);
+   
+   glTexCoord2f(0.52, 1.0);
+   glVertex3f(0.500, lineWidth, -1.0);
+   glEnd();
+}
+
+
+int cGraphics::LoadVertexShader(const char *name, const char *filename)
+{
+   FILE *fp;
+   char *ostr;
+   uInt32 pos, fsize;
+   size_t result;
+   Shader vs;
+   GLint ok;
+
+   strcpy(vs.name, name);
+   
+   fp = fopen(filename, "r");
+   if(fp == NULL) return 1;
+   
+   // get filesize
+   fseek(fp, 0, SEEK_END);
+   fsize = ftell(fp);
+   rewind(fp);
+   
+   // read all file data to str
+   ostr = new char[fsize+1];
+   memset(ostr, 0, sizeof(char)*(fsize+1));
+   pos = 0;
+   result = 1;
+   while(result)
+   {
+      result = fread(&(ostr[pos]), 1, fsize - pos, fp);
+      pos += result;
+   }
+   fclose(fp);
+
+   // create and compile shader
+   vs.id = glCreateShader(GL_VERTEX_SHADER);
+   glShaderSource(vs.id, 1, (const GLchar**) &ostr, NULL);
+   glCompileShader(vs.id);
+   delete [] ostr;
+
+   glGetShaderiv(vs.id, GL_COMPILE_STATUS, &ok);
+   if(!ok)
+   {
+      PrintShaderError(vs.id);
+      return 1; // error
+   }
+
+   mVertexList.push_back(vs);
+
+   return 0;
+}
+
+int cGraphics::LoadFragmentShader(const char *name, const char *filename)
+{
+   FILE *fp;
+   char *ostr;
+   uInt32 pos, fsize;
+   size_t result;
+   Shader fs;
+   GLint ok;
+   
+   strcpy(fs.name, name);
+
+   fp = fopen(filename, "r");
+   if(fp == NULL) return 1;
+   
+   // get filesize
+   fseek(fp, 0, SEEK_END);
+   fsize = ftell(fp);
+   rewind(fp);
+   
+   // read all file data to str
+   ostr = new char[fsize+1];
+   memset(ostr, 0, sizeof(char)*(fsize+1));
+   pos = 0;
+   result = 1;
+   while(result)
+   {
+      result = fread(&(ostr[pos]), 1, fsize - pos, fp);
+      pos += result;
+   }
+   fclose(fp);
+
+   // create and compile shader
+   fs.id = glCreateShader(GL_FRAGMENT_SHADER);
+   glShaderSource(fs.id, 1, (const GLchar**) &ostr, NULL);
+   glCompileShader(fs.id);
+   delete [] ostr;
+
+   glGetShaderiv(fs.id, GL_COMPILE_STATUS, &ok);
+   if(!ok)
+   {
+      PrintShaderError(fs.id);
+      return 1; // error
+   }
+   
+   mFragmentList.push_back(fs);
+
+   return 0;
+}
+
+
+void cGraphics::PrintShaderError(GLuint shaderID)
+{
+   GLint   logSize, logRead;
+   char *logData;
+
+   glGetShaderiv(shaderID, GL_INFO_LOG_LENGTH, &logSize);
+   logData = new char[logSize];
+
+   glGetShaderInfoLog(shaderID, logSize, &logRead, logData);
+   printf("%s\n", logData);
+  
+   delete [] logData;
+}
+
+int cGraphics::LoadShaderProgram(const char *name, const char *vertex, const char *frag)
+{
+   Shader p, v, f;
+   GLint ok;
+
+   strcpy(p.name, name);
+   p.id = glCreateProgram();
+
+   v.id = 0;
+   f.id = 0;
+   
+   for(i = 0; i < mVertexList.size(); ++i)
+   {
+      if(strcmp(mVertexList[i].name, vertex) == 0)
+      {
+         v = mVertexList[i];
+         break;
+      }
+   }
+   for(i = 0; i < mFragmentList.size(); ++i)
+   {
+      if(strcmp(mFragmentList[i].name, frag) == 0)
+      {
+         f = mFragmentList[i];
+         break;
+      }
+   }
+
+   // both found
+   if((v.id != 0) || (p.id != 0))
+   {
+      // added vertex and fragment shader to shader program
+      glAttachShader(p.id, v.id);
+      glAttachShader(p.id, f.id);
+
+      // link shaders
+      glLinkProgram(p.id);
+
+      glGetProgramiv(p.id, GL_LINK_STATUS, &ok);
+      if(!ok) return 1; // error
+
+      mShaderProgramList.push_back(p);
+   } return 2; // could not find vertex or fragment shader
+
+   return 0;
+}
+
+void cGraphics::SelectShaderProgram(const char *name)
+{
+   for(i = 0; i < mShaderProgramList.size(); ++i)
+   {
+      if(strcmp(mShaderProgramList[i].name, name) == 0)
+      {
+         mCurrentShaderProgram = mShaderProgramList[i];
+         break;
+      }
+   }
+
+   glUseProgram(mCurrentShaderProgram.id);
+}
+
+
+int cGraphics::InitHDR()
+{
+   uInt32   size, w, h;
+   OSBuffer osb;
+
+   // free all buffers
+   FreeOSBuffers();
+
+   //
+   size = game->mWidth;
+   if(game->mHeight > size) size = game->mHeight;
+   size = 1 << (1 + (uInt32)(log((float)size)/log(2.0) + 0.5));
+
+   // window, aka the screen
+   mWindow.fbo = 0;
+   mWindow.width = game->mWidth;
+   mWindow.height = game->mHeight;
+
+   glMatrixMode(GL_MODELVIEW);
+   glLoadIdentity();
+   glGetFloatv(GL_MODELVIEW_MATRIX, mWindow.modelview);
+   glOrtho(0, mWindow.width, mWindow.height, 0, 0, 10);
+   glGetFloatv(GL_MODELVIEW_MATRIX, mWindow.projection);
+   glLoadIdentity();
+
+   w = size;
+   h = size;
+   CreateOSBuffer(mScene, w, h, GL_RGBA16F_ARB, GL_HALF_FLOAT_ARB, GL_NEAREST);
+
+   for(i = 0; i < MAX_GLOW; ++i)
+   {
+      CreateOSBuffer(osb, w, h, GL_RGBA, GL_UNSIGNED_BYTE, GL_LINEAR);
+      w >>= 1;
+      h >>= 1;
+      //size >>= 1; // divide by 2
+
+      mTemp1.push_back(osb);
+   }
+
+   //size = game->mWidth;
+   //if(game->mHeight > size) size = game->mHeight;
+   w = size;
+   h = size;
+   for(i = 0; i < MAX_GLOW; ++i)
+   {
+      CreateOSBuffer(osb, w, h, GL_RGBA, GL_UNSIGNED_BYTE, GL_NEAREST);
+      w >>= 1;
+      h >>= 1;
+      //size >>= 1; // divide by 2
+
+      mTemp2.push_back(osb);
+   }
+   
+   // restore to window
+   BindOSB(mWindow);
+   
+   return 0;
+}
+
+int cGraphics::CreateOSBuffer(OSBuffer &osb, uInt32 width, uInt32 height, GLenum format, GLenum type, GLenum filter)
+{
+   uInt32 size;
+   GLenum ok;
+   
+   size = width;
+   if(height > size) size = height;
+
+   osb.width = width;
+   osb.height = height;
+   glGetFloatv(GL_MODELVIEW_MATRIX, osb.modelview);
+   glGetFloatv(GL_MODELVIEW_MATRIX, osb.projection);
+
+   // create frame buffer
+   glGenFramebuffersEXT(1, &(osb.fbo));
+   glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, osb.fbo);
+   //BindOSB(osb);
+
+   if(type == GL_HALF_FLOAT_ARB)
+   {
+      // create depth buffer
+      glGenRenderbuffersEXT(1, &(osb.depth));
+      glBindRenderbufferEXT(GL_RENDERBUFFER_EXT, osb.depth);
+      glRenderbufferStorageEXT(GL_RENDERBUFFER_EXT, GL_DEPTH_COMPONENT, osb.width, osb.height);
+      
+      // attach depth buffer to frame buffer
+      glFramebufferRenderbufferEXT(GL_FRAMEBUFFER_EXT, GL_DEPTH_ATTACHMENT_EXT, GL_RENDERBUFFER_EXT, osb.depth);
+   }
+
+   // create texture
+   glGenTextures(1, &(osb.texture));
+   glBindTexture(GL_TEXTURE_2D, osb.texture);
+
+   /*
+   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, osb.width, osb.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
+   glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+   glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+   glGenerateMipmapEXT(GL_TEXTURE_2D);
+   */
+
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, filter);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filter);
+   glTexImage2D(GL_TEXTURE_2D, 0, format, osb.width, osb.height, 0, GL_RGBA, type, NULL);   
+
+   // attach texture to frame buffer
+   glFramebufferTexture2DEXT(GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT, GL_TEXTURE_2D, osb.texture, 0);
+
+   ok = glCheckFramebufferStatusEXT(GL_FRAMEBUFFER_EXT);
+   if(ok != GL_FRAMEBUFFER_COMPLETE_EXT)
+   {
+      glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+      return 1; // error not supported
+   }
+   
+   // disconnect from frame buffer
+   glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+
+   return 0;
+}
+
+void cGraphics::Init()
+{
+   // diffuse light
+   mLightDiffuse[0] = 1.0;
+   mLightDiffuse[1] = 1.0;
+   mLightDiffuse[2] = 1.0;
+   mLightDiffuse[3] = 1.0;
+   
+   // light location (infinite)
+   mLightPosition[0] =  0.0;
+   mLightPosition[1] =  0.0;
+   mLightPosition[2] = -1.0;
+   mLightPosition[3] =  0.0;
+   
+   //
+   mBackgroundColor[0] = 0.0;
+   mBackgroundColor[1] = 0.0;
+   mBackgroundColor[2] = 0.0;
+   mBackgroundColor[3] = 0.0;
+   
+   //
+   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+   glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+
+   // enable lighting
+   glLightfv(GL_LIGHT0, GL_DIFFUSE,  mLightDiffuse);
+   glLightfv(GL_LIGHT0, GL_POSITION, mLightPosition);
+   glEnable(GL_LIGHT0);
+   glEnable(GL_LIGHTING);
+   
+   //
+   glFogi(GL_FOG_MODE, GL_EXP);
+   glFogfv(GL_FOG_COLOR,  mBackgroundColor);
+}
+
+void cGraphics::StartDraw()
+{
+   if(mGlowEnabled)
+   {
+      BindOSB(mScene, false);
+   }
+
+   glUseProgram(0);
+
+   glDisable(GL_TEXTURE_2D);
+   glDisable(GL_DEPTH_TEST);
+   glDepthMask(GL_FALSE);
+   glEnable(GL_BLEND);
+   
+   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+   glLoadIdentity();
+   
+   glClearColor(mBackgroundColor[0], mBackgroundColor[1], mBackgroundColor[2], mBackgroundColor[3]);
+}
+
+
+void cGraphics::EndDraw()
+{
+   if(mGlowEnabled)
+   {
+      glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+      glEnable(GL_TEXTURE_2D);
+      glDisable(GL_BLEND);
+      glDisable(GL_DEPTH_TEST);
+
+      // apply hi-pass filter
+      {
+         SelectShaderProgram("hipass");
+         SetShaderValue1i("source", 0);
+         SetShaderValue1f("glow", mGlowMag);
+
+         // select screen texture and temp frame buffer
+         glBindTexture(GL_TEXTURE_2D, mScene.texture);
+         // draw screen to temp and run hipass filter on it while drawing
+         DrawOSTextureQuard(mTemp1[0]);
+
+         // unselect program
+         glUseProgram(0);
+
+         // downsample root temp to small temps
+         glBindTexture(GL_TEXTURE_2D, mTemp1[0].texture);
+         for(i = 1; i < MAX_GLOW; i++)
+         {
+            DrawOSTextureQuard(mTemp1[i]);
+         }
+      }
+
+      //
+      /*
+      SelectShaderProgram("draw");
+      SetShaderValue4fv("bkgd", game->mBackgroundColor);
+      SetShaderValue1i("source", 0);
+
+      BindOSB(mWindow, false);
+
+      glBindTexture(GL_TEXTURE_2D, mScene.texture);
+
+      glViewport(0, 0, mWindow.width, mWindow.height);
+      glMatrixMode(GL_PROJECTION);
+      glLoadIdentity();
+      glOrtho(0, mWindow.width, 0, mWindow.height, -10, 10);
+      glMatrixMode(GL_MODELVIEW);
+
+      glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+      glClearColor(0, 0, 0, 0.0);
+
+      maxsize = mWindow.width;
+      if(mWindow.height > maxsize) maxsize = mWindow.height;
+      // final out, shader combines all the textures
+      glBegin(GL_QUADS);
+         glTexCoord2i(0, 0);
+         glVertex2i(0, 0);
+
+         glTexCoord2f(0, ((float)mWindow.height)/((float)mScene.height) );
+         glVertex2i(0, mWindow.height);
+
+         glTexCoord2f( ((float)mWindow.width)/((float)mScene.width) , 
+                       ((float)mWindow.height)/((float)mScene.height) );
+         glVertex2i(mWindow.width, mWindow.height);
+
+         glTexCoord2f( ((float)mWindow.width)/((float)mScene.width), 0);
+         glVertex2i(mWindow.width, 0);
+      glEnd();
+      */
+
+      
+      // apply blur filter
+      {
+         DrawOSBlur(mTemp1, mTemp2, 1);
+         DrawOSBlur(mTemp2, mTemp1, 0);
+      }
+
+      // draw to screen
+      {
+         GLint pl[MAX_GLOW];
+
+         // select screen buffer
+         BindOSB(mWindow, false);
+         
+         // combine all the textures in one
+         SelectShaderProgram("combine");
+         for(i = 0; i < MAX_GLOW; ++i)
+         {
+            // activate texture
+            glActiveTexture(GL_TEXTURE0 + i);
+            // connect texture to offscreen buffer
+            glBindTexture(GL_TEXTURE_2D, mTemp1[i].texture);
+
+            // set value in shader to combine
+            pl[i] = i;
+         }
+         SetShaderValue1iv("p", MAX_GLOW, pl);
+         
+         //
+         glActiveTexture(GL_TEXTURE0 + MAX_GLOW);
+         glBindTexture(GL_TEXTURE_2D, mScene.texture);
+         SetShaderValue1i("source", MAX_GLOW);
+
+         //
+         glViewport(0, 0, mWindow.width, mWindow.height);
+         glMatrixMode(GL_PROJECTION);
+         glLoadIdentity();
+         glOrtho(0, mWindow.width, 0, mWindow.height, -10, 10);
+         glMatrixMode(GL_MODELVIEW);
+
+         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+         glClearColor(0, 0, 0, 0.0);
+
+         // final out, shader combines all the textures
+         glBegin(GL_QUADS);
+            glTexCoord2i(0, 0);
+            glVertex2i(0, 0);
+
+            glTexCoord2f(0, ((float)mWindow.height)/((float)mScene.height) );
+            glVertex2i(0, mWindow.height);
+
+            glTexCoord2f( ((float)mWindow.width)/((float)mScene.width) , 
+                          ((float)mWindow.height)/((float)mScene.height) );
+            glVertex2i(mWindow.width, mWindow.height);
+
+            glTexCoord2f( ((float)mWindow.width)/((float)mScene.width), 0);
+            glVertex2i(mWindow.width, 0);
+         glEnd();
+      }
+      
+
+      // unselect program
+      glUseProgram(0);
+
+      glActiveTexture(GL_TEXTURE0);
+      glDisable(GL_TEXTURE_2D);
+      glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+
+      game->ChangePerspective();
+   }
+
+   glutSwapBuffers();
+}
+
+void cGraphics::BindOSB(OSBuffer osb, bool changeView)
+{
+   //glBindTexture(GL_TEXTURE_2D, 0);
+   glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, osb.fbo);
+
+   if(changeView)
+   {
+      glViewport(0, 0, osb.width, osb.height);
+
+      glMatrixMode(GL_PROJECTION);
+      glLoadMatrixf(osb.projection);
+      glMatrixMode(GL_MODELVIEW);
+      glLoadMatrixf(osb.modelview);
+   }
+}
+
+void cGraphics::DrawOSTextureQuard(OSBuffer osb)
+{
+   BindOSB(osb);
+
+   glBegin(GL_QUADS);
+      glTexCoord2i(0, 0); glVertex2i(-1, -1);
+      glTexCoord2i(1, 0); glVertex2i( 1, -1);
+      glTexCoord2i(1, 1); glVertex2i( 1,  1);
+      glTexCoord2i(0, 1); glVertex2i(-1,  1);
+   glEnd();
+}
+
+void cGraphics::DrawOSBlur(vector<OSBuffer> src, vector<OSBuffer> des, bool horz)
+{
+   float offset;
+   float coef[3] = { 0.3125, 0.375, 0.3125 };
+
+   SelectShaderProgram("blur");
+   SetShaderValue1i("source", 0);
+   SetShaderValue1fv("coefficients", 3, coef);
+   SetShaderValue1f("offsetx", 0);
+   SetShaderValue1f("offsety", 0);
+   
+   for(i = 0; i < MAX_GLOW; ++i)
+   {
+      offset = (1.4f)/((float)src[i].width);
+      
+      if(horz) SetShaderValue1f("offsetx", offset);
+      else     SetShaderValue1f("offsety", offset);
+
+      glBindTexture(GL_TEXTURE_2D, src[i].texture);
+
+      DrawOSTextureQuard(des[i]);
+   }
+}
+
+void cGraphics::SetShaderValue1i(const char *name, GLint value)
+{
+   glUniform1i(glGetUniformLocation(mCurrentShaderProgram.id, name), value);
+}
+
+void cGraphics::SetShaderValue1f(const char *name, GLfloat value)
+{
+   glUniform1f(glGetUniformLocation(mCurrentShaderProgram.id, name), value);
+}
+
+void cGraphics::SetShaderValue1iv(const char *name, int size, GLint *value)
+{
+   glUniform1iv(glGetUniformLocation(mCurrentShaderProgram.id, name), size, value);
+}
+
+void cGraphics::SetShaderValue1fv(const char *name, int size, GLfloat *value)
+{
+   glUniform1fv(glGetUniformLocation(mCurrentShaderProgram.id, name), size, value);
+}
+
+void cGraphics::SetShaderValue4fv(const char *name, GLfloat value[4])
+{
+   glUniform4fv(glGetUniformLocation(mCurrentShaderProgram.id, name), 1, value);
+}

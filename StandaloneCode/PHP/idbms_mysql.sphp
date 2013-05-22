@@ -1,0 +1,178 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   idbms_mysql.php
+//	Programmer:     Joseph E. Sutton, Casey Langen
+//	Description:    IDBMS MySQL Class
+//	Creation date:  12/7/2006
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__DBMSMYSQL__') )
+{
+   define('__DBMSMYSQL__', 1);
+   
+   require($gClassDir.'idbms.php');
+
+   class DBMSMySQL implements IDBMS
+   {
+      private $mObj = false;
+      private $mMaxPacket = 128; // MB
+      
+      public function DBMSMySQL()
+      {
+         $this->mObj = false;
+         $this->mMaxPacket = 128; // MB
+      }
+      
+      public function Connect()
+      {
+         if($this->mObj !== false)
+         {
+            $this->Disconnect();
+         }
+         
+         global $gDBUsername;
+         global $gDBPassword;
+         global $gDBName;
+         //printf("user: %s || pass: %s || DB: %s", $gDBUsername, $gDBPassword, $gDBName);
+         
+         $this->mObj = new mysqli('localhost', $gDBUsername, $gDBPassword);
+         //$this->mObj = @mysqli_connect('localhost', $gDBUsername, $gDBPassword);
+         
+         if($this->mObj !== false)
+         {
+            @$this->mObj->select_db($gDBName);
+            
+            // set max packet size allowed so downloading files from DB will work
+            $sql = sprintf("SET max_allowed_packet=%d", $this->mMaxPacket*1024*1024);
+            $sql = $this->ExecSQL($sql, null);
+         }
+      }
+      
+      public function Error()
+      {
+         return $this->mObj->error;
+      }
+      
+      public function Disconnect()
+      {
+         if($this->mObj !== false)
+         {           
+            $this->mObj->close();
+         }
+      }
+      
+      public function ExecSQL($sql, $add_row_func)
+      {
+         if($this->mObj !== false)
+         {
+            //echo 'sql: '.$sql.'<br>';
+            $result = @$this->mObj->query($sql);
+            
+            if(@$this->mObj->errno > 0)
+            {
+            	printf("[Errors] %d: %s\n", $this->mObj->errno, $this->mObj->error);
+            }
+            
+            if($result)
+            {
+               if($add_row_func != null)
+               {
+                  // if is array then the callback function is in a class
+                  $use_callback = false;
+                  if( is_array($add_row_func) )
+                  {
+                     $use_callback = true;
+                  }
+                     
+                  while($row = $result->fetch_assoc())
+                  {
+                     if($use_callback)
+                     {
+                        call_user_func($add_row_func, $row);
+                     } 
+                     else
+                     {
+                        $add_row_func($row);
+                     }
+                  }
+               }
+               
+               // free result
+               @mysqli_free_result($result);
+            }
+         }
+      }
+      
+      public function ExecSQLGetArray($sql)
+      {
+         if($this->mObj !== false)
+         {
+            $i = 0;
+            $list = array();
+            $result = $this->mObj->query($sql);
+            
+            if($result)
+            {
+               while($row = $result->fetch_assoc())
+               {
+                  $list[$i] = $row;
+                  $i++;
+               }
+            
+               // free result
+               @mysqli_free_result($result);
+            }
+            
+            return $list;
+         }
+         
+         return null;
+      }
+      
+      public function ExecRowCount($sql)
+      {
+         $num = false;
+         if($this->mObj !== false)
+         {
+            $result = $this->mObj->query($sql);
+            
+            if($result)
+            {
+               $num = $this->mObj->num_rows;
+               
+               // free result
+               @mysqli_free_result($result);
+            }
+         }
+         
+         return $num;
+      }
+      
+      
+      public function GetColNames($table_name)
+      {
+         $sql = sprintf('DESC %s', $table_name);
+         $list = $this->ExecSQLGetArray($sql);
+         if($list != null)
+         {
+            $column_names = array();
+            $i = 0;
+            foreach($list as $row)
+            {
+               $column_names[$i] = $row['Field'];
+               $i++;
+            }
+            
+            return $column_names;
+         }
+         
+         return null;
+      }
+      
+   } // end class
+
+} // end if def __DBMSMYSQL__
+
+?>

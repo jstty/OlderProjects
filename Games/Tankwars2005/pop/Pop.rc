@@ -1,0 +1,891 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Pop.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Pop.ico"
+IDR_POPTYPE             ICON    DISCARDABLE     "res\\PopDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit\tCtrl-X",               ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Fullscreen\tCtrl+F",         ID_FULLSCREEN
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About TankWars 2005\tF12",   ID_APP_ABOUT
+        MENUITEM "&User's Guide\tF1",           ID_HELP_USERSGUIDE
+    END
+END
+
+IDR_POPTYPE MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "New Game\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "&Close\tCtrl+F4",             ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "Mu&te\tCtrl+M",               ID_GAME_PLAYSOUNDS
+        MENUITEM SEPARATOR
+        MENUITEM "Pa&use\tCtrl+P",              ID_GAME_ANIMATE
+        MENUITEM "&Motion Smoothness...",       ID_GAME_SPEED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",               ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&3D OpenGL Graphics",         ID_VIEW_OPENGLGRAPHICS
+        MENUITEM "&2D Windows Graphics",        ID_VIEW_MFCGRAPHICS
+        MENUITEM SEPARATOR
+        MENUITEM "&Fullscreen View (Use ESC to end) \tCtrl + F", 
+                                                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Reset Viewpoint\tCtrl+R",    ID_VIEW_RESTORESTANDARDVIEWPOSITION
+
+        MENUITEM SEPARATOR
+        MENUITEM "Keep &Player in View",        ID_VIEW_KEEPPLAYERINVIEW
+        MENUITEM "R&ide the Player",            ID_VIEW_RIDE
+        MENUITEM SEPARATOR
+        MENUITEM "&No Background",              ID_VIEW_NOBACKGROUND
+        MENUITEM "&Minimal Background",         ID_VIEW_SOLIDBACKGROUND
+        MENUITEM "&Full Background",            ID_GAME_BACKGROUND
+        MENUITEM SEPARATOR
+        MENUITEM "S&olid Critters",             ID_VIEW_COLOREDBUBBLES
+        MENUITEM "&Wireframe Critters",         ID_VIEW_XRAYBUBBLES
+        MENUITEM SEPARATOR
+        MENUITEM "&Shoot Cursor",               ID_VIEW_SHOOTCURSOR
+        MENUITEM "&Pick Cursor",                ID_VIEW_ARROWCURSOR
+        MENUITEM "&Drag Cursor",                ID_VIEW_DRAGGERCURSOR
+        MENUITEM "P&in Cursor",                 ID_VIEW_PINCURSOR
+        MENUITEM "&Replicate Cursor",           ID_VIEW_REPLICATECURSOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Game"
+    BEGIN
+        MENUITEM "&Spacewar",                   ID_GAME_SPACEWAR
+        MENUITEM "S&olar System",               ID_GAME_SPACEWARWITHASUN
+        MENUITEM "3D So&lar System",            ID_GAME_3DSPACE
+        MENUITEM "&PickNPop",                   ID_GAME_PICKANDPOP
+        MENUITEM "&Airhockey",                  ID_GAME_AIRHOCKEY
+        MENUITEM "3D D&efender",                ID_GAME_3DDEFENDER
+        MENUITEM "&Ballworld",                  ID_GAME_FREEPLAYWITHGRAVITYANDFRICTION
+
+        MENUITEM "3D &Monster Hallway",         ID_GAME_3DMONSTERHALLWAY
+        MENUITEM "Da&mbuilder ",                ID_GAME_MAZEPLAY
+        MENUITEM "&Racer",                      ID_GAME_RACER
+        MENUITEM "&Worms",                      ID_GAME_WORMS
+        MENUITEM "&2DStub",                     ID_GAME_FREEPLAY
+        MENUITEM "&3DStub",                     ID_GAME_DESIGN
+    END
+    POPUP "Critters"
+    BEGIN
+        MENUITEM "&Wrap",                       ID_GAME_WRAP
+        MENUITEM "B&ounce",                     ID_GAME_BOUNCE
+        MENUITEM SEPARATOR
+        MENUITEM "&Small Critter Count",        ID_GAME_SMALL
+        MENUITEM "&Medium Critter Count",       ID_GAME_MEDIUM
+        MENUITEM "&Large Critter Count",        ID_GAME_LARGE
+        MENUITEM "&Huge Critter Count",         ID_GAME_HUGE
+        MENUITEM SEPARATOR
+        MENUITEM "Mi&xed Sprites",              ID_GAME_ASSORTED
+        MENUITEM "B&itmaps",                    ID_GAME_BITMAPS
+        MENUITEM "&Asteroids",                  ID_GAME_ASTEROIDS
+        MENUITEM "B&ubbles",                    ID_GAME_BUBBLES
+        MENUITEM "Simple &Polygons",            ID_FILE_SEED_SIMPLEPOLYGONS
+        MENUITEM "&Fancy Polygons",             ID_FILE_SEED_FANCYPOLYGONS
+        MENUITEM "Pol&ypolygons",               ID_FILE_SEED_POLYPOLYGONS
+        MENUITEM "Spheres",                     ID_GAME_SPHERES
+        MENUITEM "&Quake Sprites",              ID_GAME_QUAKESTYLEMMODELS
+    END
+    POPUP "&Player"
+    BEGIN
+        MENUITEM "&Shield",                     ID_PLAYER_GODMODE
+        MENUITEM SEPARATOR
+        MENUITEM "A&rrow Key Controls",         ID_PLAYER_ARROWKEYS
+        MENUITEM "&Scooter Controls",           ID_PLAYER_3DFLYER
+        MENUITEM "&Car Controls",               ID_PLAYER_CARKEYS
+        MENUITEM "Spac&eship Controls",         ID_PLAYER_SPACESHIPKEYS
+        MENUITEM "Arrow/&Hopper Controls",      ID_PLAYER_HOPPERCONTROL
+        MENUITEM "Scooter/Ho&pper (3D)",        ID_PLAYER_SCOOTERHOPPER3D
+        MENUITEM "&Mouse Controls",             ID_PLAYER_CURSORCRITTER
+        MENUITEM SEPARATOR
+        MENUITEM "&Deadly Bullets",             ID_PLAYER_DEADLYBULLETS
+        MENUITEM "&Rubber Bullets",             ID_PLAYER_RUBBERBULLETS
+        MENUITEM SEPARATOR
+        MENUITEM "&Auto Play",                  ID_PLAYER_AUTOPLAY
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Split",                      ID_WINDOW_SPLIT
+        MENUITEM SEPARATOR
+        MENUITEM "Auto&focus",                  ID_WINDOW_AUTOFOCUS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About The Pop Framework...", ID_APP_ABOUT
+        MENUITEM "Your System's &OpenGL Graphics Support...", 
+                                                ID_OPENGLINFODIALOG
+        MENUITEM "&Pop Program User's Guide",   ID_HELP_USERSGUIDE
+    END
+END
+
+IDR_OLD_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New Game\tCtrl+N",           ID_FILE_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Pop...",               ID_APP_ABOUT
+        MENUITEM "&User's Guide",               ID_HELP_USERSGUIDE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "1",            ID_VIEW_SHOOTCURSOR,    VIRTKEY, NOINVERT
+    "2",            ID_VIEW_ARROWCURSOR,    VIRTKEY, NOINVERT
+    "3",            ID_VIEW_DRAGGERCURSOR,  VIRTKEY, NOINVERT
+    "4",            ID_VIEW_PINCURSOR,      VIRTKEY, NOINVERT
+    "5",            ID_VIEW_REPLICATECURSOR, VIRTKEY, NOINVERT
+    "F",            ID_VIEW_FULLSCREEN,     VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_GAME_PLAYSOUNDS,     VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_GAME_ANIMATE,        VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_VIEW_RESTORESTANDARDVIEWPOSITION, VIRTKEY, CONTROL, 
+                                                    NOINVERT
+    VK_F1,          ID_USER_GUIDE,          VIRTKEY, NOINVERT
+    VK_F12,         ID_ABOUT,               VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EXIT,                VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 378, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About the :: TANKWARS 2005 ::"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         222,IDC_STATIC,"Static",SS_BITMAP,0,0,378,138
+    DEFPUSHBUTTON   "OK",IDOK,163,118,50,14,WS_GROUP
+    CTEXT           "http://www.PolyFaust.com/tankwars2005/",IDC_LINK,89,98,
+                    200,11
+    CONTROL         "",IDC_CR,"RICHEDIT",ES_RIGHT | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_NOHIDESEL | ES_READONLY | WS_TABSTOP,
+                    294,80,80,53
+    CONTROL         "",IDC_INFO,"RICHEDIT",ES_CENTER | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_NOHIDESEL | ES_READONLY | WS_TABSTOP,
+                    89,84,200,11
+END
+
+IDD_SPEED DIALOG DISCARDABLE  0, 0, 168, 126
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Motion Smoothness"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_SPEED,110,24,43,16,ES_AUTOHSCROLL
+    LTEXT           "Updates Per Second",IDC_STATIC,7,7,70,14
+    LTEXT           "Motion Smoothness \n\nSmoothness range is 1 to 10.\nSmoothness 5 is standard.\n\nLower smoothness values\nproduce  faster, jerkier motion.\n\nHigher smoothness values produce smoother, slower motion.",
+                    IDC_STATIC,7,25,101,94
+    PUSHBUTTON      "Cancel",IDCANCEL,127,52,34,24
+    DEFPUSHBUTTON   "OK",IDOK,127,95,34,24
+    EDITTEXT        IDC_UPDATESPERSECOND,110,7,44,16,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_OPENGLINFO DIALOGEX 0, 0, 348, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Information About OpenGL Graphics on Your System"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,310,188,31,31
+    LTEXT           "Static",IDC_STATICINFO,7,7,334,46,0,WS_EX_CLIENTEDGE
+    LTEXT           "Static",IDC_STATICCOMMENT,7,66,334,121,0,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_StereoDialog DIALOGEX 0, 0, 67, 81
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION
+CAPTION "Stereo Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Reset",IDC_Reset,7,59,26,15,0,WS_EX_STATICEDGE
+    LTEXT           "Visual Drag",IDC_STATIC,7,33,51,9
+    CONTROL         "Spin1",IDC_SPINFOCAL,"msctls_updown32",UDS_ARROWKEYS,52,
+                    41,10,15,WS_EX_STATICEDGE
+    EDITTEXT        IDC_FOCALLEN,7,41,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,36,60,27,14
+    LTEXT           "Eye Separation",IDC_STATIC,7,7,52,9
+    CONTROL         "Spin1",IDC_SPINCAM,"msctls_updown32",UDS_ARROWKEYS,52,
+                    16,10,15,WS_EX_STATICEDGE
+    EDITTEXT        IDC_CAMOFFSET,7,16,40,14,ES_AUTOHSCROLL
+END
+
+IDD_ABOUTBOX1 DIALOG DISCARDABLE  0, 0, 243, 146
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About the Pop Program"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "This demo program is based on the ""Pop Framework"",\n    a collection C++ classes that accompanies the textbook:\n     ""Software Engineering and Computer Games""\n     by Rudy Rucker.",
+                    IDC_STATIC,35,14,200,33,SS_NOPREFIX
+    LTEXT           "The Pop Framework code is open source shareware,\n and may be freely distributed and reused.\n Contact computergames@rudyrucker.com for details.",
+                    IDC_STATIC,35,73,200,26,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,186,125,50,14,WS_GROUP
+    LTEXT           "Support, updates, source code and more information are at\n    www.rudyrucker.com/computergames",
+                    IDC_STATIC,35,50,200,20
+    LTEXT           "Copyright (C) 2003, Rudy Rucker.",IDC_STATIC,35,102,200,
+                    11
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 212, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Custom Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_STATIC,4,52,204,140,NOT WS_GROUP,
+                    WS_EX_DLGMODALFRAME
+    CONTROL         "Tab1",IDC_SELECT_PLAYER,"SysTabControl32",TCS_BUTTONS,
+                    54,38,152,14
+    DEFPUSHBUTTON   "OK",IDOK,41,197,50,14
+    PUSHBUTTON      "Default",IDCANCEL,119,197,50,14
+    LTEXT           "Select Player:",IDC_STATIC,6,42,46,9,SS_CENTERIMAGE
+    CONTROL         "",IDC_PLANET,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,48,17,58,211
+    LTEXT           "Select Planet:",IDC_STATIC,48,6,58,8
+    CONTROL         "",IDC_PLANET_IMG,"Static",SS_BITMAP | SS_CENTERIMAGE,10,
+                    6,32,26
+    RTEXT           "Color:",IDC_STATIC,119,64,22,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_PLAYER_NAME,36,64,82,12,ES_AUTOHSCROLL
+    LTEXT           "Name:",IDC_STATIC,10,64,23,12,SS_CENTERIMAGE
+    CONTROL         "List1",IDC_AMMO_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_AUTOARRANGE | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,8,110,194,76
+    PUSHBUTTON      "Buy",IDC_BUY,10,96,36,12
+    PUSHBUTTON      "Sell",IDC_SELL,50,96,36,12
+    EDITTEXT        IDC_MONEY,88,96,72,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Weapon Selection:",IDC_STATIC,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,9,83,194,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,9,92,194,1
+    LTEXT           "...",IDC_PLANET_DESC,108,6,98,26,SS_SUNKEN
+    PUSHBUTTON      "Color",IDC_COLOR_BUTTON,144,63,57,14,BS_BITMAP | 
+                    BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Clear",IDC_CLEAR,164,96,36,12
+END
+
+IDD_STATUS_BAR DIALOGEX 0, 0, 482, 35
+STYLE DS_CENTER | DS_CENTERMOUSE | WS_CHILD
+EXSTYLE WS_EX_NOPARENTNOTIFY
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ANGLE,189,14,36,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin2",IDC_SPIN_ANGLE,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,221,14,9,12
+    LISTBOX         IDC_PLANET_INFO,340,11,74,20,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | LBS_NOSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Planet Info:",IDC_STATIC,340,3,72,8
+    CONTROL         "Slider1",IDC_POWER,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    WS_TABSTOP,232,15,104,12
+    LTEXT           "Power Level:",IDC_STATIC,236,4,48,10,SS_CENTERIMAGE
+    LTEXT           "Gun Angle:",IDC_STATIC,189,4,40,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_WEAPON_NAME,86,15,67,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Weapon:",IDC_STATIC,86,4,94,10,SS_CENTERIMAGE
+    RTEXT           "Player:",IDC_STATIC,4,5,24,10
+    CTEXT           "Joe",IDC_PLAYER_NAME,31,5,50,10,WS_BORDER
+    RTEXT           "HP:",IDC_STATIC,4,18,24,10
+    CTEXT           "100/200",IDC_PLAYER_HP,31,18,50,10,WS_BORDER
+    CTEXT           "100",IDC_POWER_TEXT,286,3,46,10,WS_BORDER
+    CONTROL         "Select",IDC_SELECT_WEAPON,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_TABSTOP,154,14,26,13
+    CONTROL         "FIRE ! ! !",IDC_FIRE,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,418,19,60,12
+    EDITTEXT        IDC_TIME,440,4,38,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Time:",IDC_STATIC,418,4,22,12,SS_CENTERIMAGE
+END
+
+IDD_MAIN_STATE DIALOGEX 0, 0, 179, 52
+STYLE WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_NOPARENTNOTIFY
+CAPTION "Action Selection"
+FONT 9, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "&Fire",IDC_FIRE,6,16,50,14
+    PUSHBUTTON      "&Move",IDC_MOVE,65,16,50,14
+    PUSHBUTTON      "&Pass",IDC_PASS,124,16,50,14
+    PUSHBUTTON      "&Surrender",IDC_SUR,65,36,50,12
+    LTEXT           "Select an Action:",IDC_STATIC,6,3,54,9
+    CONTROL         "",IDC_NAME,"RICHEDIT",ES_AUTOHSCROLL | ES_NOHIDESEL | 
+                    ES_READONLY | WS_TABSTOP,61,3,111,9,WS_EX_TRANSPARENT
+END
+
+IDD_WEAPON_SELECTION DIALOG DISCARDABLE  0, 0, 202, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Weapon Selection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,44,94,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,106,94,50,14
+    CONTROL         "List1",IDC_AMMO_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_AUTOARRANGE | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,4,12,194,76
+    LTEXT           "Weapon Selection:",IDC_STATIC,4,3,194,8
+END
+
+IDD_GAME_OVER DIALOGEX 0, 0, 179, 34
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Game Over"
+FONT 9, "Arial", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDC_OK,64,16,50,14
+    CONTROL         "",IDC_INFO,"RICHEDIT",ES_CENTER | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_NOHIDESEL | ES_READONLY | WS_TABSTOP,
+                    8,3,164,9,WS_EX_TRANSPARENT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "By\r\nJoseph E. Sutton\r\nJohn Harris\r\nKeith Potter\r\nAndy Cruz\0"
+            VALUE "CompanyName", "Poly Faust\0"
+            VALUE "FileDescription", "Tank Wars 2005\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "TWS2005\0"
+            VALUE "LegalCopyright", "Copyright (C) 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "tws2005.EXE\0"
+            VALUE "PrivateBuild", "4 50\0"
+            VALUE "ProductName", "Tank Wars 2005\0"
+            VALUE "ProductVersion", "1, 0, 4, 50\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 371
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_SPEED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_OPENGLINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 341
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_StereoDialog, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_ABOUTBOX1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_STATUS_BAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 475
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 28
+    END
+
+    IDD_MAIN_STATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+
+    IDD_WEAPON_SELECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_GAME_OVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 27
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_DRAGHAND            CURSOR  DISCARDABLE     "res\\Hand.cur"
+IDC_PIN                 CURSOR  DISCARDABLE     "res\\pin.cur"
+IDC_SPAWN               CURSOR  DISCARDABLE     "res\\spawn.cur"
+IDC_ZAP                 CURSOR  DISCARDABLE     "res\\zap.cur"
+IDC_REPLICATE           CURSOR  DISCARDABLE     "res\\equals.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ABOUT               BITMAP  DISCARDABLE     "res\\about.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS DLGINIT
+BEGIN
+    IDC_PLANET, 0x1234, 6, 0
+0x6145, 0x7472, 0x0068, 
+    IDC_PLANET, 0x1234, 5, 0
+0x614d, 0x7372, "\000" 
+    IDC_PLANET, 0x1234, 5, 0
+0x6f4d, 0x6e6f, "\000" 
+    IDC_PLANET, 0x1234, 8, 0
+0x6954, 0x6174, 0x206e, 0x0035, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Group 3 :>"
+    IDR_POPTYPE             "\nPop \nPop  \nPop Game Parameter File\n.pop\nPop.Document\nPop Document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Pop"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "New Game Window\nNew Game Window"
+    ID_FILE_OPEN            "Open Saved Game\nOpen Game"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save Game\nSave Game"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy selected critter n and put it on the Clipboard\nCopy Criter"
+    ID_EDIT_CUT             "Remove selectec critter and put it on the Clipboard\nCut Critter"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Paste Clipboard Critter\n Paste Critter"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_GAME_PLAYSOUNDS      "Toggle sounds\nToggle Sounds"
+    ID_GAME_RESTART         "Restart Game\nRestart Game"
+    ID_VIEW_PINCURSOR       "Pops critters with left click\nPin Cursor"
+    ID_VIEW_DRAGGERCURSOR   "Move critters with left drag\nDrag Cursor"
+    ID_WINDOW_AUTOTILE      "Toggle the feature of having the windows automatically tile."
+    ID_WINDOW_AUTOFOCUS     "Toggle the feature of auto-setting focus to the window under the cursor."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_COLOREDBUBBLES  "Solid critters\nSolid"
+    ID_VIEW_POPSOUND        "Critter sound is a pop\nPop"
+    ID_VIEW_BONKSOUND       "Critter sound is a bonk\nBonk"
+    ID_GAME_3D              "Make closer critters larger\n""3D"""
+    ID_GAME_HUGE            "Show 80 critters\nHuge Count"
+    ID_GAME_JUMBLED         "Allow small critters in front of large critters\nJumbled"
+    ID_GAME_SMALL           "Show 4 critters\nSmall count"
+    ID_GAME_MEDIUM          "Show 8 critters\nMedium count"
+    ID_GAME_LARGE           "Show 25 critters\nLarge Count"
+    ID_VIEW_XRAYBUBBLES     "Wireframe critters\nWireframe"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_USERSGUIDE      "User's Guide to Controls"
+    ID_GAME_SPEED           "Motion Smoothness Dialog: Slow Motion or Fast Forward\nMotion Smoothness Dialog"
+    ID_GAME_ANIMATE         "Toggle Pause\nToggle Pause"
+    ID_VIEW_ARROWCURSOR     "Pick cursor\nPick Cursor"
+    ID_FILE_SEED_SIMPLEPOLYGONS "Seed With Simple Polygons\nSimple Polygons"
+    ID_FILE_SEED_FANCYPOLYGONS "Seed with Fancy Polygons\nFancy Polygons"
+    ID_FILE_SEED_POLYPOLYGONS "Seed with Polypolygons\nPolypolygons"
+    ID_VIEW_SPAWNCURSOR4    "Makes a mutated copy of Critter\nSpawn Cursor"
+    ID_VIEW_SPAWNCURSOR     "Makes a mutated copy of critter.\nSpawn Cursor"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_ZAPCURSOR5      "Zap the critter.\nZap Cursor"
+    ID_VIEW_ZAPCURSOR       "Zap the critter.\nZap Cursor"
+    ID_GAME_TRIPLEPOLYPOLYGONS 
+                            "Seed with Triply-nested Polypolygons\nTriple PolyPolygons"
+    ID_GAME_ASTEROIDS       "Seed with Asteriods\nAsteroid Polygons"
+    ID_VIEW_REPLICATECURSOR6 "Copy upon click\nReplicate Cursor"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_REPLICATECURSOR "Replicate Critter you Click\nReplicate Cursor"
+    ID_GAME_BITMAPS         "Seed with Transparent Bitmap Sprites\nBitmaps"
+    ID_GAME_ASSORTED        "Seed with Mixed Sprites\nMixed Sprites"
+    ID_GAME_WRAP            "Wrap Motion Around\nWrap"
+    ID_GAME_BACKGROUND      "Put a bitmap in the background or use a blank background.\nBitmap Background"
+    ID_VIEW_PLAYCURSOR      "Play Cursor\nPlay"
+    ID_VIEW_PLAYGAME        "Game Playing Mode/nPlay"
+    ID_PLAYER_EASYKEYS      "Easy style key controls\nEasy Keys"
+    ID_PLAYER_CARKEYS       "Drive like a Car Arrow Keys,  and PgUp/PgDn, Home/End in 3D\nCar Keys"
+    ID_PLAYER_SPACESHIPKEYS "Asteroids type Key Controls, \nSpaceship Keys"
+    ID_PLAYER_GODMODE       "Player isn't damaged by critters' bullets."
+    ID_PLAYER_DEADLYBULLETS "Bullets that destroy critters they run into."
+    ID_PLAYER_RUBBERBULLETS "Massive bullets that bounce off the critters."
+    ID_PLAYER_MASSIVEPLAYER "Player has a huge mass, so it rebounds very little"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PLAYER_ABSORBERPLAYER 
+                            "Player absorbs collision energy, damping critters' motion."
+    ID_PLAYER_BOUNCINGPLAYER "Player rebounds like a critter"
+    ID_PLAYER_AUTOPLAY      "For demo and testing: player moves, spins, fires automatically."
+    ID_GAME_SPACEWAR        "A shooting game where the critters shoot back"
+    ID_GAME_DESIGN          "Demo of 3D graphics."
+    ID_PLAYER_CURSORCRITTER "Player moves in its plane with cursor.  Arrow Keys turn, PgUp/PgDn, Home/End in 3D."
+    ID_PLAYER_ARROWKEYS     "Move player with arrow keys, PgUp/PgDn i n 3D, aim with mouse."
+    ID_GAME_FREEPLAY        "2D Shooting game with health-packs."
+    ID_GAME_FREEPLAYWITHGRAVITYANDFRICTION 
+                            "Herd balls with gravity and friction."
+    ID_GAME_BOUNCE          "Bounce off Edges\nBounce"
+    ID_VIEW_WHOLEWORLD      """Map"" view of the entire game world\nMap view"
+    ID_VIEW_CLOSEUPONPLAYERREGION 
+                            "Show the sector of the world where the player is\nPlayer sector view"
+    ID_VIEW_CENTERCLOSEUPONPLAYER 
+                            "Center View on the Player position\n""Isolated Player Cam"""
+    ID_GAME_MAZEPLAY        "Try critters with gravity and walls.  Use Ctrl+C and Ctrl+V and Drag to make more walls."
+    ID_GAME_BUBBLES         "Seed with Bubbles\nBubble Shapes"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_GAME_PICKANDPOP      "Pop the peanuts and save the jewels."
+    ID_VIEW_SHOOTCURSOR     "Aim and Shoot Cursor\nShoot Cursor"
+    ID_GAME_COLLIDECRITTERS "Have Critters Bounce off Each Other"
+    ID_GAME_AIRHOCKEY       "A table-hockey game."
+    ID_VIEW_OPENGLGRAPHICS  "Use the OpenGL Graphics Engine.\n3D OpenGL Graphics"
+    ID_VIEW_MFCGRAPHICS     "Use the Windows Graphics API Calls.\n 2D Windows Graphics"
+    ID_VIEW_TRANSLATEVIEWER "Move viewer with arrow keys./nTranslate Viewer"
+    ID_VIEWERRIDE           "Viewpoint Rides Player./Ride Viewer"
+    ID_VIEW_TRANSLATE       "2D Ortho View\n2D View"
+    ID_VIEW_RIDE            "Ride the Player,  (Ctrl+Up or Down Arrows)\nRide Player"
+    ID_VIEW_FLY             "3D Fly Viewpoint./nFly Viewpoint"
+    ID_VIEW_ORBIT           "Orbit Viewer\nOrbit Viewer"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_KEEPPLAYERINVIEW "Keep Player in View\nTrack Player"
+    ID_VIEW_SOLIDBACKGROUND "Plain Solid Background.\nSolid Background"
+    ID_VIEW_NOBACKGROUND    "No Background\nNo Background"
+    ID_GAME_WORMS           "Worms Game has critters linked in chains."
+    ID_PLAYER_3DFLYER       "Fly with arrows, Use PgUp/PgDn, Home/End in 3D"
+    ID_VIEW_RESTORESTANDARDVIEWPOSITION 
+                            "Restore Viewer to Look down at Origin from Above"
+    ID_OPENGLINFODIALOG     "Tells if your graphics card supports OpenGL."
+    ID_GAME_3DDEFENDER      "A 3D Defender Game."
+    ID_PLAYER_HOPPERCONTROL "Left/Right arrows with Up key for Hopping."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_GAME_QUAKESTYLEMMODELS "Seed with Quake Models\nQuake Models"
+    ID_GAME_SPHERES         "Seed with Spheres\nSpheres"
+    ID_VIEW_OPENGL_STEREO   "Stereo Mode \nStereo"
+    ID_GAME_SPACEWARWITHASUN "2D Spacewar Game with a Gravitating Sun"
+    ID_GAME_RACER           "Race Track Game"
+    ID_GAME_3DSPACE         "3D Spacewar Game with a Gravitating Sun"
+    ID_VIEW_FULLSCREEN      "Make the Game Window Fullscreen.\n3D Fullscreen Game Windowics"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Pop.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

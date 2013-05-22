@@ -1,0 +1,359 @@
+/****************************************
+ filename:    game_engine.cpp
+ project:     warpattack
+ created by:  Joseph E. Sutton
+ date:        2010/04/07
+ description: 
+ ****************************************/
+#include "global.h"
+
+GameEngine::GameEngine()
+{
+   // seed random
+   srand(time(NULL));
+   
+   mFrameCount = 0;
+   mFPS = 0;
+   mCurrentLevel = NULL;
+   mNextLevelNum = 0;
+   mGameState = Game_Loading;
+   
+   mText     = new cTextRender();
+   mSound    = new cSoundBank();
+   mGraphics = new cGraphics();
+}
+
+GameEngine::~GameEngine()
+{
+   if(mText != NULL)     delete mText;
+   if(mSound != NULL)    delete mSound;
+   if(mGraphics != NULL) delete mGraphics;
+   
+   
+}
+
+int GameEngine::Init(int argc, char* argv[])
+{
+   GLenum error;
+
+   // settings
+<<<<<<< .mine
+   mWidth = 1280;
+   mHeight = 900;
+=======
+   mWidth = 1440;
+   mHeight = 900;
+>>>>>>> .r111
+   mShowFPS = true;
+   mGameMode = false;
+   mGameSpeed = 1.0;
+   
+   // dark gray
+   mBackgroundColor[0] = 0.0;
+   mBackgroundColor[1] = 0.0;
+   mBackgroundColor[2] = 0.0;
+   mBackgroundColor[3] = 1.0;
+
+   //
+   glutInit(&argc, argv);
+   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
+   //glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+   glutInitWindowSize(mWidth, mHeight);
+   glutInitWindowPosition(50, 50);
+   glutCreateWindow("Warpscape");
+   
+   error = glewInit();
+   if(GLEW_OK != error)
+   {
+      // error
+      return 1;
+   }
+
+   glutDisplayFunc(display);
+   glutReshapeFunc(reshape);
+   glutIdleFunc(idle);
+   
+   glutKeyboardFunc(key_down);
+   glutSpecialFunc(key_special_down);
+   
+   glutMouseFunc(mouse_click);
+   glutMotionFunc(mouse_motion);
+   glutPassiveMotionFunc(mouse_passive);
+   
+   return 0;
+}
+
+void GameEngine::Resize(int w, int h)
+{
+   mWidth  = w;
+   mHeight = h;
+   
+   // resize display area in the OpenGL internals
+   glViewport(0, 0, w, h);
+
+   // adjust view for new window size and matain aspect ratio
+   ChangePerspective(60);
+}
+
+void GameEngine::ChangePerspective(float degree)
+{
+// adjust view for new window size and matain aspect ratio
+   glMatrixMode(GL_PROJECTION);
+   glLoadIdentity();
+   gluPerspective(degree,  // field of view in degree
+                  ((float)mWidth)/((float)mHeight),  // aspect ratio
+                  1.0,    // Z near
+                  200.0); // Z far
+   
+   glMatrixMode(GL_MODELVIEW);
+   glLoadIdentity();
+}
+
+
+void GameEngine::Run()
+{
+   mGameTimer.SetExpirePerSec(0.25);
+   mGameTimer.Start();
+   mGameTimer.Update();
+   
+   mLoopTimer.SetExpirePerSec(GAME_FRAME_TIME);
+   mLoopTimer.Start();
+   mLoopTimer.Update();
+
+   glutMainLoop();
+}
+
+void GameEngine::Display()
+{
+   mGraphics->StartDraw();
+   
+   if(mCurrentLevel != NULL)
+   {
+      mCurrentLevel->Draw();
+
+      mMessage = "";
+   
+      if(mShowFPS)
+      {
+         sprintf(mMessageBuffer, "FPS: %0.1f ", mFPS);
+         mMessage += mMessageBuffer;
+      }
+      if(mGraphics->mGlowEnabled)
+      {
+              if(mGraphics->mGlowMag == 0.9f) mMessage += "HDR: On(Low) ";
+         else if(mGraphics->mGlowMag == 0.7f) mMessage += "HDR: On(Medium) ";
+         else if(mGraphics->mGlowMag == 0.5f) mMessage += "HDR: On(High) ";
+         else if(mGraphics->mGlowMag == 0.3f) mMessage += "HDR: On(Very High) ";
+      }
+      if(mGameSpeed != 1.0f)
+      {
+              if(mGameSpeed == 1.5f) mMessage += "Game Speed: Slow ";
+         else if(mGameSpeed == 2.0f) mMessage += "Game Speed: Super Slow ";
+         else if(mGameSpeed == 0.5f) mMessage += "Game Speed: Fast ";
+      }
+      
+      mText->SetColor(1, 0, 0);
+      mText->Draw2D(0.01, 0.01, mMessage.c_str());
+
+   } else {
+      DrawLoading();
+   }
+   
+   mGraphics->EndDraw();
+}
+
+void GameEngine::Idle()
+{
+   if(mGameState == Game_Loading)
+   {
+      mText->Load(MODEL_DIR"/font/lines.font");
+      
+      // load all the graphics
+      mGraphics->LoadAnimModel(MODEL_DIR"/all.list");
+      
+      // load textures
+      //mGraphics->LoadTexture("glow", MODEL_DIR"/textures/line.raw", 128);
+      
+      // load shaders
+      mGraphics->LoadVertexShader("texture1",   MODEL_DIR"/shaders/v_texture_setup.glsl");
+      mGraphics->LoadVertexShader("texture2",   MODEL_DIR"/shaders/v_texture_setup.glsl");
+      mGraphics->LoadVertexShader("texture3",   MODEL_DIR"/shaders/v_texture_setup.glsl");
+      mGraphics->LoadVertexShader("texture4",   MODEL_DIR"/shaders/v_texture_setup.glsl");
+
+      mGraphics->LoadFragmentShader("hipass",  MODEL_DIR"/shaders/f_hipass.glsl");
+      mGraphics->LoadFragmentShader("combine", MODEL_DIR"/shaders/f_combine.glsl");
+      mGraphics->LoadFragmentShader("blur",    MODEL_DIR"/shaders/f_blur.glsl");
+      mGraphics->LoadFragmentShader("draw",    MODEL_DIR"/shaders/f_draw.glsl");
+
+      mGraphics->LoadShaderProgram("hipass",  "texture1", "hipass");
+      mGraphics->LoadShaderProgram("combine", "texture2", "combine");
+      mGraphics->LoadShaderProgram("blur",    "texture3", "blur");
+      mGraphics->LoadShaderProgram("draw",    "texture4", "draw");
+
+      mGraphics->InitGlow();
+
+      // load all the sounds
+      // TODO
+      
+      // load all the level settings
+      // add new level
+      cLevel *l;
+      {
+         l = new cTitleLevel();
+         l->LoadSettings(MODEL_DIR"/levels/title.level");
+         mLevels.push_back(l);
+         
+         l = new cWarpLevel();
+         l->LoadSettings(MODEL_DIR"/levels/000.level");
+         mLevels.push_back(l);
+         
+         mLevelNum = 0;
+      }
+      
+      mGameState = Game_DoneLoading;
+   } else {
+      // done loading game
+      
+      // maintain constant framerate
+      mLoopTimer.Update();
+      if(mLoopTimer.HasExpired())
+      {
+         mLoopTimer.Start();
+         mGameTimer.Update();
+         mFrameCount++;
+         
+         // if level set
+         if(mCurrentLevel != NULL)
+         {
+            mCurrentLevel->Update();
+            mCurrentLevel->Input(mInput);
+            
+            if(mCurrentLevel->isLevelOver())
+            {
+               mNextLevelNum = mCurrentLevel->GetNextLevelNum();
+               if(mNextLevelNum >= mLevels.size())
+                  mNextLevelNum = 1;
+               
+               mLevelNum = mCurrentLevel->Exit();
+               mCurrentLevel = NULL;
+            }
+         } else {
+            // loop back around
+            if(mNextLevelNum >= mLevels.size())
+               mNextLevelNum = 1;
+
+            mCurrentLevel = mLevels[mNextLevelNum];
+            mCurrentLevel->Enter(mLevelNum);
+         }
+         
+         // clear mInput
+         memset(&mInput, 0, sizeof(LevelInput));
+         
+         glutPostRedisplay();
+      }
+      
+      // used to get FPS data
+      if(mGameTimer.HasExpired())
+      {
+         float diff = ((float)mGameTimer.TimeDiff())*0.000001;
+         
+         mFPS = ((float)mFrameCount)/diff;
+         
+         mGameTimer.Start();
+         mGameTimer.Update();
+         mFrameCount = 0;
+      }
+   }
+}
+
+void GameEngine::DrawLoading()
+{
+   mText->SetColor(1, 1, 1); // white
+   mText->Draw2D(0.475, 0.5, "Loading...");
+}
+
+
+void GameEngine::KeyDown(unsigned char key, int x, int y)
+{
+   key = tolower(key);
+
+   if(key == GLUT_KEY_ESC)
+   {
+      glutReshapeWindow(mOldWidth, mOldHeight);
+      exit(1); // ESC
+   }
+
+   else if(key == '1') mGameSpeed = 1.0f;
+   else if(key == '2') mGameSpeed = 1.5f;
+   else if(key == '3') mGameSpeed = 2.0f;
+   else if(key == '4') mGameSpeed = 0.5f;
+   else if(key == 'h') mGraphics->mGlowEnabled = !mGraphics->mGlowEnabled;
+   else if(key == '7') mGraphics->mGlowMag = 0.9f;
+   else if(key == '8') mGraphics->mGlowMag = 0.7f;
+   else if(key == '9') mGraphics->mGlowMag = 0.5f;
+   else if(key == '0') mGraphics->mGlowMag = 0.3f;
+   
+   // key set 1
+   else if(key == 'z') mInput.Action1 = true;
+   else if(key == 'x') mInput.Action2 = true;
+   // key set 2
+   else if(key == 'w') mInput.Up = true;
+   else if(key == 's') mInput.Down = true;
+   else if(key == 'a') mInput.Left = true;
+   else if(key == 'd') mInput.Right = true;
+   else if(key == '.') mInput.Action1 = true;
+   else if(key == '/') mInput.Action2 = true;
+   // key set 3
+   else if(key == ' ') mInput.Action1 = true;
+
+   cTimer::SetExpireMag(mGameSpeed);
+   
+   mInput.Key = key;
+}
+
+void GameEngine::KeySpecialDown(int key, int x, int y)
+{
+   if(key == GLUT_KEY_F1)
+   {
+      mShowFPS = !mShowFPS;
+   }
+   else if(key == GLUT_KEY_F2)
+   {
+      if(mGameMode)
+      {
+         mGameMode = false;
+         glutReshapeWindow(mOldWidth, mOldHeight);
+      } else{
+         mGameMode = true;
+         mOldWidth = mWidth;
+         mOldHeight = mHeight;
+         glutFullScreen();
+      }
+   }
+   // key set 1
+   else if(key == GLUT_KEY_UP)    mInput.Up = true;
+   else if(key == GLUT_KEY_DOWN)  mInput.Down = true;
+   else if(key == GLUT_KEY_LEFT)  mInput.Left = true;
+   else if(key == GLUT_KEY_RIGHT) mInput.Right = true;
+
+   mInput.SKey = key;
+}
+
+void GameEngine::MouseClick(int button, int state, int x, int y)
+{
+   mInput.MouseX = x;
+   mInput.MouseY = y;
+   mInput.MouseButton = button;
+}
+
+void GameEngine::MouseMotion(int x, int y)
+{
+   mInput.MouseX = x;
+   mInput.MouseY = y;
+}
+
+void GameEngine::MousePassive(int x, int y)
+{
+   mInput.MouseX = x;
+   mInput.MouseY = y;
+}

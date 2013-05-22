@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/WarpAttack/!svn/ver/43/trunk/output/data/sound/fx
+END
+laser.wav
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/WarpAttack/!svn/ver/43/trunk/output/data/sound/fx/laser.wav
+END
+explos.wav
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/WarpAttack/!svn/ver/43/trunk/output/data/sound/fx/explos.wav
+END
+missle.wav
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/WarpAttack/!svn/ver/43/trunk/output/data/sound/fx/missle.wav
+END

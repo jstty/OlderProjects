@@ -1,0 +1,43 @@
+--------------------Configuration: Young George VS Lost Island - Win32 Debug--------------------
+Begining build with project "E:\My Code\Young George VS Lost Island\Young George VS Lost Island.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MLd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Young_Ge/Young George VS Lost Island.pch" /YX /Fo"Young_Ge/" /Fd"Young_Ge/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "_DEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /fo"Young_Ge/A   Young George VS Lost Island.res" /d "_DEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Young_Ge/Young George VS Lost Island.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Young_Ge/Young George VS Lost Island.pdb" /debug /machine:I386 /out:"Young_Ge/Young George VS Lost Island.exe" /pdbtype:sept "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x409 /fo"Young_Ge/A   Young George VS Lost Island.res" /d "_DEBUG" "E:\My Code\Young George VS Lost Island\A   Young George VS Lost Island.rc"" 
+Creating temp file "C:\WINDOWS\TEMP\RSP7382.TMP" with contents </nologo /MLd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Young_Ge/Young George VS Lost Island.pch" /YX /Fo"Young_Ge/" /Fd"Young_Ge/" /FD /c 
+"E:\My Code\Young George VS Lost Island\MainWindow.cpp"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP7382.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSP7383.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Young_Ge/Young George VS Lost Island.pdb" /debug /machine:I386 /out:"Young_Ge/Young George VS Lost Island.exe" /pdbtype:sept 
+".\Young_Ge\AI.obj"
+".\Young_Ge\CDPlayer.obj"
+".\Young_Ge\ChildWindow.obj"
+".\Young_Ge\Controls.obj"
+".\Young_Ge\DialogUtils.obj"
+".\Young_Ge\DxSnd.obj"
+".\Young_Ge\FileUtils.obj"
+".\Young_Ge\Graphics.obj"
+".\Young_Ge\MainWindow.obj"
+".\Young_Ge\Midi.obj"
+".\Young_Ge\A   Young George VS Lost Island.res"
+"..\..\Msvc\Vc\lib\Comctl32.lib"
+"..\..\Msvc\Vc\lib\Dsound.lib"
+".\Game Levels\Debug\Game Levels.lib"
+"..\..\Msvc\Vc\lib\Winmm.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP7383.TMP" 
+Compiling resources...
+Compiling...
+MainWindow.cpp
+Linking...
+
+
+
+Young George VS Lost Island.exe - 0 error(s), 0 warning(s)

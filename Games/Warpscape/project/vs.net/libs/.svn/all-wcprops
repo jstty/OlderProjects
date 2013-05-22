@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/WarpAttack/!svn/ver/84/trunk/project/vs.net/libs
+END
+glut32.lib
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/WarpAttack/!svn/ver/2/trunk/project/vs.net/libs/glut32.lib
+END
+OpenGL32.Lib
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/WarpAttack/!svn/ver/84/trunk/project/vs.net/libs/OpenGL32.Lib
+END

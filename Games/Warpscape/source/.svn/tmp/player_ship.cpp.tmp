@@ -1,0 +1,41 @@
+/****************************************
+ filename:    player_ship.cpp
+ project:     warpattack
+ created by:  Joseph E. Sutton
+ date:        2010/04/15
+ description: 
+ ****************************************/
+#include "global.h"
+
+cPlayerShip::cPlayerShip(vector<Point3D> p)
+{
+   mPath = p;
+   mState = PlayerShip_Alive;
+}
+
+void cPlayerShip::Draw()
+{
+   // TODO
+   // Rotate - facing center
+   // Translate - to path point
+   
+   cAnimModel::Draw();
+}
+
+void cPlayerShip::Update()
+{
+   cAnimModel::Update();
+<<<<<<< .mine
+}
+
+void cPlayerShip::MoveLeft()
+{
+   // TODO
+}
+
+void cPlayerShip::MoveRight()
+{
+   // TODO
+}
+=======
+}>>>>>>> .r20

@@ -1,0 +1,199 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   SqlValueList.php
+//	Programmer:     Joseph E. Sutton, Casey Langen
+//	Description:    SQL Value List Class, build SQL list for SQL statement
+//                 or for export
+//	Creation date:  1/26/2006
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__SQLVALUELIST__') )
+{
+   define('__SQLVALUELIST__', 1);
+  
+   class SqlValueList
+   {
+      protected $mDataList;
+      protected $mItemCount;
+      protected $mType = 0;  // 0 -> SQL statement
+                             // 1 -> File Import
+                             // 2 -> File Export
+      public $mDeli = ', ';
+      
+      public function Reset($t = -1)
+      {
+         $this->mDataList  = '';
+         $this->mItemCount = 0;
+         $this->mDeli      = ', ';
+         
+         if($t != -1)
+            $this->mType = $t;
+      }
+      
+      public function AddNULL()
+      {
+         if($this->mItemCount > 0)
+         {
+            $this->mDataList .= $this->mDeli;
+         }
+         
+         $this->mDataList .= 'NULL';
+         $this->mItemCount++;
+      }
+      
+      public function Add($cell, $name=null)
+      {
+         if($cell === NULL)
+         {
+            return $this->AddNULL();
+         }
+         
+         if($this->mItemCount > 0)
+         {
+            $this->mDataList .= $this->mDeli;
+         }
+      
+         // get type and add
+         $error = 0;
+         if($this->mType == 0)
+         {
+            $error = $this->SQLAdd($cell, $name);
+         }
+         else if($this->mType == 1)
+         {
+            $error = $this->InsertAdd($cell, $name);
+         }
+         else if($this->mType == 2)
+         {
+            $error = $this->ExportAdd($cell, $name);
+         }
+         
+         $this->mItemCount++;
+      }
+            
+      public function AddRow($row_data)
+      {
+         $this->Reset();
+         
+         foreach($row_data as $cell)
+         {
+            $this->Add($cell);
+         }
+      }
+      
+      public function AddUpdateRow($row_data)
+      {
+         $this->Reset();
+         
+         foreach($row_data as $key => $cell)
+         {
+            $this->Add($cell, $key);
+         }
+      }
+      
+      protected function SQLAdd($cell, $name)
+      {
+         //echo "SQLAdd<br/>\n";
+         
+         // if has ticks
+         $s = $cell;
+         if( (!is_numeric($s)) &&
+             (strcmp(strtolower($s), 'now()') != 0)
+           )
+         {
+            // translate chars
+            $trans = array("%uFFFD"  => "'");
+            $s = strtr($s, $trans);
+
+            // translate return and comma back
+            $s = sprintf('\'%s\'', DB::Escape($s));
+            //
+         }
+         
+         // add to list
+            // if has name, which means it should set for Update
+            if($name != null)
+            {
+               $this->mDataList .= $name.'=';
+            }
+            
+            $this->mDataList .= $s;
+         //
+      }
+      
+      protected function InsertAdd($cell, $name)
+      {
+         //echo "InsertAdd<br/>\n";
+         
+         // if has ticks
+         $cell = trim($cell);
+         $s = trim($cell, '\'');
+         
+         // if size diff, then removed ticks, meaning string
+         if( strlen($s) != strlen($cell) )
+         {
+            $s = trim($cell, '\'');
+            // translate return and comma back
+            $trans = array('\n'  => "\n",
+                           '%c%' => ',',
+                           "'"   => "\\'",
+                           //";"   => '\;',
+                           "\""  => '\"');
+            $s = strtr($s, $trans);
+            $s = sprintf('\'%s\'', DB::Escape($s));
+            //
+         }
+         
+         // add to list
+            // if has name, which means it should set for Update
+            if($name != null)
+            {
+               $this->mDataList .= $name.'=';
+            }
+            
+            $this->mDataList .= $s;
+         //
+      }
+      
+      public function ExportAdd($cell, $name)
+      {
+         //echo "ExportAdd<br/>\n";
+         
+         $s = "";
+         if( is_numeric($cell) )
+         {
+            $s = $cell;
+         } else {
+            $s = $cell;
+            
+            $trans = array("\n"   => '\n',
+                           ','    => '%c%',
+                           "\\'"  => "'",
+                           //'\;'   => ";",
+                           '\"'   => "\"");
+            $s = strtr($s, $trans);
+            $s = sprintf('\'%s\'', DB::Escape($s));
+         }
+         // add to list
+            // if has name, which means it should set for Update
+            if($name != null)
+            {
+               $this->mDataList .= $name.'=';
+            }
+
+            $this->mDataList .= $s;
+         //
+      }
+      
+      public function GetList()
+      {
+         return $this->mDataList;
+      }
+      
+   } // end class
+
+} // end if def __SQLVALUELIST__
+
+?>

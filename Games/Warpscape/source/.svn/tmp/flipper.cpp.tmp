@@ -1,0 +1,142 @@
+/****************************************
+ filename:    flipper.cpp
+ project:     warpattack
+ created by:  Joseph E. Sutton
+ date:        2010/04/15
+ description: flipper enemy
+ ****************************************/
+#include "global.h"
+
+cFlipper::cFlipper(vector< vector<Point3D> > *p)
+{
+   mPath = p;
+   
+   // TODO
+   // Random speed the flipper moves
+   
+   mFirstTrack = 0;
+   mLastTrack  = (*mPath)[0].size();
+   
+   // pick a random track to walk on
+   mCurrentTrack = Random(mFirstTrack, mLastTrack);
+   
+   SelectAnim("Flipper_Walk");
+   Play();
+   
+   mHitable = true;
+   mFlippingState = Flipping_Done;
+}
+
+void cFlipper::Draw()
+{
+   // TODO
+   // use mPath[z][mCurrentTrack]
+   
+   cEnemy::Draw();
+}
+
+void cFlipper::Update()
+{
+   cEnemy::Update();
+
+   if(mCurrentPos.z > 0)
+   {
+	   mCurrentPos.z = 0;
+	   mFlippingState = Flip_In_Dir;
+   }
+      
+   // move along track on path, (*mPath)[z][mCurrentTrack]
+   // (*mPath)[z][mCurrentTrack].x
+   // only when mFlipping is done
+   if(mFlippingState == Flipping_Done)
+   {
+       //Some sort of updating z goes here for a certain amount of time
+	   mFlippingState = Flipping_Start;
+   }
+   
+   // if in danger, flip
+   // TODO
+   
+   // if at end of track(z < 0)
+   // pick one direction keep flipping
+   
+   // flip
+   else if(mFlippingState == Flipping_Start)
+   {
+      uInt32 dir;
+      // pick random direction
+      dir = Random(0, 1);
+      // if 0, left. 1, right
+      
+      if(dir)
+      {
+         SelectAnim("Flipper_FlipRight");
+         
+         // loop around
+         if(mCurrentTrack == mLastTrack)
+            mCurrentTrack = mFirstTrack;
+         else
+            mCurrentTrack++;
+      } else {
+         SelectAnim("Flipper_FlipLeft");
+       
+         // loop around
+         if(mCurrentTrack == mFirstTrack)
+            mCurrentTrack = mLastTrack;
+         else
+            mCurrentTrack--;
+      }
+      
+      Play();
+      
+      // move to moving state
+      mFlippingState = Flipping_Moving;
+    
+      // can't he killed while flipping
+      mHitable = false;
+   }
+   else if(mFlippingState == Flipping_Moving)
+   {
+      // wait until animation is done
+      if(mCurrentState == Anim_Done)
+      {
+         SelectAnim("Flipper_Walk");
+         Play();
+    
+         // can be killed again
+         mHitable = true;
+    
+         // done with the flipping
+         mFlippingState = Flipping_Done;
+      }
+   }
+
+   else if(mFlippingState == Flip_In_Dir)
+   {
+	   uInt32 dir;
+      // pick random direction
+      dir = Random(0, 1);
+      // if 0, left. 1, right
+      
+      if(dir)
+      {
+         SelectAnim("Flipper_FlipRight");
+         
+         // loop around
+         if(mCurrentTrack == mLastTrack)
+            mCurrentTrack = mFirstTrack;
+         else
+            mCurrentTrack++;
+      } else {
+         SelectAnim("Flipper_FlipLeft");
+       
+         // loop around
+         if(mCurrentTrack == mFirstTrack)
+            mCurrentTrack = mLastTrack;
+         else
+            mCurrentTrack--;
+      }
+      
+      Play();
+   }
+}

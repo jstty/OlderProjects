@@ -1,0 +1,583 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   table.php
+//	Programmer:     Joseph E. Sutton, Casey Langen
+//	Description:    DB Table Class
+//	Creation date:  12/7/2006
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__TABLE__') )
+{
+   define('__TABLE__', 1);
+
+   require($gClassDir.'error.php');
+   require($gClassDir.'row.php');
+   require($gClassDir.'sql_valuelist.php');
+   
+   abstract class Table extends Error
+   {
+      protected $mBodyTmpl, $mERowTmpl, $mORowTmpl, $mFirstRowTmpl, $mTempTmpl;
+      protected $mTmplsLoaded = false;
+      protected $mPageTitle = '';
+      protected $mTableName = '';
+      
+      // mColumns[0] =  array(Column Name, SQL Type, Default Value, Data Type)
+      protected $mColumns = array();
+      
+      //protected $mColumnNames = array();
+      
+      protected $mTemplateFilename = '';
+      protected $mRows = array();
+      protected $mMode = 0; // 0 -> view
+                            // 1 -> edit
+      protected $mTmpFileHandle = null;
+      protected $mSqlValue = null;
+      protected $mPrimaryKeyName = '';
+      protected $mAddtionalCreateSQL = '';
+   
+      function __construct()
+      {
+         $this->mSqlValue = new SqlValueList();
+         $this->mSqlValue->Reset(0);
+      }
+      
+      protected abstract function GetNewRow($row_data);
+      protected abstract function GetNewDefaultRow();
+
+      public function SetMode($m)
+      {
+         $this->mMode = $m;
+      }
+      
+      // Todo removed all Get functions
+      public function GetTableName()
+      {
+      	return $this->mTableName;
+      }
+      
+      public function GetPageTitle()
+      {
+         return $this->mPageTitle;
+      }
+      //
+      
+      // getter function
+      public function __get($name)
+      {
+         switch($name)
+         {     
+            case 'PrimaryKey':
+            {
+               return $this->mPrimaryKeyName;
+            }
+                        
+            case 'TableName':
+            {
+               return $this->mTableName;
+            }
+            
+            case 'PageTitle':
+            {
+               return $this->mPageTitle;
+            }
+            
+            case 'SQLCreateColumnList':
+            {
+               return $this->GenSQLCreateColumnList();
+            }
+            
+            case 'ColumnTypes':
+            {
+               $r = array();
+               $size = count($this->mColumns);
+               for($i = 0; $i < $size; $i++)
+               {
+                  // Column Name[0], SQL Type[1], Default Value[2], Data Type[3]
+                  $r[ $this->mColumns[$i][0] ] = $this->mColumns[$i][3];
+               }
+               return $r;
+            }
+            
+            case 'DefaultRowData':
+            {
+               $r = array();
+               $r[0] = array();
+               $size = count($this->mColumns);
+               for($i = 0; $i < $size; $i++)
+               {
+                  // Column Name[0], SQL Type[1], Default Value[2], Data Type[3]
+                  $r[0][ $this->mColumns[$i][0] ] = $this->mColumns[$i][2];
+               }
+               return $r;
+            }
+            
+            case 'Rows':
+            {
+               return $this->mRows;
+            }
+         }
+         
+         return false;
+      }
+      
+      public function SetTemplateFilename($filename)
+      {
+         $this->mTemplateFilename = $filename;
+      }
+      
+      public function LoadTemplates()
+      {
+      	global $gTmplDir;
+      
+      	 $data = file_get_contents($gTmplDir . $this->mTemplateFilename);
+      	 $this->SetTemplateData($data);
+      }
+      
+      public function SetTemplateData($body_tmpl_data)
+      {
+         $this->mTmplsLoaded = true;
+         
+         // temp template
+         $this->mTempTmpl = new HTMLTmpl();
+      	
+      	// main template
+         $this->mBodyTmpl = new HTMLTmpl();         
+         // even template
+         $this->mERowTmpl = new HTMLTmpl();
+         // odd template
+         $this->mORowTmpl = new HTMLTmpl();
+         
+         // first row template
+         $this->mFirstRowTmpl = new HTMLTmpl();
+         
+         $this->mBodyTmpl->Set($body_tmpl_data);
+         
+         $this->mERowTmpl->Set( $this->mBodyTmpl->GetClip('<erow>', '</erow>') );
+         $this->mORowTmpl->Set( $this->mBodyTmpl->GetClip('<orow>', '</orow>') );
+         $this->mFirstRowTmpl->Set( $this->mBodyTmpl->GetClip('<first>', '</first>') );
+         
+         // if odd or even empty then use base, clipped by rows
+         if( (strlen($this->mERowTmpl->Get()) == 0) ||
+             (strlen($this->mORowTmpl->Get()) == 0) )
+         {
+            $this->mERowTmpl->Set( $this->mBodyTmpl->GetClip('<rows>', '</rows>') );
+            $this->mORowTmpl->Set( $this->mBodyTmpl->GetClip('<rows>', '</rows>'));
+         }
+         
+         // if first row does not exist
+         if( (strlen($this->mFirstRowTmpl->Get()) == 0) )
+         {
+            $this->mFirstRowTmpl->Set( $this->mERowTmpl->Get() );
+         }
+      }
+      
+      // ApplyStyle, Makes ALL template the same style
+      // style = 0 -> first
+      // style = 1 -> odd
+      // style = 2 -> even
+      public function ApplyStyle($style)
+      {
+         if($style == 0) // first
+         {
+            $this->mORowTmpl->Set( $this->mFirstRowTmpl->Get() );
+            $this->mERowTmpl->Set( $this->mFirstRowTmpl->Get() );
+         }
+         else if($style == 1) // odd
+         {
+            $this->mFirstRowTmpl->Set( $this->mORowTmpl->Get() );
+            $this->mERowTmpl->Set(     $this->mORowTmpl->Get() );
+         }
+         else if($style == 2) // even
+         {
+            $this->mORowTmpl->Set(     $this->mERowTmpl->Get() );
+            $this->mFirstRowTmpl->Set( $this->mERowTmpl->Get() );
+         }
+      }
+      
+      protected function GenSQLCreateColumnList()
+      {
+         $out = '';
+         
+         // Column Name[0], SQL Type[1], Default Value[2], Data Type[3]
+         $size = count($this->mColumns);
+         for($i = 0; $i < $size; $i++)
+         {
+            $out .= $this->mColumns[$i][0].' '.$this->mColumns[$i][1].', ';
+         }
+         
+         return $out;
+      }
+      
+      protected function GenRowHTML($i, $row, $use_callback = false, $custom_callback = null)
+      {
+         // if first row then use first
+         if($i == 0)
+         {
+            $this->mTempTmpl->Set( $this->mFirstRowTmpl->Get() ); // First
+            $this->mTempTmpl->Replace('%row_type%', 0);
+         }
+         else
+         {
+            // check if even or odd
+            if($i & 1)
+            {
+               $this->mTempTmpl->Set( $this->mORowTmpl->Get() ); // Odd
+               $this->mTempTmpl->Replace('%row_type%', 1);
+            }
+            else
+            {
+               $this->mTempTmpl->Set( $this->mERowTmpl->Get() ); // Even
+               $this->mTempTmpl->Replace('%row_type%', 2);
+            }
+         }
+         
+         $this->mTempTmpl->Replace('%_index_%', $i+1);
+
+         if($use_callback)
+         {
+            $this->mTempTmpl->Set( call_user_func($custom_callback, $row, $this->mTempTmpl) );
+         }
+         
+         return $row->GenHTML($this->mTempTmpl, $this->mMode);
+      }
+      
+      // auto select rows from DB
+      // need to call LoadTemplates() before calling this function
+      public function GenHTMLCustom($sql_where, $custom_callback = null)
+      {
+         $row_string = '';
+         if(!$this->mTmplsLoaded)
+         {  
+            echo "tmpl's NOT loaded<br>";
+            return false;
+         }
+         
+         $this->Select($sql_where);
+         // did not select any rows, error
+         if(count($this->mRows) < 1)
+         {
+            return false;
+         }
+         
+         // if is array then the callback function is in a class
+         $use_callback = false;
+         if( is_array($custom_callback) )
+         {
+            $use_callback = true;
+         }
+         
+         $tmpl = new HTMLTmpl();
+         $i = 0;
+         foreach($this->mRows as $row)
+         {
+            $row_string .= $this->GenRowHTML($i, $row, $use_callback, $custom_callback);
+            $i++;
+         }
+         
+         $this->mBodyTmpl->ReplaceClip($row_string, '<rows>', '</rows>');
+         return $this->mBodyTmpl->Get();
+      }
+      
+      // auto select ALL rows from DB
+      public function GenHTMLAllRows()
+      {
+         $row_string = '';
+         $this->LoadTemplates();
+         
+         $this->SelectAll();
+         // did not select any rows, error
+         if(count($this->mRows) < 1)
+         {
+            return false;
+         }
+         
+         $i = 0;
+         foreach($this->mRows as $row)
+         {
+            $row_string .= $this->GenRowHTML($i, $row);
+            $i++;
+         }
+
+         $this->mBodyTmpl->ReplaceClip($row_string, '<rows>', '</rows>');
+         return $this->mBodyTmpl->Get();
+      }
+      
+      public function GenHTMLNewRow()
+      {
+         $this->LoadTemplates();
+         
+         $new_row = $this->GetNewDefaultRow();
+         $row_string = $this->GenRowHTML(0, $new_row);
+
+         $this->mBodyTmpl->ReplaceClip($row_string, '<rows>', '</rows>');
+         return $this->mBodyTmpl->Get();
+      }
+      
+      public function Create()
+      {
+         $sql = sprintf('CREATE TABLE IF NOT EXISTS %s (%s PRIMARY KEY(%s) %s)', 
+                  $this->mTableName, 
+                  $this->SQLCreateColumnList,
+                  $this->PrimaryKey,
+                  $this->mAddtionalCreateSQL
+                );
+         
+         $this->ExecDBSQL($sql);
+      }      
+     
+      // used by DB to fill array
+      public function AddRow($row_data)
+      {
+         $new_row = $this->GetNewRow($row_data);
+         array_push($this->mRows, $new_row);
+      }
+     
+      public function SelectAll()
+      {
+         // clear array
+         $this->mRows = array();
+         
+         global $gDB;
+         $gDB->SelectAll(array($this, 'AddRow'), $this->mTableName);
+      }
+      
+      public function Select($sql_where)
+      {
+         // clear array
+         $this->mRows = array();
+         
+         global $gDB;
+         $gDB->Select(array($this, 'AddRow'), $this->mTableName, $sql_where);
+      }
+            
+      public function SelectShow()
+      {
+         $this->Select('show=1');
+      }
+      
+      public function SelectActive()
+      {
+         $this->Select('active=1');
+      }
+      
+      public function Drop()
+      {
+         global $gDB;
+         return $gDB->DropTable($this->mTableName);
+      }
+      
+      protected function ExecDBSQL($sql)
+      {
+         global $gDB;
+         $gDB->ExecSQL($sql);
+      }
+            
+      // load file and insert it into the DB
+      public function Import($filename = '')
+      {
+         if( strcmp($filename, '') == 0)
+         {
+         	$filename = $this->mTableName.'.csv';
+         }
+      
+         // set SqlValue to import
+         $this->mSqlValue->Reset(1);
+         
+         $rows = @file($filename);
+         if($rows === false)
+         {
+            printf("Could not load file: <b>%s</b><br />\n", $filename);
+            return;
+         }
+         
+         foreach ($rows as $r)
+         {
+            $cols = explode(',', rtrim($r));
+            
+            // remove all padding, front and back
+            $size = count($cols);
+            for($i = 0; $i < $size; $i++)
+            {
+               $cols[$i] = trim($cols[$i]);
+               $cols[$i] = stripslashes($cols[$i]);
+            }
+            //
+            
+            $this->Insert($cols);
+         }
+      }
+      
+      protected function Insert($row_data)
+      {
+         if( count($row_data) > 0 )
+         {
+            $this->mSqlValue->AddRow($row_data);
+            $values = $this->mSqlValue->GetList();
+            
+            global $gDB;
+            $gDB->Insert($this->mTableName, $values);
+         }
+      }
+      
+      protected function Update($row_data)
+      {
+         if( count($row_data) > 0 )
+         {
+            $id_name = "";
+            $id_value = 0;
+            foreach($row_data as $key => $value)
+            {
+               $id_name  = $key;
+               $id_value = $value;
+               unset($row_data[$key]);
+               break;
+            }
+            
+            $this->mSqlValue->AddUpdateRow($row_data);
+            $values = $this->mSqlValue->GetList();
+            
+            if( count($id_name) > 0 )
+            {
+               global $gDB;
+               $gDB->Update(
+                  $this->mTableName, 
+                  $values,
+                  $id_name."=".$id_value);
+            }
+         }
+      }
+      
+      
+      public function RowCount()
+      {
+         return count($this->mRows);
+      }
+      
+      // select * from DB and add to file
+      public function Export($filename)
+      {
+         // set SqlValue to export
+         $this->mSqlValue->Reset(2);
+         
+         $this->mTmpFileHandle = fopen($filename, "w+");
+         
+         global $gDB;
+         $gDB->SelectAll(array($this, 'ExportRow'), $this->mTableName);
+         
+         fclose($this->mTmpFileHandle);
+         
+         // done
+         $this->mTmpFileHandle = null;
+      }
+      
+      public function ExportRow($row_data)
+      {
+         if( $this->mTmpFileHandle != null )
+         {
+            $s = "";
+            $this->mSqlValue->AddRow($row_data);
+            $s = $this->mSqlValue->GetList() . "\n";
+            fwrite($this->mTmpFileHandle, $s);
+            
+            global $gShowTesting;
+            if($gShowTesting)
+            {
+               echo $s."<br>";
+            }
+         } // end file handle check
+      }
+      
+      public function ProcessActionType($type, $id, $args)
+      {
+         // 0 = View   (not handled in this function)
+         // 1 = Edit   (not handled in this function)
+         // 2 = Save   (update)
+         // 3 = Add    (insert)
+         // 4 = Hide   (update)
+         // 5 = Show   (update)
+         // 6 = Delete (drop)
+         switch($type)
+         {
+            case 2: // save
+            {
+            	//print_r($args);
+               $row_data = $this->ConvertArgsToRowData($args);
+               
+               $this->Update($row_data);
+               break;
+            }
+            
+            case 3: // Add
+            {
+               $row_data = $this->ConvertArgsToRowData($args);
+               
+               $keyname = $this->PrimaryKey;
+               if( array_key_exists($keyname, $row_data) )
+               {
+               	  $row_data[ $keyname ] = NULL;
+               }
+               
+               $this->Insert($row_data);
+               break;
+            }
+            
+            case 4: // hide
+            {
+               $row_data = array();
+               $row_data[ $this->mPrimaryKeyName ] = $id;
+               $row_data['Active'] = 0;
+               
+               return $this->Update($row_data);             
+            }
+            
+            case 5: // show
+            {
+               $row_data = array();
+               $row_data[ $this->mPrimaryKeyName ] = $id;
+               $row_data['Active'] = 1;
+               
+               return $this->Update($row_data);             
+            }
+            
+            case 6: // delete
+            {
+               return $this->Delete($id);    
+            }
+         }
+         
+      }
+      
+      protected function ConvertArgsToRowData($args)
+      {
+         $row_data = array();
+
+         if($this->mColumns != null)
+         {
+            // basiclly eliminate any extra data
+            foreach($this->mColumns as $col)
+            {
+               if( array_key_exists($col[0], $args) )
+               {
+               	  $row_data[$col[0]] = $args[$col[0]];
+               }
+            }
+            
+            return $row_data;
+         }
+         
+         return null;
+      }
+      
+      protected function Delete($id)
+      {
+         global $gDB;
+         $gDB->Delete($this->mTableName, $this->mPrimaryKeyName.'='.$id);
+      }
+      
+   } // end class
+
+} // end if def __TABLE__
+
+?>

@@ -1,0 +1,478 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   img_thumbnail.php
+//	Programmer:     Joseph E. Sutton
+//	Description:    Image Thumbnail Class
+//	Creation date:  6/2/2008
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__IMG_THUMBNAIL__') )
+{
+   define('__IMG_THUMBNAIL__', 1);
+
+   class ImgThumbnail
+   {
+      public $checkSubDir;
+      public $test = false;
+      public $force = false;
+      private $cacheName = '.cache';
+      private $cacheXMLInfoFile = "";
+      
+      public function ImgThumbnail()
+      {
+         $this->checkSubDir = true;
+      }
+      
+      // pass array tree of images
+      // if dir does not have a thumb dir make one and create thumbnails
+      public function CheckImages($a)
+      {
+         //echo "<pre>"; print_r($a); echo "\n</pre>";
+          
+         $this->FindThumbDir($a);
+      }
+      
+      private function FindThumbDir($a)
+      {
+         $xmlChanged = 0;
+         $cachePath = $a['name'].'/'.$this->cacheName;
+         
+         // if cache dir does not exists
+         if( (strcmp($a['name'], $this->cacheName) != 0) &&
+             !is_dir($cachePath) )
+         {
+            echo "mkdir: ".$cachePath."<br/>\n";
+            
+            // create dir
+            if(!$this->test) {
+               mkdir($cachePath);
+               
+               // change permins on file
+               // chmod 755 <file>
+               chmod($cachePath, 0755);
+            }
+            //
+         }
+         // if not world readable
+         else if(!(fileperms($cachePath) & 0x0004))
+         {
+            // change permins on file
+            // chmod 755 <file>
+            chmod($cachePath, 0755);
+         }
+         
+         // load cache/info.xml
+         $cacheXMLInfoFile = $cachePath.'/info.xml';
+         printf("loading XML: %s</b></br>\n", $cacheXMLInfoFile);
+         $xml_info = $this->loadCacheXMLInfo($cacheXMLInfoFile, $a['name']);
+        
+         // check all files
+         foreach($a as $key => $value)
+         {
+            // if NOT array, aka dir and NOT name
+            if( (strcmp($key, 'name') != 0) && 
+                !is_array($value))
+            {
+               $fullpath_name = $a['name'].'/'.$value;
+               
+               // Is Image
+               if($this->isImg($fullpath_name))
+               {
+                  $file_date = filemtime($fullpath_name);
+                  $file_size = filesize($fullpath_name);
+                  
+                  // if file already in XML
+                  if( array_key_exists($value, $xml_info) )
+                  {
+                     // if file newer or size diff or force enabled
+                     if( ($xml_info[$value]["size"] != $file_size) || 
+                         ($xml_info[$value]["date"] < $file_date) ||
+                         ($this->force != false))
+                     {
+                        printf("<b>image diff, updating: %s</b></br>\n", $a['name'].'/'.$value);
+                        if( $this->createThumbs($a['name'], $value) == 0 )
+                        {
+                           printf("&nbsp;&nbsp;updating XML: %s</br>\n", $cacheXMLInfoFile);
+                           $this->updateXMLInfo($xml_info, $a['name'], $value);
+                           
+                           $xmlChanged++;
+                        }
+                     }
+                  }
+                  // file not in XML
+                  else {
+                     printf("<b>no thumb, creating: %s</b></br>\n", $a['name'].'/'.$value);
+                     if( $this->createThumbs($a['name'], $value) == 0 )
+                     {
+                        printf("&nbsp;&nbsp;adding XML: %s</br>\n", $cacheXMLInfoFile);
+                        $this->addXMLInfo($xml_info, $a['name'], $value);
+                        
+                        $xmlChanged++;
+                     }
+                  }
+                  
+                  /*
+                  // check if img in thumb
+                  // if not make thumb
+                  if( !in_array($value, $a[$this->cacheName]) )
+                  {
+                     $in  = $fullpath_name;
+                  }
+                  */
+               } else {
+                  printf("<b>***  not image: %s</b></br>\n", $a['name'].'/'.$value);
+               }
+            }
+            // if array, aka dir and NOT cache
+            else if((strcmp($key, $this->cacheName) != 0) && 
+                    is_array($value) &&
+                    $this->checkSubDir)
+            {
+               $this->FindThumbDir($value);
+            }
+         } // loop
+         
+         if($xmlChanged)
+         {
+            printf("<b>saving XML: %s</b></br>\n", $cacheXMLInfoFile);
+            if(!$this->test) { 
+               //$xml_info['.xml_dom']->save($cacheXMLInfoFile);
+               
+               $fd = fopen($cacheXMLInfoFile, "w");
+               if($fd !== false)
+               {
+                  fwrite($fd, $xml_info['.xml_dom']->saveXML());
+                  fclose($fd);
+               }
+            }
+         }
+         
+      } // end FindThumbDir
+      
+      
+      private function addXMLInfo($xml_info, $path, $file)
+      {
+         $dom = $xml_info['.xml_dom'];
+         $photos = $xml_info[".photos"];
+         
+         // create photo
+         $p = $dom->createElement('photo');
+                  
+         // create org
+         $o = $dom->createElement('org');
+         $out = $path.'/'.$file;
+         $file_date = filemtime($out);
+         $file_size = filesize ($out);
+         $o->setAttribute("file", $file);
+         $o->setAttribute("date", $file_date);
+         $o->setAttribute("size", $file_size);
+         
+         // create small
+         $s = $dom->createElement('small');
+         $out = $path.'/'.$this->cacheName.'/t_'.$file;
+         $file_date = filemtime($out);
+         $file_size = filesize ($out);
+         $s->setAttribute("file", $this->cacheName.'/t_'.$file);
+         $s->setAttribute("date", $file_date);
+         $s->setAttribute("size", $file_size);
+         
+         // create medium
+         $m = $dom->createElement('medium');
+         $out = $path.'/'.$this->cacheName.'/m_'.$file;
+         $file_date = filemtime($out);
+         $file_size = filesize ($out);
+         $m->setAttribute("file", $this->cacheName.'/m_'.$file);
+         $m->setAttribute("date", $file_date);
+         $m->setAttribute("size", $file_size);
+         
+         // add org, small, medium to photo
+         $p->appendChild($o); // org
+         $p->appendChild($s); // small
+         $p->appendChild($m); // medium
+         
+         // add photo to photos
+         $photos->appendChild($p);
+      }
+      
+      private function updateXMLInfo($xml_info, $path, $file)
+      {
+         $photo_info = $xml_info[$file];
+         $photo = $photo_info["element"];
+         
+         // 
+         $out = $path.'/'.$file;
+         $file_date = filemtime($out);
+         $file_size = filesize ($out);
+         $p = $photo->getElementsByTagName("org")->item(0);
+         $p->setAttribute("file", $file);
+         $p->setAttribute("date", $file_date);
+         $p->setAttribute("size", $file_size);
+         
+         $out = $path.'/'.$this->cacheName.'/t_'.$file;
+         $file_date = filemtime($out);
+         $file_size = filesize ($out);
+         $p = $photo->getElementsByTagName("small")->item(0);
+         $p->setAttribute("file", $this->cacheName.'/t_'.$file);
+         $p->setAttribute("date", $file_date);
+         $p->setAttribute("size", $file_size);
+         
+         
+         $out = $path.'/'.$this->cacheName.'/m_'.$file;
+         $file_date = filemtime($out);
+         $file_size = filesize ($out);
+         $p = $photo->getElementsByTagName("medium")->item(0);
+         $p->setAttribute("file", $this->cacheName.'/m_'.$file);
+         $p->setAttribute("date", $file_date);
+         $p->setAttribute("size", $file_size);
+      }
+      
+      // load cache/info.xml
+      private function loadCacheXMLInfo($file, $path)
+      {
+         $xml_info = array();
+         $dom = new DOMDocument('1.0');
+         $dom->formatOutput = true;
+         
+         $xml_info['.xml_dom']  = $dom;
+         $xml_info['.xml_file'] = $file;
+         $e = @$dom->load($file);
+         if($e === false)
+         {
+            printf("<b>***  missing %s</b></br>\n", $file);
+            
+            // if file not exist, create new one
+            $p = $dom->createElement('photos');
+            $p->setAttribute("path", $path);
+            
+            $dom->appendChild($p);
+            
+            $xml_info['.photos'] = $p;
+            
+            return $xml_info;
+         }
+         
+         $p = $dom->getElementsByTagName('photos');
+         $xml_info['.photos'] = $p->item(0);
+         
+         $photos = $dom->getElementsByTagName('photo');
+         foreach($photos as $photo)
+         {
+            $p = $photo->getElementsByTagName("org")->item(0);
+            $file      = $p->getAttribute("file");
+            $file_date = $p->getAttribute("date");
+            $file_size = $p->getAttribute("size");
+
+            //printf("[%s]: %s, %s<br/>\n", $file, $file_date, $file_size);  
+                      
+            $xml_info[ $file ] = array( 
+                 "date" => $file_date
+               , "size" => $file_size
+               , "element" => $photo
+               );
+         }
+         
+         return $xml_info;
+      }
+      
+      private function isImg($img)
+      {
+         $img_exts = Array(
+            'jpg', 'jpeg'
+            ,'png'
+            ,'gif'
+            //, 'tif', 'tiff'
+            //,'bmp'
+         );
+         
+         $file_ext = strtolower( substr(strrchr($img, '.'), 1) );
+         //echo "file ext: ".$file_ext."</br>\n";
+         
+         if( array_search($file_ext, $img_exts) !== false )
+         {
+            //$img = str_replace(' ', '%20', $img);
+            return ((@getimagesize($img)) !== false);
+         }
+         
+         return false;
+      }
+      
+      
+      
+      private function createThumbs($path, $file)
+      {
+         $in = $path.'/'.$file;
+         
+         $out = $path.'/'.$this->cacheName.'/t_'.$file;
+         $e = $this->createThumb($in, $out, 100);
+         if($e) return $e;
+         
+         $out = $path.'/'.$this->cacheName.'/m_'.$file;
+         $e = $this->createThumb($in, $out, 600);
+         if($e) return $e;
+         
+         return 0;
+      }
+      
+      
+      private function createThumb($in, $out, $size, $qt=80)
+      {
+         $e = 0;
+         if( class_exists("Imagick") )
+         {
+            $e = $this->imagik_createThumb($in, $out, $size, $qt);
+         } else if( function_exists("gd_info") ) {
+            $e = $this->gd_createThumb($in, $out, $size, $qt);
+         } else {
+            // ERROR!
+            $e = 1;
+         }
+         
+         // change permins on file
+         // chmod 644 <file>
+         chmod($out, 0644);
+         
+         return $e;
+      }
+      
+      private function imagik_createThumb($in, $out, $size, $qt)
+      {
+         try {
+            $thumb = new Imagick($in); 
+            
+            $width  = $thumb->getImageWidth();
+            $height = $thumb->getImageHeight();
+            
+            if( ($width > 0) && 
+                ($height > 0) )
+            {
+               ini_set('memory_limit', '100M');
+               set_time_limit(120);
+
+               $newwidth = $size;
+               $newheight = round($newwidth*($height/$width));
+               
+               // looks good, takes to long
+               // $thumb->thumbnailImage($newwidth, $newheight, false);
+               // $thumb->adaptiveBlurImage(5, 3);
+               
+               $thumb->resizeImage(
+                  $newwidth, $newheight, 
+                  Imagick::FILTER_QUADRATIC,
+                  1.00);
+               
+               /*
+                  FILTER_UNDEFINED
+                  FILTER_POINT     (8)
+                  FILTER_BOX       (9)
+                  FILTER_TRIANGLE  (10)
+                  FILTER_HERMITE   (10)
+                  FILTER_HANNING   (14)
+                  FILTER_HAMMING   (14)
+                  FILTER_BLACKMAN  (15)
+                  FILTER_GAUSSIAN  (10)
+                  FILTER_QUADRATIC (10)
+                  FILTER_CUBIC     (11)
+                  FILTER_CATROM    (11)
+                  FILTER_MITCHELL  (11)
+                  FILTER_LANCZOS   (13)
+                  FILTER_BESSEL    (13)
+                  FILTER_SINC      (14)
+               */
+               
+               $thumb->writeImage($out);
+            }
+            
+            $thumb->destroy();
+            
+         } catch (ImagickException $e) {
+            echo "<b>*** could load file: ".$in."</b></br>\n";
+            return 1;
+         }
+         
+         return 0;
+      }
+      
+      
+      private function gd_createImage($img)
+      {
+         $im = null;
+         $file_ext = strtolower( substr(strrchr($img, '.'), 1) );
+         
+         switch($file_ext)
+         {
+            case 'jpg': case 'jpeg':
+            {
+               $im = @imagecreatefromjpeg($img);
+               break;
+            }
+            
+            case 'png':
+            {
+               $im = @imagecreatefrompng($img);
+               break;
+            }
+            
+            case 'gif':
+            {
+               $im = @imagecreatefromgif($img);
+               break;
+            }
+         }
+
+         return $im;
+      }
+      
+      private function gd_createThumb($in, $out, $size, $qt)
+      {
+         list($width, $height) = getimagesize($in);
+         if( ($width > 0) && ($height > 0) )
+         {
+            ini_set('memory_limit', '100M');
+            set_time_limit(120);
+            
+            $newwidth = $size;
+            $newheight = round($newwidth*($height/$width));
+                        
+            $source = $this->gd_createImage($in);
+            if( $source )
+            {
+               $thumb = imagecreatetruecolor($newwidth, $newheight);
+               
+               imagecopyresized(
+                  $thumb, $source, 
+                  0, 0, 0, 0, 
+                  $newwidth, $newheight, 
+                  $width, $height);               
+               
+               echo "&nbsp;&nbsp;write thumb: ".$out."</br>\n";
+               
+               if(!$this->test) {            
+                  $r = imagejpeg($thumb, $out, $qt);
+                  
+                  if(!$r)
+                  {
+                     echo "<b>*** could not write thumb: ".$out."</b></br>\n";
+                     return 1;
+                  }
+               }
+               
+               imagedestroy( $thumb );
+               imagedestroy( $source );
+            } else {
+               echo "<b>*** could load file: ".$in."</b></br>\n";
+               return 2;
+            }
+         } else {
+            echo "<b>*** could load file: ".$in."</b></br>\n";
+            return 3;
+         }
+         
+         return 0;
+      } // end createThumb 
+   
+   } // end class
+}
+
+?>

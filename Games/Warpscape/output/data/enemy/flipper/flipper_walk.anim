@@ -1,0 +1,26 @@
+name = Flipper_Walk
+# frame 1
+delay = 0.1
+model = [
+# poly 1
+color = 1, 1, 1, 1
+type = open
+data = {
+0, 0, 0
+}
+# poly 2
+color = 1, 1, 1, 1
+type = open
+data = {
+0, 0, 0
+}
+]
+# frame 2
+delay = 0.1
+model = [
+color = 1, 1, 1, 1
+type = open
+data = {
+0, 0, 0
+}
+]

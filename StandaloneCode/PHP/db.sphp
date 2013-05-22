@@ -1,0 +1,142 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   db.php
+//	Programmer:     Joseph E. Sutton, Casey Langen
+//	Description:    IDBMS Wrapper
+//	Creation date:  12/7/2006
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__DB__') )
+{
+   define('__DB__', 1);
+
+   class DB
+   {  	  
+      private $mDBMSObject = null;
+      
+      public function DB()
+      {
+         global $gClassDir;
+         global $gDBType;
+         if( strcmp($gDBType, 'MySQL') == 0)
+         {
+            require($gClassDir.'idbms_mysql.php');
+            $this->mDBMSObject = new DBMSMySQL();
+         }
+      }
+      
+      public function Connect()
+      {
+         if($this->mDBMSObject != null)
+         {
+            $this->mDBMSObject->Connect();
+         }
+      }
+      
+      public function ExecSQL($sql, $add_row_func = null)
+      {
+         if($this->mDBMSObject != null)
+         {
+            global $gShowTesting;
+            if($gShowTesting)
+            {
+               echo $sql.";<br>\n";
+            }
+         
+            $this->mDBMSObject->ExecSQL($sql, $add_row_func);
+         }
+      }
+      
+      public function ExecSQLGetArray($sql)
+      {
+         if($this->mDBMSObject != null)
+         {
+            global $gShowTesting;
+            if($gShowTesting)
+            {
+               echo $sql.";<br>\n";
+            }
+         
+            return $this->mDBMSObject->ExecSQLGetArray($sql);
+         }
+         
+         return null;
+      }
+      
+      public function Error()
+      {
+         if($this->mDBMSObject != null)
+         {
+            return $this->mDBMSObject->Error();
+         }
+      }
+      
+      public function SelectAll($add_row_func, $table_name)
+      {
+         $sql = sprintf('SELECT * FROM %s', $table_name);
+         $this->ExecSQL($sql, $add_row_func);
+      }
+      
+      public function Select($add_row_func, $table_name, $case_sql)
+      {
+         $sql = sprintf('SELECT * FROM %s WHERE %s', $table_name, $case_sql);
+         $this->ExecSQL($sql, $add_row_func);
+      }
+      
+      
+      public function DropTable($table_name)
+      {
+         $sql = sprintf('DROP TABLE %s', $table_name);
+         $this->ExecSQL($sql);
+      }
+      
+      public function DropView($view_name)
+      {
+         $sql = sprintf('DROP VIEW %s', $view_name);
+         $this->ExecSQL($sql);
+      }
+      
+      public function Insert($table_name, $values)
+      {
+         $sql = sprintf('INSERT INTO %s VALUES (%s)', $table_name, $values);
+         $this->ExecSQL($sql);
+      }
+      
+      public function Update($table_name, $values, $where)
+      {
+         $sql = sprintf('UPDATE %s SET %s WHERE %s', $table_name, $values, $where);
+         $this->ExecSQL($sql);
+      }
+      
+      public function GetColNames($table_name)
+      {
+         if($this->mDBMSObject != null)
+         {
+            return $this->mDBMSObject->GetColNames($table_name);
+         }
+      }
+      
+      public function Delete($table_name, $values)
+      {
+         $sql = sprintf('DELETE FROM %s WHERE %s', $table_name, $values);
+         $this->ExecSQL($sql);
+      }
+      
+      public static function Escape($str)
+      {
+         return addslashes($str);
+      }
+      
+      public static function UnEscape($str)
+      {
+         return stripslashes($str);
+      }
+      
+      
+   } // end class
+
+} // end if def __DB__
+
+?>

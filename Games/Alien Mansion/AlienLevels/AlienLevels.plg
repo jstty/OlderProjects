@@ -1,0 +1,37 @@
+--------------------Configuration: AlienLevels - Win32 Debug--------------------
+Begining build with project "E:\My Code\Alien Mansion\AlienLevels\AlienLevels.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MTd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /FR"Debug/" /Fp"Debug/AlienLevels.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "_DEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /fo"Debug/Alienlevels.res" /d "_DEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Debug/AlienLevels.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/AlienLevels.pdb" /debug /machine:I386 /out:"Debug/AlienLevels.dll" /implib:"Debug/AlienLevels.lib" /pdbtype:sept "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSP40A3.TMP" with contents </nologo /MTd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /FR"Debug/" /Fp"Debug/AlienLevels.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"E:\My Code\Alien Mansion\AlienLevels\Level01.cpp"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP40A3.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSP40A4.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/AlienLevels.pdb" /debug /machine:I386 /out:"Debug/AlienLevels.dll" /implib:"Debug/AlienLevels.lib" /pdbtype:sept 
+".\Debug\Level01.obj"
+".\Debug\Level02.obj"
+".\Debug\Level03.obj"
+".\Debug\Level04.obj"
+".\Debug\MainLevels.obj"
+".\Debug\Alienlevels.res"
+"..\Debug\Alien Mansion.lib"
+"..\..\..\Msvc\Vc\lib\Comctl32.lib">
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP40A4.TMP" 
+Compiling...
+Level01.cpp
+Linking...
+   Creating library Debug/AlienLevels.lib and object Debug/AlienLevels.exp
+Creating command line "bscmake.exe /nologo /o"Debug/AlienLevels.bsc"  ".\Debug\Level01.sbr" ".\Debug\Level02.sbr" ".\Debug\Level03.sbr" ".\Debug\Level04.sbr" ".\Debug\MainLevels.sbr"" 
+Creating browse info file...
+
+
+
+AlienLevels.dll - 0 error(s), 0 warning(s)

@@ -1,0 +1,1607 @@
+Twarpattack
+v3
+r0
+t294176069.720682
+cCheck dependencies
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/game_engine.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/game_engine.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/main.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/model.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/model.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/sound_bank.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/sound_bank.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/text_render.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/text_render.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/polygon.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/polygon.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_path.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/warp_path.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_bank.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_bank.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_gfx.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_gfx.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/starfield_bkg.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/starfield_bkg.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/util.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/util.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/flipper.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/flipper.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship_bullet.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship_bullet.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/graphics.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/graphics.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_title.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_title.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_warp.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_warp.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/glew.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c normal x86_64 c com.apple.compilers.llvmgcc42
+cCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/timer.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/timer.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cLd /data/programming/webfolio/games/Warpscape/project/xcode/../../output/warpattack normal x86_64
+
+N../../output/warpattack
+t1272483269
+s1016520
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004DA341F300000000000000EE
+t1302544883
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/GLUT.framework/GLUT
+c000000004DA341E7000000000001A494
+t1302544871
+s107668
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h
+c000000004B489326000000000000578C
+t1263047462
+s22412
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h
+c000000004BD2501F0000000000025B59
+t1272074271
+s154457
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h
+c000000004BD2501F0000000000003F84
+t1272074271
+s16260
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL
+c000000004DA341E8000000000000DB14
+t1302544872
+s56084
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/dlfcn.h
+c000000004D5F12270000000000000B1C
+t1298076199
+s2844
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/inttypes.h
+c000000004BBD2CE900000000000027D1
+t1270689001
+s10193
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h
+c000000004D5F12270000000000003CB5
+t1298076199
+s15541
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/math.h
+c000000004AC599B500000000000004F1
+t1254463925
+s1265
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004BBD2CE90000000000004174
+t1270689001
+s16756
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdlib.h
+c000000004BBD2CE90000000000002DF5
+t1270689001
+s11765
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
+c000000004BBD2CE90000000000001731
+t1270689001
+s5937
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/_types.h
+c000000004CC3DE680000000000001845
+t1287904872
+s6213
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/time.h
+c000000004CC3DE680000000000001E17
+t1287904872
+s7703
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/time.h
+c000000004BBD2CE9000000000000178E
+t1270689001
+s6030
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
+c000000004A11EB240000000000003197
+t1242688292
+s12695
+
+N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
+c000000004D55C8260000000000003197
+t1297467430
+s12695
+i<machine/ansi.h>
+i<sys/_types.h>
+
+N/Library/Frameworks/SDL.framework/SDL
+c000000004ADD32BD0000000000156068
+t1256010429
+s1400936
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../output/warpattack
+t1344240462
+s989432
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model.cpp
+c000000004BD22C4F00000000000008DB
+t1272065103
+s2267
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_bank.cpp
+c000000004BCB98A9000000000000054B
+t1271634089
+s1355
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_gfx.cpp
+c000000004BCBC0FD000000000000096E
+t1271644413
+s2414
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/flipper.cpp
+c000000004BD537460000000000001234
+t1272264518
+s4660
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/game_engine.cpp
+c000000004BD5777D0000000000002660
+t1272280957
+s9824
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c
+c000000004BD0338D000000000007A540
+t1271935885
+s501056
+i"GL/glew.h"
+i"GL/wglew.h"
+i<GL/glxew.h>
+i<mach-o/dyld.h>
+i<stdlib.h>
+i<string.h>
+i<dlfcn.h>
+i<stdio.h>
+i<stdlib.h>
+i<inttypes.h>
+i<inttypes.h>
+i<inttypes.h>
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/graphics.cpp
+c000000004BD88D8800000000000058F7
+t1272483208
+s22775
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_title.cpp
+c000000004BD5777D000000000000170C
+t1272280957
+s5900
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_warp.cpp
+c000000004BD60CBF000000000000321F
+t1272319167
+s12831
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/main.cpp
+c000000004BBE94E70000000000000526
+t1270781159
+s1318
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/model.cpp
+c000000004BD22C4E0000000000000CEF
+t1272065102
+s3311
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship.cpp
+c000000004BD22C4E000000000000098B
+t1272065102
+s2443
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship_bullet.cpp
+c000000004BD36FE400000000000007F2
+t1272147940
+s2034
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/polygon.cpp
+c000000004BD3E4A9000000000000108F
+t1272177833
+s4239
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/sound_bank.cpp
+c000000004BC6BC0B0000000000000302
+t1271315467
+s770
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/starfield_bkg.cpp
+c000000004BCAE0C90000000000000A1E
+t1271587017
+s2590
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/text_render.cpp
+c000000004BCC75380000000000001054
+t1271690552
+s4180
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/timer.cpp
+c000000004BD22C8200000000000006BD
+t1272065154
+s1725
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/util.cpp
+c000000004BCBA2BB0000000000000372
+t1271636667
+s882
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/../../source/warp_path.cpp
+c000000004BD55FA70000000000002222
+t1272274855
+s8738
+i"global.h"
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model.o
+t1344240458
+s80560
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_bank.o
+t1344240458
+s138936
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_gfx.o
+t1344240458
+s129600
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/flipper.o
+t1344240459
+s113932
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/game_engine.o
+t1344240457
+s263216
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/glew.o
+t1344240461
+s615680
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/graphics.o
+t1344240460
+s339944
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_title.o
+t1344240461
+s161516
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_warp.o
+t1344240461
+s533008
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/main.o
+t1344240456
+s132188
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/model.o
+t1344240456
+s138724
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship.o
+t1344240460
+s157120
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship_bullet.o
+t1344240460
+s163252
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/polygon.o
+t1344240457
+s125716
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/sound_bank.o
+t1344240456
+s58352
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/starfield_bkg.o
+t1344240458
+s35360
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/text_render.o
+t1344240457
+s121000
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/timer.o
+t1344240461
+s27928
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/util.o
+t1344240459
+s25200
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_path.o
+t1344240458
+s303144
+
+N/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warpattack.LinkFileList
+c00000000501F7B470000000000000ABB
+t1344240455
+s2747
+
+N/data/programming/webfolio/games/Warpscape/source/GL/glew.h
+c000000004BD0338D0000000000081056
+t1271935885
+s528470
+i<stddef.h>
+
+N/data/programming/webfolio/games/Warpscape/source/GL/glut.h
+c000000004BD0338D0000000000006C16
+t1271935885
+s27670
+i<windows.h>
+i<GL/gl.h>
+i<GL/glu.h>
+
+N/data/programming/webfolio/games/Warpscape/source/GL/wglew.h
+c000000004BD0338D000000000000A068
+t1271935885
+s41064
+i<windows.h>
+
+N/data/programming/webfolio/games/Warpscape/source/anim_model.h
+c000000004BD22C4F00000000000003C9
+t1272065103
+s969
+
+N/data/programming/webfolio/games/Warpscape/source/anim_model_bank.h
+c000000004BCADDF6000000000000023C
+t1271586294
+s572
+
+N/data/programming/webfolio/games/Warpscape/source/anim_model_gfx.h
+c000000004BC7D17E0000000000000211
+t1271386494
+s529
+
+N/data/programming/webfolio/games/Warpscape/source/background.h
+c000000004BCADF4300000000000001A6
+t1271586627
+s422
+
+N/data/programming/webfolio/games/Warpscape/source/enemy.h
+c000000004BD22C4F0000000000000549
+t1272065103
+s1353
+
+N/data/programming/webfolio/games/Warpscape/source/flipper.h
+c000000004BD4D5E00000000000000391
+t1272239584
+s913
+
+N/data/programming/webfolio/games/Warpscape/source/game_engine.h
+c000000004BD5643A000000000000072F
+t1272276026
+s1839
+
+N/data/programming/webfolio/games/Warpscape/source/global.h
+c000000004BD2EE7F000000000000062B
+t1272114815
+s1579
+i<stdlib.h>
+i<stdio.h>
+i<time.h>
+i<math.h>
+i<vector>
+i<string>
+i<iostream>
+i<string.h>
+i<windows.h>
+i"GL/glew.h"
+i<GL/gl.h>
+i<GL/glu.h>
+i"GL/glut.h"
+i"GL/glew.h"
+i<OpenGL/gl.h>
+i<OpenGL/glu.h>
+i<GLUT/glut.h>
+i<sys/time.h>
+i"global_types.h"
+i"util.h"
+i"timer.h"
+i"sound_bank.h"
+i"polygon.h"
+i"model.h"
+i"text_render.h"
+i"anim_model_gfx.h"
+i"anim_model_bank.h"
+i"anim_model.h"
+i"graphics.h"
+i"warp_path.h"
+i"background.h"
+i"starfield_bkg.h"
+i"enemy.h"
+i"flipper.h"
+i"player_ship.h"
+i"player_ship_bullet.h"
+i"level.h"
+i"level_title.h"
+i"level_warp.h"
+i"game_engine.h"
+
+N/data/programming/webfolio/games/Warpscape/source/global_types.h
+c000000004BD22C4F00000000000003ED
+t1272065103
+s1005
+
+N/data/programming/webfolio/games/Warpscape/source/graphics.h
+c000000004BD5777D0000000000000ABA
+t1272280957
+s2746
+
+N/data/programming/webfolio/games/Warpscape/source/level.h
+c000000004BCD7F3300000000000004B9
+t1271758643
+s1209
+
+N/data/programming/webfolio/games/Warpscape/source/level_title.h
+c000000004BD39178000000000000067F
+t1272156536
+s1663
+
+N/data/programming/webfolio/games/Warpscape/source/level_warp.h
+c000000004BD5601C0000000000000858
+t1272274972
+s2136
+
+N/data/programming/webfolio/games/Warpscape/source/model.h
+c000000004BD22C4E00000000000002C8
+t1272065102
+s712
+
+N/data/programming/webfolio/games/Warpscape/source/player_ship.h
+c000000004BD22C4F000000000000038F
+t1272065103
+s911
+
+N/data/programming/webfolio/games/Warpscape/source/player_ship_bullet.h
+c000000004BD36FE10000000000000314
+t1272147937
+s788
+
+N/data/programming/webfolio/games/Warpscape/source/polygon.h
+c000000004BD3E4AA00000000000002FD
+t1272177834
+s765
+
+N/data/programming/webfolio/games/Warpscape/source/sound_bank.h
+c000000004BC6BC0B0000000000000337
+t1271315467
+s823
+
+N/data/programming/webfolio/games/Warpscape/source/starfield_bkg.h
+c000000004BC75A8300000000000002CB
+t1271356035
+s715
+
+N/data/programming/webfolio/games/Warpscape/source/text_render.h
+c000000004BCC745100000000000002D5
+t1271690321
+s725
+
+N/data/programming/webfolio/games/Warpscape/source/timer.h
+c000000004BD22C4F000000000000032C
+t1272065103
+s812
+
+N/data/programming/webfolio/games/Warpscape/source/util.h
+c000000004BCB94870000000000000245
+t1271633031
+s581
+
+N/data/programming/webfolio/games/Warpscape/source/warp_path.h
+c000000004BD5585D00000000000007C4
+t1272272989
+s1988
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model.cpp
+c000000004BD22C4F00000000000008DB
+t1272065103
+s2267
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.cpp
+c000000004BCB98A9000000000000054B
+t1271634089
+s1355
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_gfx.cpp
+c000000004BCBC0FD000000000000096E
+t1271644413
+s2414
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/flipper.cpp
+c000000004BD537460000000000001234
+t1272264518
+s4660
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/game_engine.cpp
+c000000004BD5777D0000000000002660
+t1272280957
+s9824
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c
+c000000004BD0338D000000000007A540
+t1271935885
+s501056
+i"GL/glew.h"
+i"GL/wglew.h"
+i<GL/glxew.h>
+i<mach-o/dyld.h>
+i<stdlib.h>
+i<string.h>
+i<dlfcn.h>
+i<stdio.h>
+i<stdlib.h>
+i<inttypes.h>
+i<inttypes.h>
+i<inttypes.h>
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.cpp
+c000000004BD88D8800000000000058F7
+t1272483208
+s22775
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_title.cpp
+c000000004BD5777D000000000000170C
+t1272280957
+s5900
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_warp.cpp
+c000000004BD60CBF000000000000321F
+t1272319167
+s12831
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/main.cpp
+c000000004BBE94E70000000000000526
+t1270781159
+s1318
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/model.cpp
+c000000004BD22C4E0000000000000CEF
+t1272065102
+s3311
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship.cpp
+c000000004BD22C4E000000000000098B
+t1272065102
+s2443
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship_bullet.cpp
+c000000004BD36FE400000000000007F2
+t1272147940
+s2034
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.cpp
+c000000004BD3E4A9000000000000108F
+t1272177833
+s4239
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp
+c000000004BCADC2E000000000000182D
+t1271585838
+s6189
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/sound_bank.cpp
+c000000004BC6BC0B0000000000000302
+t1271315467
+s770
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/starfield_bkg.cpp
+c000000004BCAE0C90000000000000A1E
+t1271587017
+s2590
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/text_render.cpp
+c000000004BCC75380000000000001054
+t1271690552
+s4180
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/timer.cpp
+c000000004BD22C8200000000000006BD
+t1272065154
+s1725
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/util.cpp
+c000000004BCBA2BB0000000000000372
+t1271636667
+s882
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_level.cpp
+c00000000000000000000000000000000
+t2
+s0
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_path.cpp
+c000000004BD55FA70000000000002222
+t1272274855
+s8738
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model.o
+t1272319151
+s176916
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_bank.o
+t1272319150
+s167028
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_gfx.o
+t1272319151
+s157248
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/flipper.o
+t1272319152
+s140692
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/game_engine.o
+t1272319147
+s289896
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/glew.o
+t1271936008
+s605084
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/graphics.o
+t1272483269
+s388740
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_title.o
+t1272319154
+s266748
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_warp.o
+t1272319169
+s639272
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/main.o
+t1272319147
+s160928
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/model.o
+t1272319148
+s167124
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship.o
+t1272319153
+s185892
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship_bullet.o
+t1272319153
+s259384
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/polygon.o
+t1272319150
+s240948
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/render.o
+t2
+s0
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/sound_bank.o
+t1272319148
+s87928
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/starfield_bkg.o
+t1272319152
+s165924
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/text_render.o
+t1272319149
+s226680
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/timer.o
+t1272319155
+s56404
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/util.o
+t1272319151
+s52776
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_level.o
+t1271687125
+s451748
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_path.o
+t1272319149
+s409384
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warpattack.LinkFileList
+c000000004BD22C690000000000000D27
+t1272065129
+s3367
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/GL/glew.h
+c000000004BD0338D0000000000081056
+t1271935885
+s528470
+i<stddef.h>
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/GL/glut.h
+c000000004BD0338D0000000000006C16
+t1271935885
+s27670
+i<windows.h>
+i<GL/gl.h>
+i<GL/glu.h>
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/GL/wglew.h
+c000000004BD0338D000000000000A068
+t1271935885
+s41064
+i<windows.h>
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/anim_model.h
+c000000004BD22C4F00000000000003C9
+t1272065103
+s969
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/anim_model_bank.h
+c000000004BCADDF6000000000000023C
+t1271586294
+s572
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/anim_model_gfx.h
+c000000004BC7D17E0000000000000211
+t1271386494
+s529
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/background.h
+c000000004BCADF4300000000000001A6
+t1271586627
+s422
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/enemy.h
+c000000004BD22C4F0000000000000549
+t1272065103
+s1353
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/flipper.h
+c000000004BD4D5E00000000000000391
+t1272239584
+s913
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/game_engine.h
+c000000004BD5643A000000000000072F
+t1272276026
+s1839
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/global.h
+c000000004BD2EE7F000000000000062B
+t1272114815
+s1579
+i<stdlib.h>
+i<stdio.h>
+i<time.h>
+i<math.h>
+i<vector>
+i<string>
+i<iostream>
+i<string.h>
+i<windows.h>
+i"GL/glew.h"
+i<GL/gl.h>
+i<GL/glu.h>
+i"GL/glut.h"
+i"GL/glew.h"
+i<OpenGL/gl.h>
+i<OpenGL/glu.h>
+i<GLUT/glut.h>
+i<sys/time.h>
+i"global_types.h"
+i"util.h"
+i"timer.h"
+i"sound_bank.h"
+i"polygon.h"
+i"model.h"
+i"text_render.h"
+i"anim_model_gfx.h"
+i"anim_model_bank.h"
+i"anim_model.h"
+i"graphics.h"
+i"warp_path.h"
+i"background.h"
+i"starfield_bkg.h"
+i"enemy.h"
+i"flipper.h"
+i"player_ship.h"
+i"player_ship_bullet.h"
+i"level.h"
+i"level_title.h"
+i"level_warp.h"
+i"game_engine.h"
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/global_types.h
+c000000004BD22C4F00000000000003ED
+t1272065103
+s1005
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/glut.h
+c000000004BBEA9F00000000000006C16
+t1270786544
+s27670
+i<windows.h>
+i<GL/gl.h>
+i<GL/glu.h>
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/graphics.h
+c000000004BD5777D0000000000000ABA
+t1272280957
+s2746
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/level.h
+c000000004BCD7F3300000000000004B9
+t1271758643
+s1209
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/level_title.h
+c000000004BD39178000000000000067F
+t1272156536
+s1663
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/level_warp.h
+c000000004BD5601C0000000000000858
+t1272274972
+s2136
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/model.h
+c000000004BD22C4E00000000000002C8
+t1272065102
+s712
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/player_ship.h
+c000000004BD22C4F000000000000038F
+t1272065103
+s911
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/player_ship_bullet.h
+c000000004BD36FE10000000000000314
+t1272147937
+s788
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/polygon.h
+c000000004BD3E4AA00000000000002FD
+t1272177834
+s765
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/render.h
+c000000004BCADB840000000000000266
+t1271585668
+s614
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/sound_bank.h
+c000000004BC6BC0B0000000000000337
+t1271315467
+s823
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/starfield_bkg.h
+c000000004BC75A8300000000000002CB
+t1271356035
+s715
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/text_render.h
+c000000004BCC745100000000000002D5
+t1271690321
+s725
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/timer.h
+c000000004BD22C4F000000000000032C
+t1272065103
+s812
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/util.h
+c000000004BCB94870000000000000245
+t1271633031
+s581
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/warp_level.h
+c000000004BCC033E0000000000000818
+t1271661374
+s2072
+
+N/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/source/warp_path.h
+c000000004BD5585D00000000000007C4
+t1272272989
+s1988
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_bank.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_gfx.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/flipper.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/game_engine.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/graphics.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_title.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_warp.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/main.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/model.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship_bullet.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/polygon.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/sound_bank.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/starfield_bkg.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/text_render.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/timer.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/util.cpp
+r0
+
+CBuild AST from /data/programming/webfolio/games/Warpscape/project/xcode/../../source/warp_path.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesb5a7582cb4cfb541^624c622cb4cfb541^---0#1#0#--18"Check dependencies
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933257.891052
+e365933258.816522
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model.cpp813fe4c9b2cfb541^c11cd1cab2cfb541^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model.cpp0000000000000000^1789"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model.o ../../source/anim_model.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011950.344810
+e294011951.187259
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@123"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model.cpp294011950#294011951#0(0"0(0#0#115"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model.cpp4300885448#1782"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_bank.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_bank.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933257.090523
+e365933258.112546
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_bank.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_bank.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_bank.cpp9c4d17c9b2cfb541^bde31ccab2cfb541^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_bank.cpp0000000000000000^1809"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_bank.o ../../source/anim_model_bank.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_bank.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_bank.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_bank.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011949.420530
+e294011950.344696
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_bank.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@128"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.cpp294011949#294011950#0(0"0(0#0#120"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.cpp4300885448#1792"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_bank.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_gfx.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_gfx.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933257.732827
+e365933258.783687
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_gfx.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_gfx.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_gfx.cppe0bdbbc9b2cfb541^34a2c8cab2cfb541^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_gfx.cpp0000000000000000^1805"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_gfx.o ../../source/anim_model_gfx.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/anim_model_gfx.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_gfx.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_gfx.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_gfx.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011950.218108
+e294011951.100854
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_gfx.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_gfx.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@127"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_gfx.cpp294011950#294011951#0(0"0(0#0#119"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_gfx.cpp4300885448#1790"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_gfx.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/anim_model_gfx.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/flipper.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/flipper.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933258.784921
+e365933259.856405
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/flipper.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/flipper.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/flipper.cppa513c9cab2cfb541^c53cdbcbb2cfb541^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/flipper.cpp0000000000000000^1777"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/flipper.o ../../source/flipper.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/flipper.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/flipper.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/flipper.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/flipper.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011951.959676
+e294011952.983388
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/flipper.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/flipper.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@120"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/flipper.cpp294011951#294011952#0(0"0(0#0#112"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/flipper.cpp4300885448#1776"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/flipper.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/flipper.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/game_engine.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/game_engine.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933255.514565
+e365933257.089286
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/game_engine.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/game_engine.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/game_engine.cppfa2784c7b2cfb541^25e916c9b2cfb541^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/game_engine.cpp0000000000000000^1793"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/game_engine.o ../../source/game_engine.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/game_engine.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/game_engine.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/game_engine.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/game_engine.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011945.188705
+e294011947.297742
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/game_engine.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/game_engine.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@124"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/game_engine.cpp294011945#294011947#0(0"0(0#0#116"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/game_engine.cpp4049988834747182592#1784"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/game_engine.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/game_engine.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/glew.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c normal x86_64 c com.apple.compilers.llvmgcc42
+s365933260.202753
+e365933261.454239
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/glew.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvmgcc42
+o/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c: In function 'NSGLGetProcAddress':
+o/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c:80: warning: 'NSAddImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:229)
+o/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c:89: warning: 'NSLookupSymbolInImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:181)
+o/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c:91: warning: 'NSAddressOfSymbol' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:187)
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c1c0934ccb2cfb541^284874cdb2cfb541^-706"/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c: In function 'NSGLGetProcAddress':/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c:80: warning: 'NSAddImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:229)/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c:89: warning: 'NSLookupSymbolInImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:181)/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c:91: warning: 'NSAddressOfSymbol' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:187)3(21%IDEActivityLogMessage2@101"'NSAddImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:229)-365933260#112#192#-1#-23%DVTTextDocumentLocation3@92"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c0000000000000000^79#18446744073709551615#79#18446744073709551615#18446744073709551615#0#33"'*' is deprecated (declared at *)--2@112"'NSLookupSymbolInImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:181)-365933260#304#203#-1#-3@92"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c0000000000000000^88#18446744073709551615#88#18446744073709551615#18446744073709551615#0#33"'*' is deprecated (declared at *)--2@108"'NSAddressOfSymbol' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:187)-365933260#507#199#-1#-3@92"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c0000000000000000^90#18446744073709551615#90#18446744073709551615#18446744073709551615#0#33"'*' is deprecated (declared at *)--0#0#0#-19%DVTDocumentLocation4@92"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c0000000000000000^1740"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/glew.o ../../source/glew.c normal x86_64 c com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/glew.c -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/glew.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/glew.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c normal x86_64 c com.apple.compilers.gcc.4_2
+s293628806.972352
+e293628808.080431
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/glew.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c: In function 'NSGLGetProcAddress':
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c:80: warning: 'NSAddImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:230)
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c:89: warning: 'NSLookupSymbolInImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:182)
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c:91: warning: 'NSAddressOfSymbol' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:188)
+lSLF07#2@115"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c293628806#293628808#0(830"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c: In function 'NSGLGetProcAddress':/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c:80: warning: 'NSAddImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:230)/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c:89: warning: 'NSLookupSymbolInImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:182)/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c:91: warning: 'NSAddressOfSymbol' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:188)3(22@101"'NSAddImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:230)293628807#143#223#0(6@107"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c293628685#80#0#80#0#33"'*' is deprecated (declared at *)0(22@112"'NSLookupSymbolInImage' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:182)293628807#366#234#0(6@107"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c293628685#89#0#89#0#33"'*' is deprecated (declared at *)0(22@108"'NSAddressOfSymbol' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach-o/dyld.h:188)293628807#600#230#0(6@107"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c293628685#91#0#91#0#33"'*' is deprecated (declared at *)0(0#0#107"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c4300885448#1749"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/glew.c -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/glew.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/graphics.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/graphics.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933259.026557
+e365933260.785260
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/graphics.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/graphics.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/graphics.cpp52ee06cbb2cfb541^3f3bd0ccb2cfb541^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/graphics.cpp0000000000000000^1781"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/graphics.o ../../source/graphics.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/graphics.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/graphics.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/graphics.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294176068.344869
+e294176069.543536
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/graphics.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@121"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.cpp294176068#294176069#0(0"0(0#0#113"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.cpp4300885448#1778"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/graphics.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_title.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_title.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933259.861374
+e365933261.086878
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_title.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_title.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_title.cpp05a5dccbb2cfb541^0e4c16cdb2cfb541^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_title.cpp0000000000000000^1793"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_title.o ../../source/level_title.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_title.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_title.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_title.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_title.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011953.918840
+e294011954.930733
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_title.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_title.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@124"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_title.cpp294011953#294011954#0(0"0(0#0#116"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_title.cpp4300885448#1784"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_title.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_title.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_warp.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_warp.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933260.101441
+e365933261.661068
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_warp.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_warp.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_warp.cpp54191accb2cfb541^d63aa9cdb2cfb541^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_warp.cpp0000000000000000^1789"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_warp.o ../../source/level_warp.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/level_warp.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_warp.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_warp.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_warp.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011968.068088
+e294011969.285268
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_warp.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_warp.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@123"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_warp.cpp294011968#294011969#0(0"0(0#0#115"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_warp.cpp4300885448#1782"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/level_warp.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/level_warp.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/main.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933255.514560
+e365933256.724925
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/main.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/main.cpp252284c7b2cfb541^e693b9c8b2cfb541^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/main.cpp0000000000000000^1765"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/main.o ../../source/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/main.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/main.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/main.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011945.238483
+e294011947.086472
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/main.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@117"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/main.cpp294011945#294011947#0(0"0(0#0#109"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/main.cpp8083812237369618432#1770"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/main.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/main.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/model.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/model.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933255.514558
+e365933256.856745
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/model.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/model.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/model.cppbb2a84c7b2cfb541^2e53dbc8b2cfb541^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/model.cpp0000000000000000^1769"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/model.o ../../source/model.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/model.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/model.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/model.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/model.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011947.086654
+e294011948.050067
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/model.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/model.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@118"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/model.cpp294011947#294011948#0(0"0(0#0#110"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/model.cpp4300885448#1772"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/model.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/model.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933258.975751
+e365933260.201541
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship.cpp9eedf9cab2cfb541^6c9633ccb2cfb541^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship.cpp0000000000000000^1793"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship.o ../../source/player_ship.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011952.983555
+e294011953.918724
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@124"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship.cpp294011952#294011953#0(0"0(0#0#116"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship.cpp4300885448#1784"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship_bullet.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship_bullet.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933258.817759
+e365933260.099833
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship_bullet.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship_bullet.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship_bullet.cppea7bd1cab2cfb541^09dd19ccb2cfb541^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship_bullet.cpp0000000000000000^1821"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship_bullet.o ../../source/player_ship_bullet.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/player_ship_bullet.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship_bullet.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship_bullet.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship_bullet.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011952.007518
+e294011953.094386
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship_bullet.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship_bullet.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@131"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship_bullet.cpp294011952#294011953#0(0"0(0#0#123"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship_bullet.cpp4300885448#1798"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/player_ship_bullet.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/player_ship_bullet.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/polygon.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/polygon.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933256.857979
+e365933257.889807
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/polygon.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/polygon.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/polygon.cpp87c2dbc8b2cfb541^a1d7e3c9b2cfb541^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/polygon.cpp0000000000000000^1777"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/polygon.o ../../source/polygon.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/polygon.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/polygon.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/polygon.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011949.121626
+e294011950.218000
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/polygon.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@120"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.cpp294011949#294011950#0(0"0(0#0#112"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.cpp4300885448#1776"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/polygon.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/render.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s293279020.704311
+e293279021.139096
+r0
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/render.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h:47,
+o                 from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:8:
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.h:21: error: 'cRender' does not name a type
+oIn file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h:48,
+o                 from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:8:
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.h:14: error: expected class-name before '{' token
+oIn file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h:53,
+o                 from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:8:
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.h:12: error: expected class-name before '{' token
+oIn file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h:55,
+o                 from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:8:
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/background.h:12: error: expected class-name before '{' token
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:10: error: 'cRender' has not been declared
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:10: error: ISO C++ forbids declaration of 'cRender' with no type
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp: In function 'int cRender()':
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:12: error: 'mTextureID' was not declared in this scope
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp: At global scope:
+o/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:15: error: expected constructor, destructor, or type conversion before '::' token
+lSLF07#2@119"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293279020#293279021#0(2699"In file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h:47,                 from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:8:/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.h:21: error: 'cRender' does not name a typeIn file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h:48,                 from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:8:/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.h:14: error: expected class-name before '{' tokenIn file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h:53,                 from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:8:/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.h:12: error: expected class-name before '{' tokenIn file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h:55,                 from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:8:/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/background.h:12: error: expected class-name before '{' token/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:10: error: 'cRender' has not been declared/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:10: error: ISO C++ forbids declaration of 'cRender' with no type/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp: In function 'int cRender()':/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:12: error: 'mTextureID' was not declared in this scope/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp: At global scope:/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp:15: error: expected constructor, destructor, or type conversion before '::' token9(4@30"'cRender' does not name a type293279021#273#154#3(7@133"In file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293279021#18446744073709551615#0#0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293278638#8#0#8#0#0"0(7@131"In file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h293279021#18446744073709551615#0#0(6@109"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h293279019#47#0#47#0#0"0(13@145"'cRender' does not name a type in /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.h293279021#18446744073709551615#0#0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.h293278840#21#0#21#0#0"0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/graphics.h293278840#21#0#21#0#24"'*' does not name a type0(4@36"Expected class-name before '{' token293279021#700#159#3(7@133"In file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293279021#18446744073709551615#0#0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293278638#8#0#8#0#0"0(7@131"In file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h293279021#18446744073709551615#0#0(6@109"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h293279019#48#0#48#0#0"0(13@150"Expected class-name before '{' token in /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.h293279021#18446744073709551615#0#0(6@110"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.h293044821#14#0#14#0#0"0(6@110"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/polygon.h293044821#14#0#14#0#19"expected * before *0(4@36"Expected class-name before '{' token293279021#1132#167#3(7@133"In file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293279021#18446744073709551615#0#0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293278638#8#0#8#0#0"0(7@131"In file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h293279021#18446744073709551615#0#0(6@109"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h293279019#53#0#53#0#0"0(13@158"Expected class-name before '{' token in /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.h293279021#18446744073709551615#0#0(6@118"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.h293082954#12#0#12#0#0"0(6@118"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/anim_model_bank.h293082954#12#0#12#0#19"expected * before *0(4@36"Expected class-name before '{' token293279021#1572#162#3(7@133"In file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293279021#18446744073709551615#0#0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293278638#8#0#8#0#0"0(7@131"In file included from /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h293279021#18446744073709551615#0#0(6@109"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/global.h293279019#55#0#55#0#0"0(13@153"Expected class-name before '{' token in /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/background.h293279021#18446744073709551615#0#0(6@113"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/background.h293008267#12#0#12#0#0"0(6@113"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/background.h293008267#12#0#12#0#19"expected * before *0(4@31"'cRender' has not been declared293279021#1734#155#0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293278638#10#0#10#0#25"'*' has not been declared0(4@53"ISO C++ forbids declaration of 'cRender' with no type293279021#1889#177#0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293278638#10#0#10#0#47"ISO C++ forbids declaration of '*' with no type0(4@43"'mTextureID' was not declared in this scope293279021#2208#167#0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293278638#12#0#12#0#34"'*' was not declared in this scope0(23@16"At global scope:293279021#2375#130#0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293278638#0#0#0#0#0"0(4@70"Expected constructor, destructor, or type conversion before '::' token293279021#2505#194#0(6@111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp293278638#15#0#15#0#19"expected * before *0(0#0#111"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp4300885448#1774"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/render.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/render.o1#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/sound_bank.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/sound_bank.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933255.515300
+e365933256.644186
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/sound_bank.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/sound_bank.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/sound_bank.cpp431b84c7b2cfb541^ffe7a4c8b2cfb541^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/sound_bank.cpp0000000000000000^1789"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/sound_bank.o ../../source/sound_bank.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/sound_bank.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/sound_bank.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/sound_bank.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/sound_bank.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011947.297856
+e294011948.087628
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/sound_bank.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/sound_bank.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@123"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/sound_bank.cpp294011947#294011948#0(0"0(0#0#115"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/sound_bank.cpp4300885448#1782"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/sound_bank.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/sound_bank.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/starfield_bkg.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/starfield_bkg.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933258.113846
+e365933258.974494
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/starfield_bkg.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/starfield_bkg.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/starfield_bkg.cpp9d471dcab2cfb541^c977f9cab2cfb541^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/starfield_bkg.cpp0000000000000000^1801"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/starfield_bkg.o ../../source/starfield_bkg.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/starfield_bkg.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/starfield_bkg.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/starfield_bkg.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/starfield_bkg.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011951.101022
+e294011952.007408
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/starfield_bkg.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/starfield_bkg.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@126"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/starfield_bkg.cpp294011951#294011952#0(0"0(0#0#118"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/starfield_bkg.cpp4300885448#1788"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/starfield_bkg.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/starfield_bkg.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/text_render.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/text_render.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933256.645438
+e365933257.731525
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/text_render.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/text_render.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/text_render.cpp785fa5c8b2cfb541^6d54bbc9b2cfb541^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/text_render.cpp0000000000000000^1793"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/text_render.o ../../source/text_render.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/text_render.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/text_render.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/text_render.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/text_render.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011948.050182
+e294011949.121444
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/text_render.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/text_render.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@124"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/text_render.cpp294011948#294011949#0(0"0(0#0#116"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/text_render.cpp4300885448#1784"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/text_render.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/text_render.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/timer.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/timer.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933260.786479
+e365933261.478141
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/timer.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/timer.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/timer.cppf279c9ccb2cfb541^77667acdb2cfb541^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/timer.cpp0000000000000000^1769"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/timer.o ../../source/timer.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/timer.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/timer.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/timer.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/timer.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011954.931157
+e294011955.721740
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/timer.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/timer.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@118"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/timer.cpp294011954#294011955#0(0"0(0#0#110"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/timer.cpp4300885448#1772"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/timer.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/timer.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/util.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/util.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933258.232387
+e365933259.025321
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/util.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/util.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/util.cpp93a83bcab2cfb541^a77a06cbb2cfb541^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/util.cpp0000000000000000^1765"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/util.o ../../source/util.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/util.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/util.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/util.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/util.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011951.187376
+e294011951.959566
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/util.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/util.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@117"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/util.cpp294011951#294011951#0(0"0(0#0#109"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/util.cpp4300885448#1770"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/util.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/util.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_level.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_level.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s293379923.390455
+e293379925.179906
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_level.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_level.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@123"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_level.cpp293379923#293379925#0(0"0(0#0#115"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_level.cpp4300885448#1782"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_level.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_level.o0#
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_path.o /data/programming/webfolio/games/Warpscape/project/xcode/../../source/warp_path.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s365933256.726168
+e365933258.230974
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_path.o
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../source/warp_path.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /data/programming/webfolio/games/Warpscape/project/xcode/../../source/warp_path.cpp840ebac8b2cfb541^ac1f3bcab2cfb541^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/data/programming/webfolio/games/Warpscape/project/xcode/../../source/warp_path.cpp0000000000000000^1785"CompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_path.o ../../source/warp_path.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -I/data/programming/webfolio/games/Warpscape/project/xcode/../../output/include -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -c /data/programming/webfolio/games/Warpscape/project/xcode/../../source/warp_path.cpp -o /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_path.o
+
+CCompileC build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_path.o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_path.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s294011948.087744
+e294011949.420424
+r1
+xCompileC
+xbuild/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_path.o
+x/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_path.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@122"Compile /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_path.cpp294011948#294011949#0(0"0(0#0#114"/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_path.cpp4300885448#1780"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-generated-files.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/warpattack-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/DerivedSources -c /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/../../source/warp_path.cpp -o /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warp_path.o0#
+
+CLd ../../output/warpattack normal x86_64
+s294176069.543637
+e294176069.720613
+r1
+xLd
+x../../output/warpattack
+xnormal
+xx86_64
+lSLF07#2@28"Link ../../output/warpattack294176069#294176069#0(0"0(0#0#0"4300885448#528"    cd /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L../../output -F../../output -filelist /data/school/usc/2010_01_spring/cs480_gfx/projects/prj03/warpattack/trunk/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warpattack.LinkFileList -mmacosx-version-min=10.6 -framework OpenGL -framework GLUT -o ../../output/warpattack0#
+
+CLd /data/programming/webfolio/games/Warpscape/project/xcode/../../output/warpattack normal x86_64
+s365933261.662255
+e365933262.735059
+r1
+xLd
+x/data/programming/webfolio/games/Warpscape/project/xcode/../../output/warpattack
+xnormal
+xx86_64
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Link /data/programming/webfolio/games/Warpscape/project/xcode/../../output/warpattackd09ca9cdb2cfb541^d42cbcceb2cfb541^---0#0#0#--683"Ld ../../output/warpattack normal x86_64    cd /data/programming/webfolio/games/Warpscape/project/xcode    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/llvm-g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/data/programming/webfolio/games/Warpscape/project/xcode/../../output -F/data/programming/webfolio/games/Warpscape/project/xcode/../../output -filelist /data/programming/webfolio/games/Warpscape/project/xcode/build/warpattack.build/Debug/warpattack.build/Objects-normal/x86_64/warpattack.LinkFileList -mmacosx-version-min=10.6 -framework OpenGL -framework GLUT -o /data/programming/webfolio/games/Warpscape/project/xcode/../../output/warpattack
+

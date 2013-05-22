@@ -1,0 +1,2 @@
+/data/school/2008_spring/research/dr_li/cpts/source/osx/build
+$(BUILD_DIR)/$(CONFIGURATION)

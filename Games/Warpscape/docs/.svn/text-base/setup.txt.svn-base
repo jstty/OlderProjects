@@ -1,0 +1,12 @@
+
+Setup:
+
+[Mac]
+Download SDL
+Copy "SDL.framework" to /Library/Frameworks
+
+In Project Add:
+   /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/GLUT.framework
+   /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework
+   /Library/Frameworks/SDL.framework
+

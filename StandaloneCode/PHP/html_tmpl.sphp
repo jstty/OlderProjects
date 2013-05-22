@@ -1,0 +1,151 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   html_tmpl.php
+//	Programmer:     Joseph E. Sutton, Casey Langen
+//	Description:    HTML Template Class
+//	Creation date:  11/23/2002
+//	Last Updated:   12/3/2006
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__HTMLTMPL__') )
+{
+   define('__HTMLTMPL__', 1);
+
+   class HtmlTmpl
+   {
+      private $mText = '';
+
+      public function HtmlTmpl($f='')
+      {
+         $this->mText = '';
+         if( is_string($f) ) {
+            if( strlen($f) > 1) {
+               $this->Load($f);
+            }
+         }
+      }
+
+      public function Set($data)
+      {
+         if( is_string($data) ) {
+            $this->mText = $data;
+         }
+      }
+
+      public function Get() {
+         return $this->mText;
+      }
+
+      public function PrintTmpl()
+      {
+         echo $this->mText;
+      }
+
+      public function Load($f)
+      {
+         if(file_exists($f))
+         {
+            $this->mText = file_get_contents($f);
+            return $this->mText;
+         }
+         else
+            return false;
+      }
+
+      public function GetClip($clip_start='<list>', $clip_end='</list>', $use_case = 0)
+      {
+         if( $use_case ) $spos = strpos($this->mText, $clip_start);
+         else            $spos = strpos( strtolower($this->mText), strtolower($clip_start));
+         //echo 'spos = '.$spos.'<br>';
+
+         if($spos !== false) {
+            $spos += strlen($clip_start);
+            
+            if( $use_case ) $epos = strpos($this->mText, $clip_end, $spos);
+            else            $epos = strpos(strtolower($this->mText), strtolower($clip_end), $spos);
+            //echo 'epos = '.$epos.'<br>';
+            
+            if($epos !== false) {
+               return substr($this->mText, $spos, $epos - $spos);
+            }
+         }
+         
+         return false;
+      }
+
+      public function HideClip($clip_start, $clip_end, $use_case = 0)
+      {
+         $this->ReplaceClip('', $clip_start, $clip_end, $use_case);
+      }
+
+      public function ShowClip($clip_start, $clip_end, $use_case = 0)
+      {
+         $this->Replace($clip_start, '', $use_case);
+         $this->Replace($clip_end, '', $use_case);
+      }
+      
+      public function ReplaceClip($replacement, $clip_start='<list>', $clip_end='</list>', $use_case = 0)
+      {
+         if( $use_case ) $spos = strpos($this->mText, $clip_start);
+         else            $spos = strpos(strtolower($this->mText), strtolower($clip_start));
+         //echo 'spos = '.$spos.'<br>';
+      
+         if($spos !== false) {
+            if( $use_case ) $epos = strpos($this->mText, $clip_end, $spos);
+            else            $epos = strpos(strtolower($this->mText), strtolower($clip_end), $spos);
+            //echo 'epos = '.$epos.'<br>';
+            
+            if($epos !== false) {
+            
+               $epos += strlen($clip_end);
+               
+               $this->mText = substr_replace($this->mText, $replacement, $spos, $epos - $spos);
+            }
+         } else {
+            $repeat = false;
+         }
+      }
+      
+      public function RReplaceClip($call_func, $clip_start='<list>', $clip_end='</list>')
+      {
+         $ok = true;
+         while($ok)
+         {
+            $clip = $this->GetClip($clip_start, $clip_end);
+         
+            if( strlen($clip) > 0 ) {
+            
+               if( is_array($call_func) )
+               {
+                  $temp = call_user_func($call_func, $clip);
+               } else {
+                  $temp = $call_func( $clip );
+               }
+               
+               $this->ReplaceClip($temp, $clip_start, $clip_end);
+            } else {
+               $ok = false;
+            }
+         }
+      }
+
+      // example: Replace("%PAGE_BODY%", "<b>This the the page body</b>");
+      public function Replace($id_tag, $replacement, $use_case = 0)
+      {
+         if( $use_case )
+         {
+            $spos = strpos($this->mText, $id_tag);
+            if($spos !== false) 
+               $this->mText = substr_replace($this->mText, $replacement, $spos, strlen($id_tag));
+         }
+         else
+         {
+            $this->mText = str_replace($id_tag, $replacement, $this->mText);
+         }
+      }
+   } // end class
+
+} // end if def __HTMLTMPL__
+
+?>

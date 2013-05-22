@@ -1,0 +1,249 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Pop - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"../Debug/Pop.res" /d "_DEBUG" "D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\Pop.rc"" 
+Creating temporary file "C:\DOCUME~1\joe\LOCALS~1\Temp\RSP2.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fr"../Debug/" /Fp"../Debug/Pop.pch" /Yu"stdafx.h" /Fo"../Debug/" /Fd"../Debug/" /FD /GZ /c 
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\biota.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\ChildFrm.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\collider.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\colorstyle.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\controller.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\Critter.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\critterarmed.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\critterviewer.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\critterviewerstereo.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\critterwall.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\dialogopenglinfo.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\dialogspeed.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\dialogstereo.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\force.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\game.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\glshapes.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\graphics.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\graphicsMFC.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\graphicsOpenGL.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\listener.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\MainFrm.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\MemoryDC.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\metric.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\Pop.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\PopDoc.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\popview.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\quakeMD2model.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\Randomizer.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\RealBox.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\RealPixelConverter.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\Sprite.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\sprite3d.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\spritebubble.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\spriteicon.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\spritemultiIcon.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\spritepolygon.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\spritequake.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\spritetexturebox.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\static.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\Texture.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\Timer.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\VectorTransformation.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\code\level.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\code\levelselector.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\code\actionbutton.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\code\title_level.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\code\battle_level.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\code\end_level.cpp"
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\code\tankwars2005.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\joe\LOCALS~1\Temp\RSP2.tmp" 
+Creating temporary file "C:\DOCUME~1\joe\LOCALS~1\Temp\RSP3.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fr"../Debug/" /Fp"../Debug/Pop.pch" /Yc"stdafx.h" /Fo"../Debug/" /Fd"../Debug/" /FD /GZ /c 
+"D:\School\CSUB\2005_winter\cs335\project\tankwars2005\pop\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\joe\LOCALS~1\Temp\RSP3.tmp" 
+Creating temporary file "C:\DOCUME~1\joe\LOCALS~1\Temp\RSP4.tmp" with contents
+[
+opengl32.lib glu32.lib winmm.lib /nologo /subsystem:windows /profile /debug /machine:I386 /out:"..\out\tws2005_(Debug).exe" 
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\biota.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\ChildFrm.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\collider.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\colorstyle.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\controller.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Critter.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\critterarmed.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\critterviewer.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\critterviewerstereo.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\critterwall.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\dialogopenglinfo.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\dialogspeed.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\dialogstereo.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\force.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\game.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\glshapes.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\graphics.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\graphicsMFC.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\graphicsOpenGL.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\listener.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\MainFrm.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\MemoryDC.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\metric.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Pop.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\PopDoc.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\popview.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\quakeMD2model.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Randomizer.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\RealBox.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\RealPixelConverter.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Sprite.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\sprite3d.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spritebubble.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spriteicon.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spritemultiIcon.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spritepolygon.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spritequake.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spritetexturebox.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\static.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\StdAfx.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Texture.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Timer.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\VectorTransformation.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\level.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\levelselector.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\actionbutton.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\title_level.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\battle_level.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\end_level.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\tankwars2005.obj
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Pop.res
+]
+Creating command line "link.exe @C:\DOCUME~1\joe\LOCALS~1\Temp\RSP4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+biota.cpp
+ChildFrm.cpp
+collider.cpp
+colorstyle.cpp
+controller.cpp
+Critter.cpp
+critterarmed.cpp
+critterviewer.cpp
+critterviewerstereo.cpp
+critterwall.cpp
+dialogopenglinfo.cpp
+dialogspeed.cpp
+dialogstereo.cpp
+force.cpp
+game.cpp
+glshapes.cpp
+graphics.cpp
+graphicsMFC.cpp
+graphicsOpenGL.cpp
+listener.cpp
+Generating Code...
+Compiling...
+MainFrm.cpp
+MemoryDC.cpp
+metric.cpp
+Pop.cpp
+PopDoc.cpp
+popview.cpp
+quakeMD2model.cpp
+Randomizer.cpp
+RealBox.cpp
+RealPixelConverter.cpp
+Sprite.cpp
+sprite3d.cpp
+spritebubble.cpp
+spriteicon.cpp
+spritemultiIcon.cpp
+spritepolygon.cpp
+spritequake.cpp
+spritetexturebox.cpp
+static.cpp
+Texture.cpp
+Generating Code...
+Compiling...
+Timer.cpp
+VectorTransformation.cpp
+level.cpp
+levelselector.cpp
+actionbutton.cpp
+title_level.cpp
+battle_level.cpp
+end_level.cpp
+tankwars2005.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\DOCUME~1\joe\LOCALS~1\Temp\RSP6.tmp" with contents
+[
+/nologo /o"../Debug/Pop.bsc" 
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\StdAfx.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\biota.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\ChildFrm.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\collider.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\colorstyle.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\controller.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Critter.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\critterarmed.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\critterviewer.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\critterviewerstereo.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\critterwall.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\dialogopenglinfo.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\dialogspeed.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\dialogstereo.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\force.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\game.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\glshapes.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\graphics.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\graphicsMFC.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\graphicsOpenGL.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\listener.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\MainFrm.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\MemoryDC.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\metric.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Pop.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\PopDoc.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\popview.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\quakeMD2model.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Randomizer.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\RealBox.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\RealPixelConverter.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Sprite.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\sprite3d.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spritebubble.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spriteicon.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spritemultiIcon.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spritepolygon.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spritequake.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\spritetexturebox.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\static.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Texture.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\Timer.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\VectorTransformation.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\level.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\levelselector.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\actionbutton.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\title_level.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\battle_level.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\end_level.sbr
+\School\CSUB\2005_winter\cs335\project\tankwars2005\Debug\tankwars2005.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\joe\LOCALS~1\Temp\RSP6.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+tws2005_(Debug).exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<?php
+
+  function ParseRssFeed($inRssLocation, $inCount, $inRandomize, $inTarget="")
+  {
+    $pageStr = '';
+    
+    $xmlFeed = simplexml_load_file($inRssLocation);
+    $feedCount = count($xmlFeed->item) > $inCount ? $inCount : count($xmlFeed->item);
+
+    srand((double)microtime()*1000000);  
+    $randomItems = array();
+    if($inRandomize == true)
+    {
+      while(count($randomItems) < $feedCount)
+      {
+        $found = false;
+        $temp = (int)rand(0,count($xmlFeed->item)-1);
+        foreach($randomItems as $value)
+        {
+          if($temp == $value)
+          {
+            $found = true;
+            break;
+          }
+        }
+        if($found == false)
+        {
+          $randomItems[]=$temp;
+        }
+      }
+    }
+    else
+    {
+      for($i = 0; $i < $feedCount; $i++)
+      {
+        $randomItems[]=$i;
+      }
+    }
+
+    for($i = 0; $i < $feedCount; $i++)
+    {
+      $pageStr .= '<div class="item" align="left"> <a class="item" href="';
+      $pageStr .= $xmlFeed->item[$randomItems[$i]]->link;
+      $pageStr .= '"';
+      if(strcmp($inTarget, "") != 0)
+      {
+        $pageStr .= " target=\"$inTarget\"";
+      }
+      $pageStr .= '>'.($i + 1).'. ';
+      $pageStr .= $xmlFeed->item[$randomItems[$i]]->title;
+      $pageStr .= '</a></div>';
+
+      if($i < $feedCount-1)
+      {
+        //$pageStr .= '<hr/>';
+        $pageStr .= "\n";
+      }
+    }
+    
+    return $pageStr;
+  } 
+
+?>

@@ -1,0 +1,78 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   error.php
+//	Programmer:     Joseph E. Sutton, Casey Langen
+//	Description:    Error Class
+//	Creation date:  1/7/2007
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__ERROR__') )
+{
+   define('__ERROR__', 1);
+
+   class Error
+   {
+      private $elist = array(); // error list(array
+      
+      public function Error()
+      {
+         $this->ResetError();
+      }
+      
+      public function ResetError()
+      {
+         $this->elist = array();
+      }
+   
+      public function AddError($emsg)
+      {
+      	 if( is_array($emsg) )
+      	 	$this->elist = array_merge($this->elist, $emsg);
+      	 else
+         	$this->elist[count($this->elist)] = $emsg;
+      }
+      
+      public function GetErrors()
+      {
+      	return $this->elist;
+      }
+      
+      public function ErrorMsg()
+      {
+         $out = '';
+         $format = "%s<br />\n";
+         
+         foreach($this->elist as $e)
+         {
+            $out .= sprintf($format, $e);
+         }
+         
+         return $out;
+      }
+      
+      public function isError()
+      {
+      	return (count($this->elist) > 0);
+      }
+   
+      /*
+      // getter function
+      public function __get($name)
+      {
+         switch($name)
+         {
+            // use print style, only render body and use diffrent template
+            case 'isError':
+               return isError();
+               
+            case 'ErrorMsg':
+               return $this->GenMsg();
+         }
+      }
+      */
+   } // end class
+   
+} // end define
+?>

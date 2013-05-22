@@ -1,0 +1,64 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+// Program Name:   session.php
+// Programmer:     Joseph E. Sutton
+// Description:    Session Class
+// Creation date:  2/1/2003
+// Last Updated:   1/8/2006
+// Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__SESSION__') )
+{
+   define('__SESSION__', 1);
+   require($gClassDir.'error.php');
+   
+   class Session extends Error
+   {    
+      public function Session()
+      {
+         $this->Init();
+      }
+
+      public function Del($key)
+      {
+         if( isset($_SESSION[$key]) )
+         {
+            unset( $_SESSION[$key] );
+         }
+      }
+      
+      public function DelAll()
+      {
+         foreach ($_SESSION as $key => $value)
+         {
+            unset( $_SESSION[$key] );
+         }
+
+         unset( $_SESSION );
+      }
+      
+      // sesstion name
+      public function Init()
+      {
+         session_start();
+      }
+      
+      public function __get($n)
+      {   
+         if( isset($_SESSION[$n]) )
+            return $_SESSION[$n];
+         else 
+            return NULL;
+      }
+
+      public function __set($n, $v)
+      {
+         $_SESSION[$n] = $v;
+      }
+      
+   } // end class
+
+} // end if def __SESSION__
+
+?>

@@ -1,0 +1,23 @@
+fix go full screen
+
+load multipule javascript files
+  - file listing all JS files to load
+  - load append files to string
+
+Javascript:
+	function RingInit
+	Create Wrestler Collision Script Object
+		player
+
+		wrestler
+			- Get If Collided
+			- Get Wreslter Object (Player Object)
+
+	test collision
+	src hot spot (point)
+	  desc
+		 action line (x1 to x2)
+		 hot spot +/- 5 (y1 to y2)
+
+
+

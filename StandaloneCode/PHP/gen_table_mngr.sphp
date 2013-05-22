@@ -1,0 +1,542 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   gen_table_mngr.php
+//	Programmer:     Joseph E. Sutton
+//	Description:    DB Table Class
+//	Creation date:  5/1/2006
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__GEN_TABLE_MNGR__') )
+{
+   define('__GEN_TABLE_MNGR__', 1);
+
+   class GenTableMngr extends Table
+   {
+   	  // 1 = list (select)
+   	  // 2 = edit (select)
+   	  // 3 = save (update)
+   	  // 4 = add  (insert)	  
+   	  // 5 = hide (update)
+   	  // 6 = show (update)
+   	  // 7 = remove (delete)
+
+   	  
+      protected $mPageType = 0;
+      protected $mTableName = "";
+      protected $mPage = null;
+      protected $mID = 0;
+      protected $mArgs = null;
+      protected $mListType = 1;
+      protected $mColumnType = array();
+      
+      protected $mHeader, $mItems;
+   
+      function __construct($args)
+      {
+      	 $this->mArgs = $args;
+      
+         if(isset($args['t']))
+         { 
+            $this->mPageType = $args['t'];
+         }
+         
+         if( isset($args['lt']) )
+         {
+         	$this->mListType = $args['lt'];
+         }
+         
+         if(isset($args['id']))
+         { 
+            $this->mID = $args['id'];
+         }
+         
+         if(isset($args['s']))
+         { 
+            $this->mTableName = $args['s'];
+         }
+         
+         if(isset($args['mPage']))
+         { 
+            $this->mPage = $args['mPage'];
+         }
+         
+         parent::__construct();
+      }
+      
+      public function Create()
+      {
+      	// do nothing for now
+      }
+      
+      public function GetNewRow($row_data)
+      {
+      	// do nothing for now
+      }
+      
+      public function GetNewDefaultRow()
+      {
+      	// do nothing for now
+      }
+      
+      // 0 = list (select) view
+   	// 1 = edit (select) view
+   	// 2 = save (update) action
+   	// 3 = add  (insert) action
+   	// 4 = hide (update) action
+   	// 5 = show (update) action
+   	// 6 = remove (delete) action
+      public function GenHTML()
+      {
+      	global $gTmplDir;
+      	$page = "";
+      	$e = "";
+      	
+      	// update DB actions
+      	if( ($this->mPageType > 1) &&
+      	    ($this->mPageType < 7) )
+      	{
+      		//global $gShowTesting;
+      		//$gShowTesting = 1;
+      		//print_r($this->mPage);
+      		$e = $this->mPage->ProcessActionType($this->mPageType, $this->mID, $this->mArgs);
+      		//exit();
+      		
+      		if( strlen($e) > 0)
+      		{
+      			$this->mPageType = 1; // if error, back to edit.
+      		} else {
+      			// not prob
+      			// redirect
+      			
+      			$url = sprintf('index.php?p=gtm&s=%s&t=0', $this->mTableName);
+      			//echo "url: ".$url;
+      			Browser::Redirect($url);
+      			exit();
+      		}
+      	}
+      	
+      	// disaply type
+      	switch($this->mPageType)
+      	{
+      		case 1: // Edit
+      			// main template
+        		$this->mBodyTmpl = new HTMLTmpl($gTmplDir . 'gtm_2.htm');
+        		
+        		if($this->mID == -1) {
+        			$this->mBodyTmpl->Replace('%type%', 3); // add
+        		} else {
+        			$this->mBodyTmpl->Replace('%type%', 2); // save
+      			}
+      		
+      			$page = $this->Edit($e);
+      			break;
+      		
+      		default: // List
+      			$this->mBodyTmpl = new HTMLTmpl($gTmplDir . 'gtm_1.htm');
+      			$page = $this->GenList();
+      			break;
+      	}
+      	
+      	return $page;
+      }
+      
+      public function GetPageTitle()
+      {
+         if( $this->mPage == null)
+         {
+           return '';
+         } else {
+      	   return $this->mPage->GetPageTitle();
+      	 }
+      }
+      
+      
+      public function GenList()
+      {
+      	 $out = "";
+      	 $list = "";
+      	 
+         $header = new HTMLTmpl();
+         $items  = new HTMLTmpl();
+         $item_e = new HTMLTmpl();
+         $item_o = new HTMLTmpl();
+         
+         $item = new HTMLTmpl();
+         $tmp = new HTMLTmpl();
+         $tmp_i = new HTMLTmpl();
+      
+      	 $header->Set( $this->mBodyTmpl->GetClip("<header>", "</header>") );
+      	 $items->Set( $this->mBodyTmpl->GetClip("<items>", "</items>") );
+      	 
+      	 if( $this->mPage == null)
+         {
+           $out = sprintf('GenTableMngr: <b>"%s" not defined in list of Tables!</b><br/>', $this->mTableName);
+           return $out;
+         }
+      	 
+      	 // build header
+      	 $list = "";
+      	 $item_e->Set( $header->GetClip("<item>", "</item>") );
+      	 
+      	 
+      	 $a = $this->GetTableDefList();
+      	 foreach($a as $key => $value)
+      	 {
+      	 	$tmp->Set( $item_e->Get() );
+      	 	
+      	 	$tmp->Replace('%data%', $value['Field']);
+      	 	//$tmp->Replace('%data%', $value);
+      	 	
+      	 	$list .= $tmp->Get();
+      	 }
+      	 $header->ReplaceClip($list, "<item>", "</item>");
+      	 
+      	 $this->mBodyTmpl->ReplaceClip($header->Get(), "<header>", "</header>");
+      	 //
+      	 
+         
+      	 // build data list
+      	 $list = "";
+      	 $row_list = "";
+      	 $item_e->Set( $items->GetClip("<erow>", "</erow>") );
+      	 $item_o->Set( $items->GetClip("<orow>", "</orow>") );
+      	 
+      	 $a = $this->GetDatatList();
+      	 $i = 1;
+      	 foreach($a as $key => $row)
+      	 {
+      	 	if($i & 1)
+      	 	{
+      	 		$tmp->Set( $item_o->Get() );
+      	 	} else {
+      	 		$tmp->Set( $item_e->Get() );
+      	 	}
+      	 	$item->Set( $tmp->GetClip("<item>", "</item>") );
+      	 	
+      	 	
+      	 	$row_list = "";
+      	 	foreach($row as $col => $value)
+      	 	{
+      	 		$tmp_i->Set( $item->Get() );
+      	 		
+      	 		$value = trim($value); // remove all white space
+      	 		
+      	 		// check size
+      	 		$l = strlen($value);
+      	 		if( $l < 1 )
+      	 		{
+      	 			$value = "&nbsp;";
+      	 		}
+      	 		
+      	 		// 0 = default 
+               // 1 = number
+               // 2 = single-row text
+               // 3 = multi-row text
+               // 4 = html text
+               // 5 = check box (bool value)
+               // 6 = file
+      	 		switch( $this->mPage->ColumnTypes[$col] )
+   	 		   {
+      	 		   case 3:
+      	 		   {
+      	 		      if( strlen($value) > 50 )
+      	 		      {
+                        $value = sprintf("<div style='overflow: auto; width: 100%%; height: 100px'>%s</div>", $value);
+      	 		      }
+   	 		      break;
+      	 		   }
+      	 		   
+      	 		   case 4:
+      	 		   {
+                     $value = sprintf("<iframe>%s</iframe>", $value);
+   	 		      break;
+      	 		   }
+   	 		     
+                  case 5:
+                  {
+   	 		         $o_value = ord($value);
+          	 			if( $o_value === 1 || $o_value === 0 )
+          	 			{
+          	 				$value = ($o_value > 0) ? 'true' : 'false';
+                     }
+                  break;
+                  }
+   	 		          
+   	 		     case 6:
+   	 		     {
+   	 		         $value = "file";
+   	 		     break;
+   	 		     }
+   	 		   }
+      	 		//
+      	 		
+      	 		$tmp_i->Replace('%data%', $value);
+      	 		
+      	 		$row_list .= $tmp_i->Get();
+      	 	}
+      	 	//print_r($row_list);
+      	 	$tmp->ReplaceClip($row_list, "<item>", "</item>");
+      	 	
+      	 	if( $this->mListType )
+      		{
+      	 		$tmp->ShowClip("<showen>", "</showen>");
+      	 		$tmp->HideClip("<hidden>", "</hidden>");
+      	 	}
+      	 	else
+      	 	{
+      	 		$tmp->ShowClip("<hidden>", "</hidden>");
+      	 		$tmp->HideClip("<showen>", "</showen>");
+      	 	}
+      	 	
+      	 	$id_name = $this->mPage->PrimaryKey;
+      	 	if( isset($row[$id_name]) )
+      	 	{
+      	 		$tmp->Replace("%id%", $row[$id_name]);
+      	 	}
+      	 	else 
+      	 	{
+      	 		$tmp->Replace("%id%", "");
+      	 	}
+      	 	     	 	
+      	 	$list .= $tmp->Get();
+      	 	$i++;
+      	 }
+      	 $this->mBodyTmpl->ReplaceClip($list, "<items>", "</items>");
+      	 //
+      	 
+      	 $this->mBodyTmpl->Replace("%table_name%", $this->mTableName);
+      	 $this->mBodyTmpl->Replace("%table_title%", $this->mPage->GetPageTitle());
+      	 
+      	 $out = $this->mBodyTmpl->Get();
+      	 return $out;
+      }
+      
+      //
+      public function Edit($error)
+      {
+      	 $out = "";
+      	 $list = "";
+      	     	       	 
+          $items = new HTMLTmpl();
+          $item_e = new HTMLTmpl();
+          $item_o = new HTMLTmpl();
+          $item = new HTMLTmpl();
+        
+          $tmp = new HTMLTmpl();
+          $tmp_i = new HTMLTmpl();
+      
+      	 $items->Set( $this->mBodyTmpl->GetClip("<items>", "</items>") );
+      	 $item_e->Set( $items->GetClip("<erow>", "</erow>") );
+      	 $item_o->Set( $items->GetClip("<orow>", "</orow>") );
+      	 
+      	 //
+      	 $i = 1;
+      	 $col_names = $this->GetTableDefList();
+      	 if($this->mID != -1)
+      	 {
+      	 	$row = $this->GetRowData();
+      	 }
+      	 else
+      	 {
+      	 	$row = $this->mPage->DefaultRowData;
+      	 }
+      	 
+      	 //print_r($col_names);
+      	 //print_r($row);
+      	 
+      	 $this->mColumnType = $this->mPage->ColumnTypes;
+      	 
+      	 foreach($col_names as $key => $value)
+      	 {
+      	 	if($i & 1)
+      	 	{
+      	 		$tmp->Set( $item_o->Get() );
+      	 	} else {
+      	 		$tmp->Set( $item_e->Get() );
+      	 	}
+      	 	$item->Set( $tmp->GetClip("<item>", "</item>") );
+      	 	$tmp_i->Set( $item->GetClip("<data>", "</data>") );
+      	 	
+      	 	$name = $value["Field"];
+      	 	
+      	 	//
+      	 	$data = $this->GetData($name, $row[0][$name], $tmp_i);
+      	 	//
+      	 	
+      	 	
+      	 	$item->ReplaceClip($data, "<data>", "</data>");
+      	 	$item->Replace("%name%", $name);    	 	
+      	 	
+      	 	
+      	 	$tmp->ReplaceClip($item->Get(), "<item>", "</item>");
+      	 	$list .= $tmp->Get();
+      	 	$i++;
+      	 }
+      	 
+      	 $this->mBodyTmpl->ReplaceClip($list, "<items>", "</items>");
+      	 
+      	 $this->mBodyTmpl->Replace("%table_name%", $this->mTableName);
+      	 $this->mBodyTmpl->Replace("%table_title%", $this->mPage->GetPageTitle());
+      	 
+      	 $this->mBodyTmpl->Replace("%id%", $this->mID);
+      	 
+      	 if( strlen($error) > 0 )
+      	 {
+      	 	$this->mBodyTmpl->ShowClip("<error>", "</error>");
+      	 	$this->mBodyTmpl->Replace("%error_str%", $error);
+      	 } else {
+      	 	$this->mBodyTmpl->HideClip("<error>", "</error>");
+      	 }
+      	 
+      	 
+      	 $out = $this->mBodyTmpl->Get();
+      	 return $out;
+      }
+      
+      
+      // type list
+      // 0 = default 
+      // 1 = number
+      // 2 = single-row text
+      // 3 = multi-row text
+      // 4 = html text
+      // 5 = check box (bool value)
+      // 6 = file
+      protected function GetData($col_name, $data, $tmp)
+      {
+      		$tmp_out = new HTMLTmpl();
+      		
+      		//$this->mPage->GetColumnType($col_name);
+      		$type = $this->mColumnType[$col_name]; 
+      		
+      		switch($type)
+      		{
+      			case 0: // default
+      			{
+      				$tmp_out->Set( $tmp->GetClip("<default>", "</default>") );
+      				break;
+      			}
+      			
+      			case 1: // number
+      			{
+      				$tmp_out->Set( $tmp->GetClip("<number>", "</number>") );
+      				break;
+      			}
+      			
+      			case 2: // single-row text
+      			{
+      				$tmp_out->Set( $tmp->GetClip("<stext>", "</stext>") );
+      				break;
+      			}
+      			
+      			case 3: // multi-row text
+      			{
+      				$tmp_out->Set( $tmp->GetClip("<mtext>", "</mtext>") );
+      				break;
+      			}
+      			
+      			case 4: // html text
+      			{
+      				$tmp_out->Set( $tmp->GetClip("<htext>", "</htext>") );
+      				break;
+      			}
+      			
+      			case 5: // check box (bool value)
+      			{
+   					// convert bit to int
+   					if( !ctype_digit($data) )
+   					{
+						   $data = (ord($data) > 0) ? 1 : 0;
+      	 			}
+      	 			
+      				$tmp_out->Set( $tmp->GetClip("<check>", "</check>") );
+      			
+      				if($data > 0)
+      				{
+      					$tmp_out->ShowClip("<true>", "</true>");
+      				}
+      				else
+      				{
+      					$tmp_out->HideClip("<true>", "</true>");
+      				}
+ 
+      			break;
+      			}
+      			
+      			case 6: // file
+      			{
+      			   $tmp_out->Set( "file" );
+      			   
+      			break;
+      			}
+      			
+      			default:
+      			{
+      				$tmp_out->Set( $tmp->GetClip("<default>", "</default>") );
+      				break;
+      			}
+      		}
+      		
+      		$tmp_out->Replace("%data%", $data);
+       		return $tmp_out->Get();
+      }
+      
+      protected function GetRowData()
+      {
+         global $gDB;
+         $s = sprintf("SELECT * FROM %s WHERE %s=%d ORDER BY %s", 
+         		$this->mPage->GetTableName(), 
+         		$this->mPage->PrimaryKey,
+         		$this->mID,
+         		$this->mPage->PrimaryKey );
+         
+         return $gDB->ExecSQLGetArray( $s );
+      }
+      
+      protected function GetDatatList()
+      {
+         global $gDB;
+         
+         if( $this->mPage == null)
+         {
+            printf('GenTableMngr: <b>"%s" not defined in list of Tables!</b><br/>', $this->mTableName);
+            return array();
+         }
+         else
+         {
+            $s = sprintf("SELECT * FROM %s WHERE active=%d ORDER BY %s", 
+            $this->mPage->GetTableName(), 
+            $this->mListType,
+            $this->mPage->PrimaryKey );
+            /*
+            $s = sprintf("select * from %s ", 
+              $this->mPage->GetTableName() );
+            */
+            return $gDB->ExecSQLGetArray( $s );
+         }
+      }
+      
+      
+      protected function GetTableDefList()
+      {
+         global $gDB;
+         
+         if( $this->mPage == null)
+         {
+            printf('GenTableMngr: <b>"%s" not defined in list of Tables!</b><br/>', $this->mTableName);
+            return array();
+         }
+         else
+         {
+            return $gDB->ExecSQLGetArray( "desc ".$this->mPage->GetTableName() );
+         }
+      }
+      
+      
+   } // end class
+
+} // end if def __GEN_TABLE_MNGR__
+
+?>

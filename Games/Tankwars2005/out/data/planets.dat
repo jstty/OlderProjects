@@ -1,0 +1,39 @@
+<planet>
+	Earth
+	World at War
+	pics\earth_icon.bmp
+	pics\earth.bmp
+	176 172 154
+	1.0 10.0 0.5
+	15.0
+</planet>
+
+<planet>
+	Mars
+	Total Anarchy
+	pics\mars_icon.bmp
+	pics\mars.bmp
+	159 63 32
+	1.0 20.0 0.75
+	10.0
+</planet>
+
+<planet>
+	Moon
+	Low gravity and no wind
+	pics\moon_icon.bmp
+	pics\moon.bmp
+	102 65 55
+	0 0 0
+	2.5
+</planet>
+
+<planet>
+	Titan 5
+	Crazy Town
+	pics\titan5_icon.bmp
+	pics\titan5.bmp
+	195 90 112
+	10.0 30.0 1.0
+	20.0
+</planet>

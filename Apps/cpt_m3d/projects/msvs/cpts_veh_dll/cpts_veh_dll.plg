@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: cpts_veh_dll - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP43C.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "CPTS_VEH_DLL_EXPORTS" /Fp"Debug/cpts_veh_dll.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"\\.host\Shared Folders\cpt_m3d\source_veh\org\biobehavior.cpp"
+"\\.host\Shared Folders\cpt_m3d\source_veh\org\desbehavior.cpp"
+"\\.host\Shared Folders\cpt_m3d\source_veh\org\mapbehavior.cpp"
+"\\.host\Shared Folders\cpt_m3d\source_veh\org\strats.cpp"
+"\\.host\Shared Folders\cpt_m3d\source_veh\c_cpts_vehicle.cpp"
+"\\.host\Shared Folders\cpt_m3d\source_veh\c_cpts_vehicle_data.cpp"
+"\\.host\Shared Folders\cpt_m3d\source_veh\c_vehicle.cpp"
+"\\.host\Shared Folders\cpt_m3d\source_veh\c_webots_controller.cpp"
+"\\.host\Shared Folders\cpt_m3d\projects\msvs\cpts_veh_dll\cpts_veh_dll.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP43C.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP43D.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"../../../lib/cpts_veh.pdb" /debug /machine:I386 /out:"../../../out/cpts_veh.dll" /implib:"../../../lib/cpts_veh.lib" /pdbtype:sept 
+".\Debug\biobehavior.obj"
+".\Debug\desbehavior.obj"
+".\Debug\mapbehavior.obj"
+".\Debug\strats.obj"
+".\Debug\c_cpts_vehicle.obj"
+".\Debug\c_cpts_vehicle_data.obj"
+".\Debug\c_vehicle.obj"
+".\Debug\c_webots_controller.obj"
+".\Debug\cpts_veh_dll.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP43D.tmp"
+<h3>Output Window</h3>
+Compiling...
+biobehavior.cpp
+desbehavior.cpp
+mapbehavior.cpp
+strats.cpp
+c_cpts_vehicle.cpp
+c_cpts_vehicle_data.cpp
+c_vehicle.cpp
+c_webots_controller.cpp
+cpts_veh_dll.cpp
+c:\program files\microsoft visual studio\vc98\include\xstring(133) : warning C4786: 'std::reverse_bidirectional_iterator<std::list<std::list<_Point3D,std::allocator<_Point3D> > *,std::allocator<std::list<_Point3D,std::allocator<_Point3D> > *> >::iterator,std::list<_Point3D,std::allocator<_Point3D> > *,std::list<_Point3D,std::allocator<_Point3D> > * &,std::list<_Point3D,std::allocator<_Point3D> > * *,int>' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\xstring(133) : warning C4786: 'std::reverse_bidirectional_iterator<std::list<std::list<_Point3D,std::allocator<_Point3D> > *,std::allocator<std::list<_Point3D,std::allocator<_Point3D> > *> >::const_iterator,std::list<_Point3D,std::allocator<_Point3D> > *,std::list<_Point3D,std::allocator<_Point3D> > * const &,std::list<_Point3D,std::allocator<_Point3D> > * const *,int>' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\xstring(133) : warning C4786: 'std::reverse_bidirectional_iterator<std::list<std::list<double,std::allocator<double> > *,std::allocator<std::list<double,std::allocator<double> > *> >::iterator,std::list<double,std::allocator<double> > *,std::list<double,std::allocator<double> > * &,std::list<double,std::allocator<double> > * *,int>' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\xstring(133) : warning C4786: 'std::reverse_bidirectional_iterator<std::list<std::list<double,std::allocator<double> > *,std::allocator<std::list<double,std::allocator<double> > *> >::const_iterator,std::list<double,std::allocator<double> > *,std::list<double,std::allocator<double> > * const &,std::list<double,std::allocator<double> > * const *,int>' : identifier was truncated to '255' characters in the debug information
+Linking...
+   Creating library ../../../lib/cpts_veh.lib and object ../../../lib/cpts_veh.exp
+
+
+
+<h3>Results</h3>
+cpts_veh.dll - 0 error(s), 4 warning(s)
+</pre>
+</body>
+</html>

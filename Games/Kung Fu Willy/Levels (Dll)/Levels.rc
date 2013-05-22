@@ -1,0 +1,106 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDW_END1                WAVE    DISCARDABLE     "end1.wav"
+IDW_END2A               WAVE    DISCARDABLE     "end2a.wav"
+IDW_END2B               WAVE    DISCARDABLE     "end2b.wav"
+IDW_HIT1                WAVE    DISCARDABLE     "hit1.wav"
+IDW_HIT2                WAVE    DISCARDABLE     "hit2.wav"
+IDW_HIT3                WAVE    DISCARDABLE     "hit3.wav"
+IDW_TITLE1              WAVE    DISCARDABLE     "Title1.wav"
+IDW_TITLE2              WAVE    DISCARDABLE     "Title2.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TITLE               BITMAP  DISCARDABLE     "Title.bmp"
+IDS_P1                  BITMAP  DISCARDABLE     "P1b1.bmp"
+IDS_P1M                 BITMAP  DISCARDABLE     "P1m1.bmp"
+IDS_P2                  BITMAP  DISCARDABLE     "P2b1.bmp"
+IDS_P2M                 BITMAP  DISCARDABLE     "P2m1.bmp"
+IDS_COM                 BITMAP  DISCARDABLE     "COMb1.bmp"
+IDB_BK1                 BITMAP  DISCARDABLE     "bk_1.bmp"
+IDB_BK2                 BITMAP  DISCARDABLE     "bk_2.bmp"
+IDB_BK3                 BITMAP  DISCARDABLE     "bk_3.bmp"
+IDB_SB                  BITMAP  DISCARDABLE     "Status Bar.bmp"
+IDB_FLOOR               BITMAP  DISCARDABLE     "Floor.bmp"
+IDB_SBCOM               BITMAP  DISCARDABLE     "textco~1.bmp"
+IDB_SBP1                BITMAP  DISCARDABLE     "textp1~1.bmp"
+IDB_SBP2                BITMAP  DISCARDABLE     "textp2~1.bmp"
+IDB_BK1D                BITMAP  DISCARDABLE     "bk_1d.bmp"
+IDB_BK2D                BITMAP  DISCARDABLE     "bk_2d.bmp"
+IDB_BK3D                BITMAP  DISCARDABLE     "bk_3d.bmp"
+IDS_EB                  BITMAP  DISCARDABLE     "Energy Bar.bmp"
+IDS_EBM                 BITMAP  DISCARDABLE     "ebm.bmp"
+IDS_P2DEAD              BITMAP  DISCARDABLE     "endani2.bmp"
+IDS_P2MDEAD             BITMAP  DISCARDABLE     "endani2m.bmp"
+IDS_P1DEAD              BITMAP  DISCARDABLE     "endanim.bmp"
+IDS_P1MDEAD             BITMAP  DISCARDABLE     "endanimm.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

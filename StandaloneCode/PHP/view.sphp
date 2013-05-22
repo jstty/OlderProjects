@@ -1,0 +1,46 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   view.php
+//	Programmer:     Joseph E. Sutton, Casey Langen
+//	Description:    DB Table Class
+//	Creation date:  12/26/2007
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__VIEW__') )
+{
+   define('__VIEW__', 1);
+
+   require($gClassDir.'table.php');
+   
+   abstract class View extends Table
+   {
+      public function Create()
+      {
+         $sql = sprintf('CREATE OR REPLACE VIEW %s AS %s', 
+                  $this->mTableName,
+                  $this->mAddtionalCreateSQL
+                );
+         
+         $this->ExecDBSQL($sql);
+      }      
+           
+      public function Drop()
+      {
+         global $gDB;
+         return $gDB->DropView($this->mTableName);
+      }
+            
+      // load file and insert it into the DB
+      public function Import($filename = '')
+      {
+         // do nothing  
+      }     
+      
+            
+   } // end class
+
+} // end if def __VIEW__
+
+?>

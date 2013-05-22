@@ -1,0 +1,108 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   loginout.php
+//	Programmer:     Joseph E. Sutton, Casey Langen
+//	Description:    LogInOut Class
+//	Creation date:  12/7/2006
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__LOGINOUT__') )
+{
+   define('__LOGINOUT__', 1);
+   require($gClassDir.'session.php');
+   require($gClassDir.'error.php');
+
+   class LogInOut extends Error
+   {
+      private $mUsername;
+      private $mPassword;
+      private $mLoggedIn;
+      private $mSession;
+
+      private $mUserID;
+      private $mUserLevel;
+      private $mUserName;
+   
+      public function LogInOut()
+      {
+         $this->mLoggedIn = false;
+         $this->mSession = new Session();
+         
+         $this->mUserID = -1;
+         $this->mUserLevel = -1;
+         $this->mUserName = '';
+         
+         //print_r($_SESSION);
+      }
+      
+      public function Logout()
+      {
+         $this->mSession->Del('user');
+         $this->mSession->Del('pass');
+         
+         $this->mLoggedIn = false;
+      }
+      
+      public function Check($ut, $u = '', $p = '')
+      {
+         if( (strlen($u) < 1) || (strlen($p) < 1) )
+         {
+            // check session
+            $u = $this->mSession->user;
+            $p = $this->mSession->pass;
+            //echo "User: ".$u."<br>";
+            //echo "Pass: ".$p."<br>";
+            
+            if( (strlen($u) < 1) || (strlen($p) < 1) )
+            {
+               // if empty username or password, don't check name
+               return false;
+            }
+         }
+         
+         if( $ut->CheckUserPass($u, $p) )
+         {
+            $this->mUserID = $ut->GetUserID();
+            $this->mUserLevel = $ut->GetUserLevel();
+            $this->mUserName = $ut->GetUserName();
+         
+            // added user and pass to session
+            $this->mSession->user = $u;
+            $this->mSession->pass = $p;
+            
+            $this->mLoggedIn = true;
+         } else {
+            $this->AddError('Invalid Username or Password');
+         }
+         
+         return false;
+      }
+      
+      public function GetUserID()
+      {
+         return $this->mUserID;
+      }
+      
+      public function GetUserLevel()
+      {
+         return $this->mUserLevel;
+      }
+      
+      public function GetUserName()
+      {
+         return $this->mUserName;
+      }
+      
+      public function LoggedIn()
+      {
+         return $this->mLoggedIn;
+      }
+      
+      
+   } // end class
+
+} // end if def __LOGINOUT__
+
+?>

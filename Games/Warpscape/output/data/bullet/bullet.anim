@@ -1,0 +1,12 @@
+name = Bullet
+delay = 0.1
+model = [
+color = 1, 1, 0, 1
+type = closed
+data = {
+ 1,  0, 0
+ 0, -1, 0
+-1,  0, 0
+ 0,  1, 0
+}
+]

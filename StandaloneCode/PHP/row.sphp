@@ -1,0 +1,105 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   row.php
+//	Programmer:     Joseph E. Sutton, Casey Langen
+//	Description:    DB Row Class
+//	Creation date:  12/8/2006
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__ROW__') )
+{
+   define('__ROW__', 1);
+
+   class Row
+   {  
+      protected $data = null;
+      
+      public function Row($row_data)
+      {
+         $this->data = $row_data;
+      }
+      
+      public function GetData()
+      {
+         return $this->data;
+      }
+      
+      public function GetValue($name)
+      {
+         if( isset($this->data[$name]) )
+         {
+            return $this->data[$name];
+         }
+         
+         return false;
+      }
+      
+      // mode = 0 -> view
+      // mode = 1 -> edit(need to escape special chars)
+      public function GenHTML($tmpl, $mode)
+      {
+         if( ($this->data != null) &&
+             is_array($this->data) &&
+             ($tmpl != null) &&
+             is_a($tmpl, 'HTMLTmpl'))
+         {
+            // loop through all columns in the row
+            foreach($this->data as $key => $value)
+            {
+               if(false)
+               {
+                  // testing
+                  echo '<b>'.$key.'</b> = <b>'.$value.'</b> ('.gettype($value).')<br>';
+               }
+               
+               // if bool, auto show/hide clip, 
+               // instead of the just replacing key with value in template
+               if(is_bool($value))
+               {
+                  if($value)
+                  {
+                     $tmpl->ShowClip('<'.$key.'>', '</'.$key.'>');
+                  }
+                  else 
+                  {
+                     $tmpl->HideClip('<'.$key.'>', '</'.$key.'>');
+                  }
+               }
+               else 
+               {
+				  $value = StripSlashes($value);
+
+                  if($mode == 0) // view
+                  {  
+                  }
+                  else if($mode == 1) // edit
+                  {
+                     $value = HtmlSpecialChars($value);
+                  }
+                  
+                  if(is_string($value) )
+                  {
+                     $value = trim($value);
+                     if( empty( $value ) )
+                     {
+                  	   $value = '&nbsp;';
+                     }
+                  }
+                  
+                  $tmpl->Replace('%'.$key.'%', $value);
+               }
+            } // end foreach
+            
+            return $tmpl->Get();
+         } // end if
+         
+         return '';
+      }
+      
+   } // end class
+
+} // end if def __ROW__
+
+?>

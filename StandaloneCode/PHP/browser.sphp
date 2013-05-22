@@ -1,0 +1,60 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+// Program Name:   browser.php
+// Programmer:     Joseph E. Sutton
+// Description:    Browser Class
+// Creation Date:  7/2/2002
+// Last Updated:   1/8/2007
+// Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__BROWSER__') )
+{
+   define('__BROWSER__', ' ');
+
+   class Browser
+   {
+      static public function Redirect($url, $target='_parent')
+      {
+         // user double quotes because \n needs to be resolved to linefeed
+         print("<html><head>\n\n");
+         
+         print("<script language=javascript>\n<!--\n");
+
+         printf("var frame = \"%s\";\n\n", $target);
+
+         print("if( parent[frame] != null)\n{\n");
+         printf("parent[frame].document.location = \"%s\";\n} else {\n", $url);
+         printf("parent.document.location = \"%s\";\n}\n\n", $url);
+
+         print("// -->\n</script>\n");
+
+         print("</head><body>\n<center>\n");
+         printf("<br>Redirecting...<br>(If failed <a target=\"%s\" href=\"%s\">click here</a>)\n</center>\n", $target, $url);
+         print("</body>\n</html>\n");
+         
+         exit();
+      }
+
+      static public function Download($data, $name='db.txt')
+      {
+         header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+         header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); 
+         header('Cache-Control: no-store, no-cache, must-revalidate');
+         header('Cache-Control: post-check=0, pre-check=0', false);
+         header('Cache-Control: private');
+         header('Pragma: no-cache');
+
+         header('Content-Length: '. strlen($data) );
+         header('Content-Type: application/octet-stream');
+
+         header('Content-Disposition: attachment; filename='.$name);
+
+         print($data);
+      }
+
+   }
+
+}
+
+?>

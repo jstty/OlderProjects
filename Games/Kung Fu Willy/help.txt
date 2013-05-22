@@ -1,0 +1,71 @@
+////////////////////////////////////////////
+//    Kung Fu Willy
+//      Help Text
+//     By Who Knows
+// (AKA Joseph E. Sutton)
+////////////////////////////////////////////
+
+Table of Contents:
+ Player One & Two Joy Stick Controls
+ Player Two Keyboard Controls
+ How to fight and defend
+ Other Keyboard functions
+ Other Questions Comments etc.
+
+Player One & Two Joy Stick Controls:
+ Fighting:
+  Up    + Button 1	- Upper cut
+  Down  + Button 1	- Low kick
+  Left  + Button 1	- Punch
+  Right + Button 1	- Punch
+  Button 1		- Punch
+ Defending:
+  Up    + Button 1	- Jump
+  Down  + Button 1	- Duck
+  Left  + Button 1	- Mid Block
+  Right + Button 1	- Mid Block
+  Button 1		- Mid Block
+
+Player Two Keyboard Controls:
+ Fighting:
+  Up Arrow    + Z Key	- Upper cut
+  Down Arrow  + Z Key	- Low kick
+  Left Arrow  + Z Key	- Punch
+  Right Arrow + Z Key	- Punch
+  Z Key			- Punch
+ Defending:
+  Up Arrow    + Z Key	- Jump
+  Down Arrow  + Z Key	- Duck
+  Left Arrow  + Z Key	- Mid Block
+  Right Arrow + Z Key	- Mid Block
+  Z Key			- Mid Block
+
+How to fight and defend:
+ Player One: Fighting
+   Select an attack
+ Player Two: Defending
+   If Player One selected Punch then Player Two must select Mid Block to avoid being hit.
+   If Player One selected Upper cut then Player Two must select Duck to avoid being hit.
+   If Player One selected Low kick then Player Two must select Jump to avoid being hit.
+
+Other Keyboard functions:
+ ` Key			- Stops the CD Player(the key just to the left of the 1 key)
+ 1 Key			- Plays CD track one
+ 2 Key			- Plays CD track two
+ 3 Key			- Plays CD track three
+ 4 Key			- Plays CD track four
+ 5 Key			- Plays CD track five
+ 6 Key			- Plays CD track six
+ 7 Key			- Plays CD track seven
+ 8 Key			- Plays CD track eight
+ 9 Key			- Plays CD track nine
+ 0 Key			- Plays CD track ten
+ R Key			- Restarts the Midi Player
+ S Key			- Stops the Midi Player
+ E Key			- Easy difficulty
+ M Key			- Medium difficulty
+ H Key			- Hard difficulty
+
+Other Questions Comments etc.:
+ Please E-Mail me, Who Knows, at MOJO@LIGHTSPEED.NET
+

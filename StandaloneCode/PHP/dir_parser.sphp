@@ -1,0 +1,97 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   dir_parser.php
+//	Programmer:     Joseph E. Sutton
+//	Description:    Directory Parser Class
+//	Creation date:  6/2/2008
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__DIR_PARSER__') )
+{
+   define('__DIR_PARSER__', 1);
+
+   class DirParser
+   {
+      public $checkSubDir;
+      private $cacheName = '.cache';
+      
+      public function DirParser()
+      {
+         $this->checkSubDir = true;
+      }
+      
+      public function GetDirTree($start_path)
+      {
+         if(!is_dir($start_path)) return (array());
+         
+         return $this->RecDir($start_path);
+      } // end GetDirTree
+      
+      private function RecDir($path)
+      {
+         $a = array();
+         $a['name'] = $path;
+         $a[$this->cacheName] = array();
+         
+         $sub_dir_array = array();
+         $file_array = array();
+         
+         if($dh = opendir($path))
+         {
+            $file = readdir($dh);
+            while($file !== false)
+            {
+               $isCache = false;
+               if(strcmp($file, $this->cacheName) == 0)
+                  $isCache = true;
+               
+               if( (substr($file, 0, 1) != '.') || // ignore all dot files. but if cache ok
+                   ($isCache)
+                 )
+               {
+                  $p = $path.'/'.$file;
+                  //echo "filename: $file<br/>\n";
+                  if(is_dir($p))
+                  {
+                     if($isCache)
+                     {
+                        $a[$this->cacheName] = $this->RecDir($p);
+                        //unset($a[$cacheName]['name']);
+                        unset($a[$this->cacheName][$this->cacheName]);
+                     } else {
+                        if($this->checkSubDir)
+                        {
+                           $sub_dir_array[$p] = $this->RecDir($p);
+                        } else {
+                           $sub_dir_array[$p] = array('name' => $p, 
+                                                      $this->cacheName => array()
+                                                );
+                        }
+                     }
+                  } else {
+                     array_push($file_array, $file);
+                  }
+               }
+               
+               $file = readdir($dh);
+            }
+            closedir($dh);
+         }
+         
+         ksort($sub_dir_array); // sort array
+         asort($file_array);    // sort array
+         
+         //print_r($sub_dir_array);
+         //print_r($file_array);
+         
+         $a = array_merge($a, $sub_dir_array, $file_array);
+         return $a;
+      }
+      
+   } // end class
+} // end define
+
+?>
+

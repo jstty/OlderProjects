@@ -1,0 +1,330 @@
+/****************************************
+ filename:    warp_level.cpp
+ project:     warpattack
+ created by:  Joseph E. Sutton
+ date:        2010/04/08
+ description: warp level
+ ****************************************/
+#include "global.h"
+
+cWarpLevel::cWarpLevel()
+{
+   mPlayerShip = NULL;
+   
+   // diffuse light
+   mLightDiffuse[0] = 1.0;
+   mLightDiffuse[1] = 1.0;
+   mLightDiffuse[2] = 1.0;
+   mLightDiffuse[3] = 1.0;
+   
+   // light location (infinite)
+   mLightPosition[0] =  0.0;
+   mLightPosition[1] =  0.0;
+   mLightPosition[2] = -1.0;
+   mLightPosition[3] =  0.0;
+   
+   // dark gray
+   mBackgroundColor[0] = 0.05;
+   mBackgroundColor[1] = 0.05;
+   mBackgroundColor[2] = 0.05;
+   mBackgroundColor[3] = 1.0;
+   
+   mBackground.push_back(new cStarfield());
+}
+
+cWarpLevel::~cWarpLevel()
+{
+   Clear();
+}
+
+void cWarpLevel::Clear()
+{
+   if(mWarpPath != NULL)   delete mWarpPath;
+   if(mPlayerShip != NULL) delete mPlayerShip;
+   
+   // TODO
+   // remove remaining mEnemies
+   // remove remaining mBullets
+}
+
+void cWarpLevel::Enter(uInt32 level_num) 
+{
+   cLevel::Enter(level_num);
+   
+   // Settings
+   mPaused = false;
+   mMaxNumBullets = 10;
+   mMaxBulletRate = 110000;
+   mFogDensity = 0.11;
+   
+   // enable lighting
+   glLightfv(GL_LIGHT0, GL_DIFFUSE,  mLightDiffuse);
+   glLightfv(GL_LIGHT0, GL_POSITION, mLightPosition);
+   glEnable(GL_LIGHT0);
+   glEnable(GL_LIGHTING);
+   
+   // blending function
+   glPointSize(1.10);
+   glLineWidth(1.10);
+   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+   glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+   
+   //
+   glFogi(GL_FOG_MODE, GL_EXP);
+   glFogf(GL_FOG_DENSITY, mFogDensity);
+   glFogfv(GL_FOG_COLOR,  mBackgroundColor);
+   
+   // disable depth buffering testing, to use alpha lines
+   glEnable(GL_DEPTH_TEST);
+   
+   glClearColor(mBackgroundColor[0], mBackgroundColor[1], mBackgroundColor[2], 0.0);
+   
+   mWarpPath = new cWarpPath();
+   mWarpPath->Load(MODEL_DIR"/warp/square.poly");
+   
+   // scale using poly width and height
+   mScaleWarpPathY = ((game->mHeight)/mWarpPath->GetHeight())*0.002;
+   mScaleWarpPathX = mScaleWarpPathY;
+   
+   // get path for ship
+   mPlayerShip = new cPlayerShip(mWarpPath->GetTrackCenters());
+   
+   // TODO
+   // remove, build random list
+   // For testing
+   mEnemies.push_back( new cFlipper( &(mWarpPath->mPath) ) );
+   
+   //
+   mBulletRateTimer.SetExpire(mMaxBulletRate);
+   mBulletRateTimer.Start();
+   mBullets.clear();
+   
+   
+   // 
+   mZoomState = Zoom_StartIn;
+   mCurrentBkg = mBackground[0];
+}
+
+void cWarpLevel::Exit()
+{
+   // TODO
+}
+
+void cWarpLevel::Draw()
+{
+   if(mZoomState == Zoom_StartIn)
+   {
+      return;
+   }
+   
+   if(mZoomState == Zoom_MovingIn)
+   {
+      glTranslatef(0, 0, mZoomZPos);
+   }
+      
+   glEnable(GL_BLEND);
+   glDepthMask(GL_FALSE);
+
+   if(mCurrentBkg != NULL)
+      mCurrentBkg->Draw();
+
+   glPushMatrix();
+
+   // scale and translate for warp path
+   glScalef(mScaleWarpPathX, mScaleWarpPathY, 1.0); // scale polygon so all fit in the same area
+   glTranslatef(0.0, 0.0, -2.0);
+   
+   glEnable(GL_FOG);
+   
+   if(mWarpPath != NULL)
+      mWarpPath->Draw();
+   
+   if(mZoomState == Zoom_DoneIn)
+   {
+      if(mPlayerShip != NULL)
+		{
+         mPlayerShip->Draw();
+		}
+   
+      for(i = 0; i < mEnemies.size(); ++i)
+      {
+         mEnemies[i]->Draw();
+      }
+      
+      for(i = 0; i < mBullets.size(); ++i)
+      {
+         mBullets[i]->Draw();
+      }
+   }
+   
+   glDisable(GL_FOG);
+   
+   glPopMatrix();
+   
+   glDepthMask(GL_TRUE);
+   glDisable(GL_BLEND);
+   
+   // Score
+   if(mZoomState == Zoom_DoneIn)
+   {
+      game->mText->DrawLines(0.02, 0.93, 0.03, "Score 00123456789");
+   }
+   
+   if(mPaused) DrawPaused();
+}
+
+void cWarpLevel::Update()
+{
+   if(!mPaused)
+   {
+      if(mZoomState == Zoom_StartIn)
+      {
+         mWarpPath->SetCurrentSelectedTrack(-1);
+         mZoomState = Zoom_MovingIn;
+         
+         mZoomStartFieldOfView = 160.0;
+         mZoomEndFieldOfView   =  60.0;
+         mZoomStartZPos        = -25.5;
+         mZoomEndZPos          =   0.0;
+         mZoomMoveRate         = 2.0;
+         
+         mZoomFieldOfView = mZoomStartFieldOfView;
+         mZoomSteps       = mZoomStartFieldOfView-mZoomEndFieldOfView;
+         mZoomZPos        = mZoomStartZPos;
+         
+         mZoomTimer.SetExpire((uInt32)((float)mZoomSteps/mZoomMoveRate)*30000);
+         mZoomTimer.Start();
+         
+         if(mCurrentBkg != NULL) mCurrentBkg->Update();
+         if(mWarpPath != NULL)   mWarpPath->Update();
+      }
+      
+      if(mZoomState == Zoom_MovingIn)
+      {
+         game->ChangePerspective(mZoomFieldOfView);
+         
+         mZoomFieldOfView -= mZoomMoveRate;
+         mZoomZPos += ((float)(mZoomEndZPos - mZoomStartZPos)/((float)mZoomSteps/(float)mZoomMoveRate));
+         
+         mZoomTimer.Update();
+         if(mZoomTimer.HasExpired())
+         {
+            mZoomState = Zoom_DoneIn;
+         }
+      }
+      
+      if(mZoomState == Zoom_DoneIn)
+      {
+         if(mCurrentBkg != NULL)
+            mCurrentBkg->Update();
+         
+         if(mPlayerShip != NULL)
+            mPlayerShip->Update();
+         
+         if(mWarpPath != NULL)
+         {
+            if(mPlayerShip != NULL)
+               mWarpPath->SetCurrentSelectedTrack(mPlayerShip->mCurrentTrack);
+            
+            mWarpPath->Update();
+         }
+         
+               
+         for(i = 0; i < mEnemies.size(); ++i)
+         {
+            mEnemies[i]->Update();
+         }
+         
+         for(i = 0; i < mBullets.size(); ++i)
+         {
+            mBullets[i]->Update();
+            
+            // greater then because in -Z direction
+            if(mBullets[i]->mCurrentZ < mWarpPath->GetMinZ())
+            {
+               DestroyBullet(i);
+            }
+         }
+      } // Zoom_DoneIn
+   }
+}
+
+void cWarpLevel::Input(LevelInput input)
+{
+   if(input.Key == 'p')
+      mPaused = !mPaused;
+   
+   if(!mPaused)
+   {
+      // left press, move left
+      // right press, move right
+      // when action 1, fire bullet
+           if(input.Left)  mPlayerShip->MoveLeft();
+      else if(input.Right) mPlayerShip->MoveRight();
+      else if(input.Action1)
+      {
+         mBulletRateTimer.Update();
+         
+         if( (mMaxNumBullets > mBullets.size()) &&
+             (mBulletRateTimer.HasExpired())
+           )
+         {
+            mBulletRateTimer.Start();
+            
+            // fire bullet
+            mTmpBullet = new cPlayerShipBullet(mPlayerShip->mCurrentTrack, &(mWarpPath->mPath));  
+            mBullets.push_back(mTmpBullet);
+         }
+      }
+   }
+}
+
+void cWarpLevel::DrawPaused()
+{
+   GLfloat c[4];
+   c[0] = 0.0; c[1] = 0.0; c[2] = 0.0; c[3] = 0.5;
+   
+   glPushMatrix();
+   glTranslatef(-2.0, -2.0, -1.001); // -1.001; 1 so anything at -1.0 will not be covered
+   
+   glEnable(GL_BLEND);
+   glDepthMask(GL_FALSE);
+   
+   glBegin(GL_POLYGON);
+   glNormal3f(0, 0, -1.0);
+   glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
+   
+   glVertex3f( 0, 0, 0);
+   glVertex3f( 0, 4, 0);
+   glVertex3f( 4, 4, 0);
+   glVertex3f( 4, 0, 0);
+   glVertex3f( 0, 0, 0);
+   
+   glEnd();
+   
+   glDepthMask(GL_TRUE);
+   glDisable(GL_BLEND);   
+   
+   glPopMatrix();
+   
+   game->mText->SetColor(1, 1, 1); // white
+   game->mText->Draw2D(0.465, 0.5, "[ Paused ]");
+}
+
+void cWarpLevel::DestroyBullet(uInt32 index)
+{
+   if(index < mBullets.size())
+   {
+      mTmpBullet = mBullets[i];
+      if(mTmpBullet != NULL) delete mTmpBullet;
+      
+      mBullets.erase(mBullets.begin() + i);
+   }
+}
+
+int  cWarpLevel::LoadSettings(const char *filename)
+{
+   // TODO
+   
+   return 0;
+}

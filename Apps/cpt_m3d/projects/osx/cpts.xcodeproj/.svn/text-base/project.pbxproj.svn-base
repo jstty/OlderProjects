@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F6DF7880DC78EFE00D50415 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6DF7870DC78EFE00D50415 /* OpenGL.framework */; };
+		2F6DFCB10DC7F43900D50415 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6DFCB00DC7F43900D50415 /* GLUT.framework */; };
+		2FBDE0760DF0070D00955C29 /* settings.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FBDE0750DF0070D00955C29 /* settings.ini */; };
+		2FD0CE6A0DEF47B000961AC8 /* gl_info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0CE680DEF47B000961AC8 /* gl_info.cpp */; };
+		2FD0CE6B0DEF47B000961AC8 /* gl_sensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0CE690DEF47B000961AC8 /* gl_sensor.cpp */; };
+		2FD0CE6F0DEF47E300961AC8 /* gl_sensor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FD0CE6E0DEF47E300961AC8 /* gl_sensor.h */; };
+		2FF426120DE61240005679C1 /* c_chemical_trail_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425D90DE61240005679C1 /* c_chemical_trail_manager.cpp */; };
+		2FF426130DE61240005679C1 /* c_chemical_trail_manager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425DA0DE61240005679C1 /* c_chemical_trail_manager.h */; };
+		2FF426140DE61240005679C1 /* c_chemical_trail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425DB0DE61240005679C1 /* c_chemical_trail.cpp */; };
+		2FF426150DE61240005679C1 /* c_chemical_trail.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425DC0DE61240005679C1 /* c_chemical_trail.h */; };
+		2FF426160DE61240005679C1 /* c_cpts_env_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425DD0DE61240005679C1 /* c_cpts_env_data.cpp */; };
+		2FF426170DE61240005679C1 /* c_cpts_env_data.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425DE0DE61240005679C1 /* c_cpts_env_data.h */; };
+		2FF426180DE61240005679C1 /* c_cpts_env.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425DF0DE61240005679C1 /* c_cpts_env.cpp */; };
+		2FF426190DE61240005679C1 /* c_cpts_env.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425E00DE61240005679C1 /* c_cpts_env.h */; };
+		2FF4261A0DE61240005679C1 /* c_cpts_gl_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425E10DE61240005679C1 /* c_cpts_gl_view.cpp */; };
+		2FF4261B0DE61240005679C1 /* c_cpts_gl_view.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425E20DE61240005679C1 /* c_cpts_gl_view.h */; };
+		2FF4261C0DE61240005679C1 /* c_cpts_settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425E30DE61240005679C1 /* c_cpts_settings.cpp */; };
+		2FF4261D0DE61240005679C1 /* c_cpts_settings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425E40DE61240005679C1 /* c_cpts_settings.h */; };
+		2FF4261E0DE61240005679C1 /* c_cpts_vehicle_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425E50DE61240005679C1 /* c_cpts_vehicle_data.cpp */; };
+		2FF4261F0DE61240005679C1 /* c_cpts_vehicle_data.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425E60DE61240005679C1 /* c_cpts_vehicle_data.h */; };
+		2FF426200DE61240005679C1 /* c_cpts_vehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425E70DE61240005679C1 /* c_cpts_vehicle.cpp */; };
+		2FF426210DE61240005679C1 /* c_cpts_vehicle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425E80DE61240005679C1 /* c_cpts_vehicle.h */; };
+		2FF426220DE61240005679C1 /* c_null_controller.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425E90DE61240005679C1 /* c_null_controller.h */; };
+		2FF426230DE61240005679C1 /* c_settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425EA0DE61240005679C1 /* c_settings.cpp */; };
+		2FF426240DE61240005679C1 /* c_settings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425EB0DE61240005679C1 /* c_settings.h */; };
+		2FF426250DE61240005679C1 /* c_vehicle_const.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425EC0DE61240005679C1 /* c_vehicle_const.h */; };
+		2FF426260DE61240005679C1 /* c_vehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425ED0DE61240005679C1 /* c_vehicle.cpp */; };
+		2FF426270DE61240005679C1 /* c_vehicle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425EE0DE61240005679C1 /* c_vehicle.h */; };
+		2FF426280DE61240005679C1 /* c_webots_controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425EF0DE61240005679C1 /* c_webots_controller.cpp */; };
+		2FF426290DE61240005679C1 /* c_webots_controller.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425F00DE61240005679C1 /* c_webots_controller.h */; };
+		2FF4262A0DE61240005679C1 /* c_webots_sensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425F10DE61240005679C1 /* c_webots_sensor.cpp */; };
+		2FF4262B0DE61240005679C1 /* c_webots_sensor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425F20DE61240005679C1 /* c_webots_sensor.h */; };
+		2FF4262C0DE61240005679C1 /* c_wind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425F30DE61240005679C1 /* c_wind.cpp */; };
+		2FF4262D0DE61240005679C1 /* c_wind.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425F40DE61240005679C1 /* c_wind.h */; };
+		2FF4262E0DE61240005679C1 /* cpts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425F50DE61240005679C1 /* cpts.cpp */; };
+		2FF4262F0DE61240005679C1 /* cpts.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425F60DE61240005679C1 /* cpts.h */; };
+		2FF426300DE61240005679C1 /* env_def.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425F70DE61240005679C1 /* env_def.h */; };
+		2FF426310DE61240005679C1 /* gl_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425F80DE61240005679C1 /* gl_color.cpp */; };
+		2FF426320DE61240005679C1 /* gl_color.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425F90DE61240005679C1 /* gl_color.h */; };
+		2FF426330DE61240005679C1 /* gl_grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425FA0DE61240005679C1 /* gl_grid.cpp */; };
+		2FF426340DE61240005679C1 /* gl_grid.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425FB0DE61240005679C1 /* gl_grid.h */; };
+		2FF426350DE61240005679C1 /* gl_plume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF425FC0DE61240005679C1 /* gl_plume.cpp */; };
+		2FF426360DE61240005679C1 /* gl_plume.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425FD0DE61240005679C1 /* gl_plume.h */; };
+		2FF426380DE61240005679C1 /* gl_info.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF425FF0DE61240005679C1 /* gl_info.h */; };
+		2FF426390DE61240005679C1 /* gl_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF426000DE61240005679C1 /* gl_text.cpp */; };
+		2FF4263A0DE61240005679C1 /* gl_text.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426010DE61240005679C1 /* gl_text.h */; };
+		2FF4263B0DE61240005679C1 /* gl_vehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF426020DE61240005679C1 /* gl_vehicle.cpp */; };
+		2FF4263C0DE61240005679C1 /* gl_vehicle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426030DE61240005679C1 /* gl_vehicle.h */; };
+		2FF4263D0DE61240005679C1 /* gl_wind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF426040DE61240005679C1 /* gl_wind.cpp */; };
+		2FF4263E0DE61240005679C1 /* gl_wind.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426050DE61240005679C1 /* gl_wind.h */; };
+		2FF4263F0DE61240005679C1 /* gl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426060DE61240005679C1 /* gl.h */; };
+		2FF426400DE61240005679C1 /* i_chem_sensor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426070DE61240005679C1 /* i_chem_sensor.h */; };
+		2FF426410DE61240005679C1 /* i_env_data.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426080DE61240005679C1 /* i_env_data.h */; };
+		2FF426420DE61240005679C1 /* i_env.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426090DE61240005679C1 /* i_env.h */; };
+		2FF426430DE61240005679C1 /* i_vehicle_controller.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF4260A0DE61240005679C1 /* i_vehicle_controller.h */; };
+		2FF426440DE61240005679C1 /* i_vehicle_data.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF4260B0DE61240005679C1 /* i_vehicle_data.h */; };
+		2FF426450DE61240005679C1 /* i_vehicle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF4260C0DE61240005679C1 /* i_vehicle.h */; };
+		2FF426460DE61240005679C1 /* i_view.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF4260D0DE61240005679C1 /* i_view.h */; };
+		2FF426470DE61240005679C1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4260E0DE61240005679C1 /* main.cpp */; };
+		2FF426480DE61240005679C1 /* maxmin.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF4260F0DE61240005679C1 /* maxmin.h */; };
+		2FF426490DE61240005679C1 /* s_data.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426100DE61240005679C1 /* s_data.h */; };
+		2FF4264A0DE61240005679C1 /* types_structs.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426110DE61240005679C1 /* types_structs.h */; };
+		2FF4265B0DE612E4005679C1 /* actfunction.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF4264B0DE612E4005679C1 /* actfunction.h */; };
+		2FF4265C0DE612E4005679C1 /* biobehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4264C0DE612E4005679C1 /* biobehavior.cpp */; };
+		2FF4265D0DE612E4005679C1 /* biobehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF4264D0DE612E4005679C1 /* biobehavior.h */; };
+		2FF4265E0DE612E4005679C1 /* constants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF4264E0DE612E4005679C1 /* constants.h */; };
+		2FF4265F0DE612E4005679C1 /* desbehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4264F0DE612E4005679C1 /* desbehavior.cpp */; };
+		2FF426600DE612E4005679C1 /* desbehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426500DE612E4005679C1 /* desbehavior.h */; };
+		2FF426610DE612E4005679C1 /* globaldef.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426510DE612E4005679C1 /* globaldef.h */; };
+		2FF426620DE612E4005679C1 /* inisearch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426520DE612E4005679C1 /* inisearch.h */; };
+		2FF426630DE612E4005679C1 /* list.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426530DE612E4005679C1 /* list.h */; };
+		2FF426640DE612E4005679C1 /* listnd.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426540DE612E4005679C1 /* listnd.h */; };
+		2FF426650DE612E4005679C1 /* mapbehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF426550DE612E4005679C1 /* mapbehavior.cpp */; };
+		2FF426660DE612E4005679C1 /* mapbehavior.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426560DE612E4005679C1 /* mapbehavior.h */; };
+		2FF426670DE612E4005679C1 /* odor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426570DE612E4005679C1 /* odor.h */; };
+		2FF426680DE612E4005679C1 /* point.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF426580DE612E4005679C1 /* point.h */; };
+		2FF426690DE612E4005679C1 /* strats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FF426590DE612E4005679C1 /* strats.cpp */; };
+		2FF4266A0DE612E4005679C1 /* strats.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2FF4265A0DE612E4005679C1 /* strats.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				2FF426130DE61240005679C1 /* c_chemical_trail_manager.h in CopyFiles */,
+				2FF426150DE61240005679C1 /* c_chemical_trail.h in CopyFiles */,
+				2FF426170DE61240005679C1 /* c_cpts_env_data.h in CopyFiles */,
+				2FF426190DE61240005679C1 /* c_cpts_env.h in CopyFiles */,
+				2FF4261B0DE61240005679C1 /* c_cpts_gl_view.h in CopyFiles */,
+				2FF4261D0DE61240005679C1 /* c_cpts_settings.h in CopyFiles */,
+				2FF4261F0DE61240005679C1 /* c_cpts_vehicle_data.h in CopyFiles */,
+				2FF426210DE61240005679C1 /* c_cpts_vehicle.h in CopyFiles */,
+				2FF426220DE61240005679C1 /* c_null_controller.h in CopyFiles */,
+				2FF426240DE61240005679C1 /* c_settings.h in CopyFiles */,
+				2FF426250DE61240005679C1 /* c_vehicle_const.h in CopyFiles */,
+				2FF426270DE61240005679C1 /* c_vehicle.h in CopyFiles */,
+				2FF426290DE61240005679C1 /* c_webots_controller.h in CopyFiles */,
+				2FF4262B0DE61240005679C1 /* c_webots_sensor.h in CopyFiles */,
+				2FF4262D0DE61240005679C1 /* c_wind.h in CopyFiles */,
+				2FF4262F0DE61240005679C1 /* cpts.h in CopyFiles */,
+				2FF426300DE61240005679C1 /* env_def.h in CopyFiles */,
+				2FF426320DE61240005679C1 /* gl_color.h in CopyFiles */,
+				2FF426340DE61240005679C1 /* gl_grid.h in CopyFiles */,
+				2FF426360DE61240005679C1 /* gl_plume.h in CopyFiles */,
+				2FF426380DE61240005679C1 /* gl_info.h in CopyFiles */,
+				2FF4263A0DE61240005679C1 /* gl_text.h in CopyFiles */,
+				2FF4263C0DE61240005679C1 /* gl_vehicle.h in CopyFiles */,
+				2FF4263E0DE61240005679C1 /* gl_wind.h in CopyFiles */,
+				2FF4263F0DE61240005679C1 /* gl.h in CopyFiles */,
+				2FF426400DE61240005679C1 /* i_chem_sensor.h in CopyFiles */,
+				2FF426410DE61240005679C1 /* i_env_data.h in CopyFiles */,
+				2FF426420DE61240005679C1 /* i_env.h in CopyFiles */,
+				2FF426430DE61240005679C1 /* i_vehicle_controller.h in CopyFiles */,
+				2FF426440DE61240005679C1 /* i_vehicle_data.h in CopyFiles */,
+				2FF426450DE61240005679C1 /* i_vehicle.h in CopyFiles */,
+				2FF426460DE61240005679C1 /* i_view.h in CopyFiles */,
+				2FF426480DE61240005679C1 /* maxmin.h in CopyFiles */,
+				2FF426490DE61240005679C1 /* s_data.h in CopyFiles */,
+				2FF4264A0DE61240005679C1 /* types_structs.h in CopyFiles */,
+				2FF4265B0DE612E4005679C1 /* actfunction.h in CopyFiles */,
+				2FF4265D0DE612E4005679C1 /* biobehavior.h in CopyFiles */,
+				2FF4265E0DE612E4005679C1 /* constants.h in CopyFiles */,
+				2FF426600DE612E4005679C1 /* desbehavior.h in CopyFiles */,
+				2FF426610DE612E4005679C1 /* globaldef.h in CopyFiles */,
+				2FF426620DE612E4005679C1 /* inisearch.h in CopyFiles */,
+				2FF426630DE612E4005679C1 /* list.h in CopyFiles */,
+				2FF426640DE612E4005679C1 /* listnd.h in CopyFiles */,
+				2FF426660DE612E4005679C1 /* mapbehavior.h in CopyFiles */,
+				2FF426670DE612E4005679C1 /* odor.h in CopyFiles */,
+				2FF426680DE612E4005679C1 /* point.h in CopyFiles */,
+				2FF4266A0DE612E4005679C1 /* strats.h in CopyFiles */,
+				2FD0CE6F0DEF47E300961AC8 /* gl_sensor.h in CopyFiles */,
+				2FBDE0760DF0070D00955C29 /* settings.ini in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F6DF7870DC78EFE00D50415 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		2F6DFC6C0DC7EC6A00D50415 /* cpts */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cpts; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6DFCB00DC7F43900D50415 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		2FBDE0750DF0070D00955C29 /* settings.ini */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = settings.ini; path = ../../out/settings.ini; sourceTree = SOURCE_ROOT; };
+		2FD0CE680DEF47B000961AC8 /* gl_info.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = gl_info.cpp; path = ../../source/gl_info.cpp; sourceTree = SOURCE_ROOT; };
+		2FD0CE690DEF47B000961AC8 /* gl_sensor.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = gl_sensor.cpp; path = ../../source/gl_sensor.cpp; sourceTree = SOURCE_ROOT; };
+		2FD0CE6E0DEF47E300961AC8 /* gl_sensor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gl_sensor.h; path = ../../source/gl_sensor.h; sourceTree = SOURCE_ROOT; };
+		2FF425D90DE61240005679C1 /* c_chemical_trail_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_chemical_trail_manager.cpp; path = ../../source/c_chemical_trail_manager.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425DA0DE61240005679C1 /* c_chemical_trail_manager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_chemical_trail_manager.h; path = ../../source/c_chemical_trail_manager.h; sourceTree = SOURCE_ROOT; };
+		2FF425DB0DE61240005679C1 /* c_chemical_trail.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_chemical_trail.cpp; path = ../../source/c_chemical_trail.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425DC0DE61240005679C1 /* c_chemical_trail.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_chemical_trail.h; path = ../../source/c_chemical_trail.h; sourceTree = SOURCE_ROOT; };
+		2FF425DD0DE61240005679C1 /* c_cpts_env_data.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_cpts_env_data.cpp; path = ../../source/c_cpts_env_data.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425DE0DE61240005679C1 /* c_cpts_env_data.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_cpts_env_data.h; path = ../../source/c_cpts_env_data.h; sourceTree = SOURCE_ROOT; };
+		2FF425DF0DE61240005679C1 /* c_cpts_env.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_cpts_env.cpp; path = ../../source/c_cpts_env.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425E00DE61240005679C1 /* c_cpts_env.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_cpts_env.h; path = ../../source/c_cpts_env.h; sourceTree = SOURCE_ROOT; };
+		2FF425E10DE61240005679C1 /* c_cpts_gl_view.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_cpts_gl_view.cpp; path = ../../source/c_cpts_gl_view.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425E20DE61240005679C1 /* c_cpts_gl_view.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_cpts_gl_view.h; path = ../../source/c_cpts_gl_view.h; sourceTree = SOURCE_ROOT; };
+		2FF425E30DE61240005679C1 /* c_cpts_settings.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_cpts_settings.cpp; path = ../../source/c_cpts_settings.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425E40DE61240005679C1 /* c_cpts_settings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_cpts_settings.h; path = ../../source/c_cpts_settings.h; sourceTree = SOURCE_ROOT; };
+		2FF425E50DE61240005679C1 /* c_cpts_vehicle_data.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_cpts_vehicle_data.cpp; path = ../../source/c_cpts_vehicle_data.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425E60DE61240005679C1 /* c_cpts_vehicle_data.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_cpts_vehicle_data.h; path = ../../source/c_cpts_vehicle_data.h; sourceTree = SOURCE_ROOT; };
+		2FF425E70DE61240005679C1 /* c_cpts_vehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_cpts_vehicle.cpp; path = ../../source/c_cpts_vehicle.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425E80DE61240005679C1 /* c_cpts_vehicle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_cpts_vehicle.h; path = ../../source/c_cpts_vehicle.h; sourceTree = SOURCE_ROOT; };
+		2FF425E90DE61240005679C1 /* c_null_controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_null_controller.h; path = ../../source/c_null_controller.h; sourceTree = SOURCE_ROOT; };
+		2FF425EA0DE61240005679C1 /* c_settings.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_settings.cpp; path = ../../source/c_settings.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425EB0DE61240005679C1 /* c_settings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_settings.h; path = ../../source/c_settings.h; sourceTree = SOURCE_ROOT; };
+		2FF425EC0DE61240005679C1 /* c_vehicle_const.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_vehicle_const.h; path = ../../source/c_vehicle_const.h; sourceTree = SOURCE_ROOT; };
+		2FF425ED0DE61240005679C1 /* c_vehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_vehicle.cpp; path = ../../source/c_vehicle.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425EE0DE61240005679C1 /* c_vehicle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_vehicle.h; path = ../../source/c_vehicle.h; sourceTree = SOURCE_ROOT; };
+		2FF425EF0DE61240005679C1 /* c_webots_controller.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_webots_controller.cpp; path = ../../source/c_webots_controller.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425F00DE61240005679C1 /* c_webots_controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_webots_controller.h; path = ../../source/c_webots_controller.h; sourceTree = SOURCE_ROOT; };
+		2FF425F10DE61240005679C1 /* c_webots_sensor.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_webots_sensor.cpp; path = ../../source/c_webots_sensor.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425F20DE61240005679C1 /* c_webots_sensor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_webots_sensor.h; path = ../../source/c_webots_sensor.h; sourceTree = SOURCE_ROOT; };
+		2FF425F30DE61240005679C1 /* c_wind.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = c_wind.cpp; path = ../../source/c_wind.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425F40DE61240005679C1 /* c_wind.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = c_wind.h; path = ../../source/c_wind.h; sourceTree = SOURCE_ROOT; };
+		2FF425F50DE61240005679C1 /* cpts.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = cpts.cpp; path = ../../source/cpts.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425F60DE61240005679C1 /* cpts.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = cpts.h; path = ../../source/cpts.h; sourceTree = SOURCE_ROOT; };
+		2FF425F70DE61240005679C1 /* env_def.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = env_def.h; path = ../../source/env_def.h; sourceTree = SOURCE_ROOT; };
+		2FF425F80DE61240005679C1 /* gl_color.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = gl_color.cpp; path = ../../source/gl_color.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425F90DE61240005679C1 /* gl_color.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gl_color.h; path = ../../source/gl_color.h; sourceTree = SOURCE_ROOT; };
+		2FF425FA0DE61240005679C1 /* gl_grid.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = gl_grid.cpp; path = ../../source/gl_grid.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425FB0DE61240005679C1 /* gl_grid.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gl_grid.h; path = ../../source/gl_grid.h; sourceTree = SOURCE_ROOT; };
+		2FF425FC0DE61240005679C1 /* gl_plume.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = gl_plume.cpp; path = ../../source/gl_plume.cpp; sourceTree = SOURCE_ROOT; };
+		2FF425FD0DE61240005679C1 /* gl_plume.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gl_plume.h; path = ../../source/gl_plume.h; sourceTree = SOURCE_ROOT; };
+		2FF425FF0DE61240005679C1 /* gl_info.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gl_info.h; path = ../../source/gl_info.h; sourceTree = SOURCE_ROOT; };
+		2FF426000DE61240005679C1 /* gl_text.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = gl_text.cpp; path = ../../source/gl_text.cpp; sourceTree = SOURCE_ROOT; };
+		2FF426010DE61240005679C1 /* gl_text.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gl_text.h; path = ../../source/gl_text.h; sourceTree = SOURCE_ROOT; };
+		2FF426020DE61240005679C1 /* gl_vehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = gl_vehicle.cpp; path = ../../source/gl_vehicle.cpp; sourceTree = SOURCE_ROOT; };
+		2FF426030DE61240005679C1 /* gl_vehicle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gl_vehicle.h; path = ../../source/gl_vehicle.h; sourceTree = SOURCE_ROOT; };
+		2FF426040DE61240005679C1 /* gl_wind.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = gl_wind.cpp; path = ../../source/gl_wind.cpp; sourceTree = SOURCE_ROOT; };
+		2FF426050DE61240005679C1 /* gl_wind.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gl_wind.h; path = ../../source/gl_wind.h; sourceTree = SOURCE_ROOT; };
+		2FF426060DE61240005679C1 /* gl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gl.h; path = ../../source/gl.h; sourceTree = SOURCE_ROOT; };
+		2FF426070DE61240005679C1 /* i_chem_sensor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = i_chem_sensor.h; path = ../../source/i_chem_sensor.h; sourceTree = SOURCE_ROOT; };
+		2FF426080DE61240005679C1 /* i_env_data.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = i_env_data.h; path = ../../source/i_env_data.h; sourceTree = SOURCE_ROOT; };
+		2FF426090DE61240005679C1 /* i_env.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = i_env.h; path = ../../source/i_env.h; sourceTree = SOURCE_ROOT; };
+		2FF4260A0DE61240005679C1 /* i_vehicle_controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = i_vehicle_controller.h; path = ../../source/i_vehicle_controller.h; sourceTree = SOURCE_ROOT; };
+		2FF4260B0DE61240005679C1 /* i_vehicle_data.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = i_vehicle_data.h; path = ../../source/i_vehicle_data.h; sourceTree = SOURCE_ROOT; };
+		2FF4260C0DE61240005679C1 /* i_vehicle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = i_vehicle.h; path = ../../source/i_vehicle.h; sourceTree = SOURCE_ROOT; };
+		2FF4260D0DE61240005679C1 /* i_view.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = i_view.h; path = ../../source/i_view.h; sourceTree = SOURCE_ROOT; };
+		2FF4260E0DE61240005679C1 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../source/main.cpp; sourceTree = SOURCE_ROOT; };
+		2FF4260F0DE61240005679C1 /* maxmin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = maxmin.h; path = ../../source/maxmin.h; sourceTree = SOURCE_ROOT; };
+		2FF426100DE61240005679C1 /* s_data.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = s_data.h; path = ../../source/s_data.h; sourceTree = SOURCE_ROOT; };
+		2FF426110DE61240005679C1 /* types_structs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = types_structs.h; path = ../../source/types_structs.h; sourceTree = SOURCE_ROOT; };
+		2FF4264B0DE612E4005679C1 /* actfunction.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = actfunction.h; sourceTree = "<group>"; };
+		2FF4264C0DE612E4005679C1 /* biobehavior.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = biobehavior.cpp; sourceTree = "<group>"; };
+		2FF4264D0DE612E4005679C1 /* biobehavior.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = biobehavior.h; sourceTree = "<group>"; };
+		2FF4264E0DE612E4005679C1 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		2FF4264F0DE612E4005679C1 /* desbehavior.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = desbehavior.cpp; sourceTree = "<group>"; };
+		2FF426500DE612E4005679C1 /* desbehavior.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = desbehavior.h; sourceTree = "<group>"; };
+		2FF426510DE612E4005679C1 /* globaldef.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = globaldef.h; sourceTree = "<group>"; };
+		2FF426520DE612E4005679C1 /* inisearch.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = inisearch.h; sourceTree = "<group>"; };
+		2FF426530DE612E4005679C1 /* list.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		2FF426540DE612E4005679C1 /* listnd.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = listnd.h; sourceTree = "<group>"; };
+		2FF426550DE612E4005679C1 /* mapbehavior.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = mapbehavior.cpp; sourceTree = "<group>"; };
+		2FF426560DE612E4005679C1 /* mapbehavior.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = mapbehavior.h; sourceTree = "<group>"; };
+		2FF426570DE612E4005679C1 /* odor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = odor.h; sourceTree = "<group>"; };
+		2FF426580DE612E4005679C1 /* point.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = point.h; sourceTree = "<group>"; };
+		2FF426590DE612E4005679C1 /* strats.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = strats.cpp; sourceTree = "<group>"; };
+		2FF4265A0DE612E4005679C1 /* strats.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = strats.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6DF7880DC78EFE00D50415 /* OpenGL.framework in Frameworks */,
+				2F6DFCB10DC7F43900D50415 /* GLUT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* cpts */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* frameworks */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = cpts;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2FBDE0750DF0070D00955C29 /* settings.ini */,
+				2FAC384E0DD0ECA000D89EC1 /* view */,
+				2FAC384F0DD0ECA600D89EC1 /* environment */,
+				2FAC38700DD0ED5B00D89EC1 /* vehicle */,
+				2FAC38780DD0F56F00D89EC1 /* settings */,
+				2FF426110DE61240005679C1 /* types_structs.h */,
+				2FF4260E0DE61240005679C1 /* main.cpp */,
+				2FF425F50DE61240005679C1 /* cpts.cpp */,
+				2FF425F60DE61240005679C1 /* cpts.h */,
+				2FF4260F0DE61240005679C1 /* maxmin.h */,
+				2F6DF6EC0DC78C8A00D50415 /* org */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F6DFC6C0DC7EC6A00D50415 /* cpts */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F6DF6EC0DC78C8A00D50415 /* org */ = {
+			isa = PBXGroup;
+			children = (
+				2FF4264B0DE612E4005679C1 /* actfunction.h */,
+				2FF4264C0DE612E4005679C1 /* biobehavior.cpp */,
+				2FF4264D0DE612E4005679C1 /* biobehavior.h */,
+				2FF4264E0DE612E4005679C1 /* constants.h */,
+				2FF4264F0DE612E4005679C1 /* desbehavior.cpp */,
+				2FF426500DE612E4005679C1 /* desbehavior.h */,
+				2FF426510DE612E4005679C1 /* globaldef.h */,
+				2FF426520DE612E4005679C1 /* inisearch.h */,
+				2FF426530DE612E4005679C1 /* list.h */,
+				2FF426540DE612E4005679C1 /* listnd.h */,
+				2FF426550DE612E4005679C1 /* mapbehavior.cpp */,
+				2FF426560DE612E4005679C1 /* mapbehavior.h */,
+				2FF426570DE612E4005679C1 /* odor.h */,
+				2FF426580DE612E4005679C1 /* point.h */,
+				2FF426590DE612E4005679C1 /* strats.cpp */,
+				2FF4265A0DE612E4005679C1 /* strats.h */,
+			);
+			name = org;
+			path = ../../source/org;
+			sourceTree = SOURCE_ROOT;
+		};
+		2FAC384E0DD0ECA000D89EC1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2FF4260D0DE61240005679C1 /* i_view.h */,
+				2FF425E10DE61240005679C1 /* c_cpts_gl_view.cpp */,
+				2FF425E20DE61240005679C1 /* c_cpts_gl_view.h */,
+				2FF426060DE61240005679C1 /* gl.h */,
+				2FF425F80DE61240005679C1 /* gl_color.cpp */,
+				2FF425F90DE61240005679C1 /* gl_color.h */,
+				2FF425FA0DE61240005679C1 /* gl_grid.cpp */,
+				2FF425FB0DE61240005679C1 /* gl_grid.h */,
+				2FF425FC0DE61240005679C1 /* gl_plume.cpp */,
+				2FF425FD0DE61240005679C1 /* gl_plume.h */,
+				2FD0CE690DEF47B000961AC8 /* gl_sensor.cpp */,
+				2FD0CE6E0DEF47E300961AC8 /* gl_sensor.h */,
+				2FD0CE680DEF47B000961AC8 /* gl_info.cpp */,
+				2FF425FF0DE61240005679C1 /* gl_info.h */,
+				2FF426000DE61240005679C1 /* gl_text.cpp */,
+				2FF426010DE61240005679C1 /* gl_text.h */,
+				2FF426020DE61240005679C1 /* gl_vehicle.cpp */,
+				2FF426030DE61240005679C1 /* gl_vehicle.h */,
+				2FF426040DE61240005679C1 /* gl_wind.cpp */,
+				2FF426050DE61240005679C1 /* gl_wind.h */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		2FAC384F0DD0ECA600D89EC1 /* environment */ = {
+			isa = PBXGroup;
+			children = (
+				2FF425F70DE61240005679C1 /* env_def.h */,
+				2FF426080DE61240005679C1 /* i_env_data.h */,
+				2FF426090DE61240005679C1 /* i_env.h */,
+				2FF425DD0DE61240005679C1 /* c_cpts_env_data.cpp */,
+				2FF425DE0DE61240005679C1 /* c_cpts_env_data.h */,
+				2FF425DF0DE61240005679C1 /* c_cpts_env.cpp */,
+				2FF425E00DE61240005679C1 /* c_cpts_env.h */,
+				2FF426070DE61240005679C1 /* i_chem_sensor.h */,
+				2FF425D90DE61240005679C1 /* c_chemical_trail_manager.cpp */,
+				2FF425DA0DE61240005679C1 /* c_chemical_trail_manager.h */,
+				2FF425DB0DE61240005679C1 /* c_chemical_trail.cpp */,
+				2FF425DC0DE61240005679C1 /* c_chemical_trail.h */,
+				2FF425F10DE61240005679C1 /* c_webots_sensor.cpp */,
+				2FF425F20DE61240005679C1 /* c_webots_sensor.h */,
+				2FF425F30DE61240005679C1 /* c_wind.cpp */,
+				2FF425F40DE61240005679C1 /* c_wind.h */,
+			);
+			name = environment;
+			sourceTree = "<group>";
+		};
+		2FAC38700DD0ED5B00D89EC1 /* vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				2FF4260A0DE61240005679C1 /* i_vehicle_controller.h */,
+				2FF4260B0DE61240005679C1 /* i_vehicle_data.h */,
+				2FF4260C0DE61240005679C1 /* i_vehicle.h */,
+				2FF426100DE61240005679C1 /* s_data.h */,
+				2FF425EC0DE61240005679C1 /* c_vehicle_const.h */,
+				2FF425ED0DE61240005679C1 /* c_vehicle.cpp */,
+				2FF425EE0DE61240005679C1 /* c_vehicle.h */,
+				2FF425E50DE61240005679C1 /* c_cpts_vehicle_data.cpp */,
+				2FF425E60DE61240005679C1 /* c_cpts_vehicle_data.h */,
+				2FF425E70DE61240005679C1 /* c_cpts_vehicle.cpp */,
+				2FF425E80DE61240005679C1 /* c_cpts_vehicle.h */,
+				2FF425E90DE61240005679C1 /* c_null_controller.h */,
+				2FF425EF0DE61240005679C1 /* c_webots_controller.cpp */,
+				2FF425F00DE61240005679C1 /* c_webots_controller.h */,
+			);
+			name = vehicle;
+			sourceTree = "<group>";
+		};
+		2FAC38780DD0F56F00D89EC1 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				2FF425E30DE61240005679C1 /* c_cpts_settings.cpp */,
+				2FF425E40DE61240005679C1 /* c_cpts_settings.h */,
+				2FF425EA0DE61240005679C1 /* c_settings.cpp */,
+				2FF425EB0DE61240005679C1 /* c_settings.h */,
+			);
+			name = settings;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F6DFCB00DC7F43900D50415 /* GLUT.framework */,
+				2F6DF7870DC78EFE00D50415 /* OpenGL.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* cpts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "cpts" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cpts;
+			productInstallPath = "$(HOME)/bin";
+			productName = cpts;
+			productReference = 2F6DFC6C0DC7EC6A00D50415 /* cpts */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "cpts" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* cpts */;
+			projectDirPath = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* cpts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FF426120DE61240005679C1 /* c_chemical_trail_manager.cpp in Sources */,
+				2FF426140DE61240005679C1 /* c_chemical_trail.cpp in Sources */,
+				2FF426160DE61240005679C1 /* c_cpts_env_data.cpp in Sources */,
+				2FF426180DE61240005679C1 /* c_cpts_env.cpp in Sources */,
+				2FF4261A0DE61240005679C1 /* c_cpts_gl_view.cpp in Sources */,
+				2FF4261C0DE61240005679C1 /* c_cpts_settings.cpp in Sources */,
+				2FF4261E0DE61240005679C1 /* c_cpts_vehicle_data.cpp in Sources */,
+				2FF426200DE61240005679C1 /* c_cpts_vehicle.cpp in Sources */,
+				2FF426230DE61240005679C1 /* c_settings.cpp in Sources */,
+				2FF426260DE61240005679C1 /* c_vehicle.cpp in Sources */,
+				2FF426280DE61240005679C1 /* c_webots_controller.cpp in Sources */,
+				2FF4262A0DE61240005679C1 /* c_webots_sensor.cpp in Sources */,
+				2FF4262C0DE61240005679C1 /* c_wind.cpp in Sources */,
+				2FF4262E0DE61240005679C1 /* cpts.cpp in Sources */,
+				2FF426310DE61240005679C1 /* gl_color.cpp in Sources */,
+				2FF426330DE61240005679C1 /* gl_grid.cpp in Sources */,
+				2FF426350DE61240005679C1 /* gl_plume.cpp in Sources */,
+				2FF426390DE61240005679C1 /* gl_text.cpp in Sources */,
+				2FF4263B0DE61240005679C1 /* gl_vehicle.cpp in Sources */,
+				2FF4263D0DE61240005679C1 /* gl_wind.cpp in Sources */,
+				2FF426470DE61240005679C1 /* main.cpp in Sources */,
+				2FF4265C0DE612E4005679C1 /* biobehavior.cpp in Sources */,
+				2FF4265F0DE612E4005679C1 /* desbehavior.cpp in Sources */,
+				2FF426650DE612E4005679C1 /* mapbehavior.cpp in Sources */,
+				2FF426690DE612E4005679C1 /* strats.cpp in Sources */,
+				2FD0CE6A0DEF47B000961AC8 /* gl_info.cpp in Sources */,
+				2FD0CE6B0DEF47B000961AC8 /* gl_sensor.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = cpts;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = cpts;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../out;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SYMBOL_SEPARATION = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = OSX;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../out;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SYMBOL_SEPARATION = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = OSX;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "cpts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "cpts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

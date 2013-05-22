@@ -1,0 +1,87 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   email.php
+//	Programmer:     Joseph E. Sutton
+//	Description:    Email processing, tag and send mail
+//	Created Date:   1/23/2006
+// Updated:        1/6/2007
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__EMAIL__') )
+{
+	define('__EMAIL__', 1);
+   
+   class EmailProcessor
+   {
+      static public function HashEmail($email)
+      {
+         $hash_email = '';
+         
+         $size = strlen($email);
+         for($i = 0; $i < $size; $i++)
+         {
+            $hash_email .= sprintf('&#%d;', ord($email{$i}));
+         }
+         
+         $out_email = sprintf('<a href="mailto:%s">%s</a>', $hash_email, $hash_email);
+         return $out_email;
+      }
+      
+      /*
+         require: pear::mail, pear::net/smtp
+                  pear install mail net_smtp
+      */
+      static public function SendEmail($from, $to, $subject, $message, $content_type)
+      {  
+         require_once("Mail.php");
+         
+         $user = 'js.csub.emailsender@gmail.com';
+         $pass = '0+#WrlAw';
+         
+         $headers = array (
+           'From' => $from,
+           'To' => $to,
+           'Subject' => $subject,
+           'Reply-To' => $from,
+           'MIME-Version' => '1.0',
+           'Content-Type' => $content_type
+         );
+         
+         $smtp = Mail::factory( 'smtp', array (
+            'host' => "localhost",
+            'port' => 25,
+            'auth' => false,
+            'debug' => false,
+         ));
+         
+         /*
+         $smtp = Mail::factory( 'smtp', array (
+            'host' => "ssl://smtp.gmail.com",
+            'port' => 465,
+            'auth' => TRUE,
+            'username' => $user,
+            'password' => $pass,
+            'debug' => FALSE,
+         ));
+         */
+         
+         /*
+         echo "to: ".$to;
+         echo "headers: ".$headers;
+         echo "msg: ".$message;
+         */
+         
+         $mail = $smtp->send($to, $headers, $message);
+         if(PEAR::isError($mail))
+         {
+            //echo("Mail Error: <p>" . $mail->getMessage() . "</p>");
+            return $mail->getMessage();
+         }
+         
+         //echo("<p>Message successfully sent!</p>");
+         return true;
+      }
+   }
+}
+?>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/WarpAttack/!svn/ver/101/trunk/output/data/shaders
+END
+f_combine.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/WarpAttack/!svn/ver/101/trunk/output/data/shaders/f_combine.glsl
+END
+f_draw.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/WarpAttack/!svn/ver/85/trunk/output/data/shaders/f_draw.glsl
+END
+v_texture_setup.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/WarpAttack/!svn/ver/101/trunk/output/data/shaders/v_texture_setup.glsl
+END
+f_blur.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/WarpAttack/!svn/ver/84/trunk/output/data/shaders/f_blur.glsl
+END
+f_hipass.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/WarpAttack/!svn/ver/101/trunk/output/data/shaders/f_hipass.glsl
+END

@@ -1,0 +1,535 @@
+/****************************************
+ filename:    level_warp.cpp
+ project:     warpattack
+ created by:  Joseph E. Sutton
+ date:        2010/04/08
+ description: warp level
+ ****************************************/
+#include "global.h"
+
+cWarpLevel::cWarpLevel()
+{
+   mPlayerShip = NULL;
+
+   mLives = 4;
+   mScore = 0;
+
+   mBackground.push_back(new cStarfield());
+}
+
+cWarpLevel::~cWarpLevel()
+{
+   Clear();
+}
+
+void cWarpLevel::Clear()
+{
+   if(mWarpPath != NULL)   delete mWarpPath;
+   if(mPlayerShip != NULL) delete mPlayerShip;
+   
+   // TODO
+   // remove remaining mEnemies
+   // remove remaining mBullets
+}
+
+uInt32 cWarpLevel::Enter(uInt32 level_num) 
+{
+   uInt32 startTrack;
+   cFlipper *f;
+   cLevel::Enter(level_num);
+  
+   
+   // Settings
+   mMaxNumEnemies = 5;
+   mMaxNumBullets = 10;
+   mMaxBulletRate = 110000;
+   
+   mFogDensity    = 0.08;
+   
+   mZoomStartFieldOfView = 160.0;
+   mZoomEndFieldOfView   =  60.0;
+   mZoomStartZPos        = -50.0;
+   mZoomEndZPos          =   0.0;
+   mZoomMoveRate         =   5.0;
+   
+   mWarpPath = new cWarpPath();
+   mLevelMax = 7;
+   if(mLevelNum == 1)
+   {
+      mWarpPath->Load(MODEL_DIR"/warp/v.poly");
+      startTrack = 1;
+   }
+   else if(mLevelNum == 2)
+   {
+      mWarpPath->Load(MODEL_DIR"/warp/cross.poly");
+      startTrack = 15;
+   }
+   else if(mLevelNum == 3)
+   {
+      mWarpPath->Load(MODEL_DIR"/warp/staircase.poly");
+      startTrack = 1;
+   }
+   else if(mLevelNum == 4)
+   {
+      mWarpPath->Load(MODEL_DIR"/warp/valley.poly");
+      startTrack = 1;
+   }
+   else if(mLevelNum == 5)
+   {
+      mWarpPath->Load(MODEL_DIR"/warp/circle.poly");
+      startTrack = 11;
+   }
+   else if(mLevelNum == 6)
+   {
+      mWarpPath->Load(MODEL_DIR"/warp/steep_v.poly");
+      startTrack = 1;
+   }
+   else
+   {
+      mWarpPath->Load(MODEL_DIR"/warp/diamond.poly");
+      startTrack = 1;
+   }
+
+   mLivesPoly.Load(MODEL_DIR"/ship/ship.poly");
+   mLivesPoly.mColor.a = 0.8;
+
+   // scale using poly width and height
+   float height;
+   height = mWarpPath->GetHeight();
+   if(height < 4) height = 4;
+   mScaleWarpPathY = ((game->mHeight)/height)*0.002;
+   mScaleWarpPathX = mScaleWarpPathY;
+
+   mPlayerShip = new cPlayerShip(mWarpPath->GetPoly(), mWarpPath->GetPolyType(), startTrack);
+
+   // TODO
+   // remove, build random list
+   // For testing
+   mEnemies.clear();
+   
+   for(i = 0; i  < mMaxNumEnemies; ++i)
+   {
+      f = new cFlipper( &(mWarpPath->mPath), mWarpPath->GetPolyType());
+      mEnemies.push_back(f);
+   }
+
+   //
+   mBulletRateTimer.SetExpire(mMaxBulletRate);
+   mBulletRateTimer.Start();
+   mBullets.clear();
+   
+   // 
+   mZoomState = Zoom_StartIn;
+   mLevelState = LevelState_Running;
+   mCurrentBkg = mBackground[0];
+   
+   return mLevelNum;
+}
+
+uInt32 cWarpLevel::Exit()
+{
+   ++mLevelNum;
+   if(mLevelNum > mLevelMax)
+      mLevelNum = 1;
+      
+   return mLevelNum;
+}
+
+void cWarpLevel::Draw()
+{
+   glLineWidth(1.10);
+   
+   if(mZoomState == Zoom_StartIn)
+   {
+      return;
+   }
+   
+   if((mZoomState == Zoom_MovingIn) ||
+      (mZoomState == Zoom_MovingOut))
+   {
+      glTranslatef(0, 0, mZoomZPos);
+   }
+
+   if(mCurrentBkg != NULL)
+      mCurrentBkg->Draw();
+
+   glEnable(GL_FOG);
+   glFogf(GL_FOG_DENSITY, mFogDensity);
+   glPushMatrix();
+
+   // scale and translate for warp path
+   glScalef(mScaleWarpPathX, mScaleWarpPathY, 1.0); // scale polygon so all fit in the same area
+   glTranslatef(0.0, 0.0, -2.0);
+      
+   if(mWarpPath != NULL)
+   {
+      glLineWidth(1.5);
+      mWarpPath->Draw();
+      glLineWidth(1.10);
+   }
+   
+   if(mZoomState == Zoom_DoneIn)
+   {
+      if(mPlayerShip != NULL)
+		{
+         mPlayerShip->Draw();
+		}
+   
+      for(i = 0; i < mEnemies.size(); ++i)
+      {
+         mEnemies[i]->Draw();
+      }
+      
+      for(i = 0; i < mBullets.size(); ++i)
+      {
+         mBullets[i]->Draw();
+      }
+   }
+
+   glPopMatrix();
+   glDisable(GL_FOG);
+
+   // Score
+   if(mZoomState == Zoom_DoneIn)
+   {
+      // draw lives
+      glPushMatrix();
+      glScalef(0.1, 0.1, 1.0);
+      glTranslatef(15.0, 10.5, -2.0);
+      glLineWidth(1.5);
+      for(i = 0; i < mLives; ++i)
+      {
+         mLivesPoly.Draw();
+         glTranslatef(-(mLivesPoly.mWidth + 0.3), 0.0, 0.0);
+      }
+      glPopMatrix();
+
+      glLineWidth(2.25);
+      game->mText->SetColor(0.9, 0.9, 0.9);
+      game->mText->DrawLines(0.02, 0.93, 0.03, "Score %0.5d", mScore);
+      glLineWidth(1.10);
+   }
+     
+   //if(mLevelState == LevelState_Paused) DrawPaused();
+}
+
+void cWarpLevel::Update()
+{
+   if(mLevelState == LevelState_Running)
+   {
+      // Zoom Start IN
+      if(mZoomState == Zoom_StartIn)
+      {
+         mWarpPath->SetCurrentSelectedTrack(-1);
+         mZoomState = Zoom_MovingIn;
+         
+         mZoomFieldOfView = mZoomStartFieldOfView;
+         mZoomSteps       = mZoomStartFieldOfView-mZoomEndFieldOfView;
+         mZoomZPos        = mZoomStartZPos;
+         
+         game->ChangePerspective(mZoomFieldOfView);
+         
+         mZoomTimer.SetExpirePerSec(GAME_FRAME_TIME);
+         mZoomTimer.Start();
+         
+         if(mCurrentBkg != NULL) mCurrentBkg->Update();
+         if(mWarpPath != NULL)   mWarpPath->Update();
+      }
+      // Zoom Moving IN
+      if(mZoomState == Zoom_MovingIn)
+      {
+         mZoomTimer.Update();
+         if(mZoomTimer.HasExpired())
+         {
+            mZoomTimer.Start();
+            game->ChangePerspective(mZoomFieldOfView);
+         
+            mZoomFieldOfView -= mZoomMoveRate;
+            mZoomZPos += ((float)(mZoomEndZPos - mZoomStartZPos)/((float)mZoomSteps/(float)mZoomMoveRate));
+            
+            if(mZoomFieldOfView < mZoomEndFieldOfView)
+            {
+               mZoomState = Zoom_DoneIn;
+               game->ChangePerspective(mZoomEndFieldOfView);
+            }
+         }
+      }
+      
+      // Zoom Done IN
+      if(mZoomState == Zoom_DoneIn)
+      {
+         if(mCurrentBkg != NULL)
+            mCurrentBkg->Update();
+         
+         if(mPlayerShip != NULL)
+            mPlayerShip->Update();
+         
+         if(mWarpPath != NULL)
+         {
+            if(mPlayerShip != NULL)
+               mWarpPath->SetCurrentSelectedTrack(mPlayerShip->GetCurrentTrack());
+            
+            mWarpPath->Update();
+         }
+
+         Point3D p, e;
+         uInt32 et, pt;
+         for(i = 0; i < mEnemies.size(); ++i)
+         {
+            // check enemy and player collision
+            e = mEnemies[i]->GetCenterPos();
+            p = mPlayerShip->GetCenterPos();
+            if(e.z == p.z)
+            {
+               et = mEnemies[i]->GetCurrentTrack();
+               pt = mPlayerShip->GetCurrentTrack();
+               if(et == pt)
+               {
+                  // player killed
+                  mLives--;
+                  
+                  if(mLives == 0)
+                  {
+                     // game over
+                     mLevelState = LevelState_Exit;
+                     mLevelNum = -1;
+                     
+                     mLives = 4;
+                     mScore = 0;
+                  } else {
+                     // restart level
+                     mZoomState = Zoom_ResetMovingOut;
+                     mWarpPath->ResetBackToStart();
+                     mLevelNum--;
+                  }
+               }
+            }
+            
+            
+            mEnemies[i]->Update();
+
+            if(mEnemies[i]->isDead())
+            {
+               mEnemies.erase(mEnemies.begin() + i);
+               // done
+               break;
+            }
+
+            // collission check with bullet
+            if(mEnemies[i]->mHitable)
+            {
+               PointBox3D b;
+               for(j = 0; j < mBullets.size(); ++j)
+               {
+                  p = mEnemies[i]->GetCenterPos();
+                  b = mBullets[j]->GetHitRegion();
+                  if( CollisionTest(p, b) )
+                  {
+                     // player killed enemy
+                     mEnemies[i]->Killed();
+                     DestroyBullet(j);
+
+                     mScore += 100;
+                  }
+               }
+            }
+
+            //
+         }
+
+         if(mEnemies.size() == 0)
+         {
+            // no more enemies, level over
+            mZoomState = Zoom_ResetMovingOut;
+            mWarpPath->ResetBackToStart();
+
+            mScore += 2000;
+         }
+
+         for(i = 0; i < mBullets.size(); ++i)
+         {
+            mBullets[i]->Update();
+            
+            // greater then because in -Z direction
+            if(mBullets[i]->GetZ() < mWarpPath->GetMinZ())
+            {
+               DestroyBullet(i);
+            }
+         }
+      }
+      
+      // Zoom Reset Moving OUT
+      if(mZoomState == Zoom_ResetMovingOut)
+      {
+         if(mCurrentBkg != NULL)
+            mCurrentBkg->Update();
+
+         if(mWarpPath != NULL)
+         {
+            mWarpPath->SetCurrentSelectedTrack(-1);
+            mWarpPath->Update();
+         }
+
+         if(mWarpPath->ResetDone())
+            mZoomState = Zoom_StartOut;
+      }
+      // Zoom Start OUT
+      if(mZoomState == Zoom_StartOut)
+      {
+         mZoomState = Zoom_MovingOut;
+         
+         mZoomFieldOfView = mZoomEndFieldOfView;
+         mZoomSteps       = (mZoomStartFieldOfView-mZoomEndFieldOfView)*0.60;
+         mZoomZPos        = mZoomEndZPos;
+         mZoomMoveRate    = 3.5;
+         
+         mZoomTimer.SetExpirePerSec( GAME_FRAME_TIME );
+         mZoomTimer.Start();
+         
+         if(mCurrentBkg != NULL) mCurrentBkg->Update();
+         if(mWarpPath != NULL)   mWarpPath->Update();
+      }
+      // Zoom Moving OUT
+      if(mZoomState == Zoom_MovingOut)
+      {
+         mZoomTimer.Update();
+         if(mZoomTimer.HasExpired())
+         {
+            mZoomTimer.Start();
+            game->ChangePerspective(mZoomFieldOfView);
+            
+            mZoomFieldOfView -= mZoomMoveRate;
+            mZoomZPos += ((float)(mZoomEndZPos - mZoomStartZPos)/
+                         ((float)mZoomSteps/(float)mZoomMoveRate));
+            
+            if(mZoomFieldOfView < 0)
+            {
+               mZoomState  = Zoom_DoneOut;
+               mLevelState = LevelState_Exit;
+            }
+         }
+      }
+      
+   }
+}
+
+
+bool cWarpLevel::CollisionTest(Point3D p, PointBox3D b)
+{
+   uInt32 i;
+   Point3D min, max;
+
+   // find min and max
+   min = b.s[0];
+   max = min;
+   for(i = 1; i < 4; ++i)
+   {
+      if(b.s[i].x > max.x) max.x = b.s[i].x;
+      if(b.s[i].x < min.x) min.x = b.s[i].x;
+      if(b.s[i].y > max.y) max.y = b.s[i].y;
+      if(b.s[i].y < min.y) min.y = b.s[i].y;
+      if(b.s[i].z > max.z) max.z = b.s[i].z;
+      if(b.s[i].z < min.z) min.z = b.s[i].z;
+   }
+
+   //
+   if( ((min.x <= p.x) && (p.x <= max.x)) &&
+//       ((min.y <= p.y) && (p.y <= max.y)) &&
+       ((min.z <= p.z) && (p.z <= max.z))
+     ) return true;
+
+   return false;
+}
+
+
+void cWarpLevel::Input(LevelInput input)
+{
+   if(input.Key == 'p')
+   {
+      if(mZoomState == Zoom_DoneIn)
+         mLevelState = (mLevelState == LevelState_Paused) ? LevelState_Running : LevelState_Paused;
+   }
+
+   if(input.Key == 'r')
+   {
+      mLevelState = LevelState_Exit;
+      mLevelNum = -1;
+
+      mLives = 4;
+      mScore = 0;
+   }
+   
+   if(mLevelState == LevelState_Running)
+   {
+      // left press, move left
+      // right press, move right
+      // when action 1, fire bullet
+           if(input.Left)  mPlayerShip->MoveLeft();
+      else if(input.Right) mPlayerShip->MoveRight();
+      else if(input.Action1)
+      {
+         mBulletRateTimer.Update();
+         
+         if( (mMaxNumBullets > mBullets.size()) &&
+             (mBulletRateTimer.HasExpired())
+           )
+         {
+            mBulletRateTimer.Start();
+            
+            // fire bullet
+            mTmpBullet = new cPlayerShipBullet(mPlayerShip->GetCurrentTrack(), &(mWarpPath->mPath));  
+            mBullets.push_back(mTmpBullet);
+         }
+      }
+      
+      if(input.Key == 'n')
+      {
+         mZoomState = Zoom_ResetMovingOut;
+         mWarpPath->ResetBackToStart();
+      }
+   }
+}
+
+void cWarpLevel::DrawPaused()
+{
+   GLfloat c[4];
+   c[0] = 0.0; c[1] = 0.0; c[2] = 0.0; c[3] = 0.5;
+   
+   glPushMatrix();
+   glTranslatef(-2.0, -2.0, -1.001); // -1.001; 1 so anything at -1.0 will not be covered
+   
+   glBegin(GL_POLYGON);
+   glNormal3f(0, 0, -1.0);
+   glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
+   
+   glVertex3f( 0, 0, 0);
+   glVertex3f( 0, 4, 0);
+   glVertex3f( 4, 4, 0);
+   glVertex3f( 4, 0, 0);
+   glVertex3f( 0, 0, 0);
+   
+   glEnd();
+   
+   glPopMatrix();
+   
+   game->mText->SetColor(1, 1, 1); // white
+   game->mText->Draw2D(0.465, 0.5, "[ Paused ]");
+}
+
+void cWarpLevel::DestroyBullet(uInt32 index)
+{
+   if(index < mBullets.size())
+   {
+      mTmpBullet = mBullets[index];
+      if(mTmpBullet != NULL) delete mTmpBullet;
+      
+      mBullets.erase(mBullets.begin() + index);
+   }
+}
+
+int  cWarpLevel::LoadSettings(const char *filename)
+{
+   // TODO
+   
+   return 0;
+}

@@ -1,0 +1,87 @@
+/****************************************
+ filename:    player_ship.cpp
+ project:     warpattack
+ created by:  Joseph E. Sutton
+ date:        2010/04/15
+ description: 
+ ****************************************/
+#include "global.h"
+
+cPlayerShip::cPlayerShip(vector<Point3D> p)
+{
+   mPath = p;
+   mState = PlayerShip_Alive;
+   
+   SelectAnim("Ship");
+   Play();
+   
+   mCurrentTrack = p.size() >> 1; // the middle track
+   SelectAnim("Ship");
+	angle = 0;
+}
+
+void cPlayerShip::Draw()
+{
+   // TODO
+   // Rotate - facing center
+<<<<<<< .mine
+   glRotatef(angle, mPath[mCurrentTrack].x, mPath[mCurrentTrack].y, mPath[mCurrentTrack].z);
+   
+=======
+	glRotatef(angle, mPath[mCurrentTrack].x, mPath[mCurrentTrack].y, mPath[mCurrentTrack].z);
+
+>>>>>>> .r37
+   // Translate - to path point
+	glTranslatef(mPath[mCurrentTrack].x, mPath[mCurrentTrack].y, mPath[mCurrentTrack].z);
+   
+   cAnimModel::Draw();
+}
+
+void cPlayerShip::Update()
+{
+   cAnimModel::Update();
+}
+
+void cPlayerShip::MoveLeft()
+{
+	mOldTrack = mCurrentTrack;
+	if(mCurrentTrack > 0)
+      mCurrentTrack--;
+    else
+      mCurrentTrack = mPath.size()-1;
+
+	//rotation
+	a = Abs(mPath[mCurrentTrack].x - mPath[mOldTrack].x);
+	b = Abs(mPath[mCurrentTrack].y - mPath[mOldTrack].y);
+	if(a != 0 && b != 0)
+	{ 
+		c = pow(a,2) + pow(b,2);
+		angle = acos((pow(a,2)+pow(b,2)-c)/(2*a*b));
+<<<<<<< .mine
+		//glRotatef(angle, mPath[mCurrentTrack].x, mPath[mCurrentTrack].y, mPath[mCurrentTrack].z);
+=======
+>>>>>>> .r37
+	}
+}
+
+void cPlayerShip::MoveRight()
+{
+	mOldTrack = mCurrentTrack;
+	if(mCurrentTrack < (mPath.size()-1))
+      mCurrentTrack++;
+    else
+      mCurrentTrack = 0;
+
+	//Rotation
+	a = Abs(mPath[mCurrentTrack].x - mPath[mOldTrack].x);
+	b = Abs(mPath[mCurrentTrack].y - mPath[mOldTrack].y);
+	if(a != 0 && b != 0)
+	{ 
+		c = pow(a,2) + pow(b,2);
+		angle = acos((pow(a,2)+pow(b,2)-c)/(2*a*b));
+<<<<<<< .mine
+		//glRotatef(angle, mPath[mCurrentTrack].x, mPath[mCurrentTrack].y, mPath[mCurrentTrack].z);
+=======
+>>>>>>> .r37
+	}
+}

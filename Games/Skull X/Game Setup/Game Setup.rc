@@ -1,0 +1,530 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Game Setup.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Game Setup.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GAMESETUP_DIALOG DIALOGEX 0, 0, 190, 282
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Game Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,6,250,42,14
+    PUSHBUTTON      "Cancel",IDCANCEL,54,250,42,14
+    EDITTEXT        IDC_EDIT1,47,126,30,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "In Seconds (Default 180)",IDC_STATIC,81,128,75,10,
+                    SS_CENTERIMAGE
+    CONTROL         "Infinit",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,11,112,
+                    34,12
+    CONTROL         "Custom",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,11,126,
+                    34,12
+    GROUPBOX        "Play Time",IDC_STATIC,4,102,156,52
+    CONTROL         "Count Up",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,10,142,
+                    44,10
+    CONTROL         "Count Down",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,57,
+                    142,52,10
+    CONTROL         "15 min",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,47,112,
+                    34,12
+    CONTROL         "30 min",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,83,112,
+                    34,12
+    CONTROL         "1 hr",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,119,112,37,
+                    12
+    PUSHBUTTON      "Edit",IDC_BUTTON1,122,216,22,14
+    CONTROL         "Inside Ref",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,72,216,48,14
+    CONTROL         "Outside Ref",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,72,232,48,14
+    PUSHBUTTON      "Edit",IDC_BUTTON2,122,232,22,14
+    CONTROL         "Bench",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    6,216,30,14
+    CONTROL         "Chair",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    6,230,30,14
+    PUSHBUTTON      "Edit",IDC_BUTTON3,37,216,22,14
+    PUSHBUTTON      "Edit",IDC_BUTTON4,37,230,22,14
+    CONTROL         "1 p/m",IDC_RADIO22,"Button",BS_AUTORADIOBUTTON,10,172,
+                    34,10
+    CONTROL         "3 p/m",IDC_RADIO23,"Button",BS_AUTORADIOBUTTON,48,172,
+                    30,10
+    EDITTEXT        IDC_EDIT6,48,184,30,12,ES_AUTOHSCROLL
+    CONTROL         "# p/m",IDC_RADIO24,"Button",BS_AUTORADIOBUTTON,10,184,
+                    34,12
+    CONTROL         "3 pts",IDC_RADIO25,"Button",BS_AUTORADIOBUTTON,94,172,
+                    30,10
+    CONTROL         "6 pts",IDC_RADIO26,"Button",BS_AUTORADIOBUTTON,126,172,
+                    30,10
+    EDITTEXT        IDC_EDIT7,126,184,30,12,ES_AUTOHSCROLL
+    CONTROL         "# pts",IDC_RADIO27,"Button",BS_AUTORADIOBUTTON,94,184,
+                    30,12
+    CONTROL         "Demo",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    146,28,32,10
+    PUSHBUTTON      "Default",IDCANCEL2,104,250,42,14
+    GROUPBOX        "Win Match Energy",IDC_STATIC,86,160,80,40
+    GROUPBOX        "Recover",IDC_STATIC,4,160,78,40
+    COMBOBOX        IDC_COMBO2,104,38,66,72,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,104,63,66,40,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Difficulty",IDC_STATIC,104,55,36,8
+    LTEXT           "Match type",IDC_STATIC,104,30,36,8
+    EDITTEXT        IDC_EDIT2,104,14,74,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST1,34,22,66,54,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Game Style Name:",IDC_STATIC,104,6,74,8
+    PUSHBUTTON      "New",IDC_BUTTON5,4,22,28,14
+    PUSHBUTTON      "Save",IDC_BUTTON6,72,6,28,14
+    PUSHBUTTON      "Save As",IDC_BUTTON7,36,6,28,14
+    PUSHBUTTON      "Load",IDC_BUTTON8,4,60,28,14
+    PUSHBUTTON      "Reset",IDC_BUTTON9,4,40,28,14
+END
+
+IDD_REF DIALOG DISCARDABLE  0, 0, 162, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,30,112,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,84,112,50,14
+    CONTROL         "Pin Fall",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,10,20,
+                    38,10
+    CONTROL         "No Pin Fall",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,10,
+                    8,49,10
+    EDITTEXT        IDC_EDIT2,48,18,40,12,ES_AUTOHSCROLL
+    CONTROL         "Submit",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON,10,46,
+                    37,10
+    CONTROL         "No Submit",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON,10,
+                    34,47,10
+    EDITTEXT        IDC_EDIT3,48,44,40,12,ES_AUTOHSCROLL
+    LTEXT           "If zero then no pin fall",IDC_STATIC,92,20,64,10
+    CONTROL         "Outside Count",IDC_RADIO14,"Button",BS_AUTORADIOBUTTON,
+                    10,74,54,10
+    CONTROL         "No Outside Count",IDC_RADIO15,"Button",
+                    BS_AUTORADIOBUTTON,10,62,68,10
+    EDITTEXT        IDC_EDIT4,64,72,40,12,ES_AUTOHSCROLL
+    LTEXT           "Default 20",IDC_STATIC,107,74,32,10
+    LTEXT           "Default 3",IDC_STATIC,92,8,32,10
+    LTEXT           "Default 10",IDC_STATIC,92,34,32,10
+    LTEXT           "If zero then no submit",IDC_STATIC,92,46,64,10
+    CONTROL         "Over ropes",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,90,50,10
+    CONTROL         "You lose",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,62,90,
+                    46,10
+    CONTROL         "They lose",IDC_RADIO28,"Button",BS_AUTORADIOBUTTON,62,
+                    101,46,10
+END
+
+IDD_WEP DIALOG DISCARDABLE  0, 0, 180, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,62,50,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,114,50,50,14
+    CONTROL         "Appear at start",IDC_RADIO12,"Button",
+                    BS_AUTORADIOBUTTON,10,6,76,12
+    CONTROL         "Full ( Default )",IDC_RADIO13,"Button",
+                    BS_AUTORADIOBUTTON,24,18,54,12
+    CONTROL         "Broken",IDC_RADIO16,"Button",BS_AUTORADIOBUTTON,24,30,
+                    54,12
+    CONTROL         "Brought in by computer",IDC_RADIO14,"Button",
+                    BS_AUTORADIOBUTTON,92,6,82,12
+    CONTROL         "Full ( Default )",IDC_RADIO15,"Button",
+                    BS_AUTORADIOBUTTON,100,18,54,12
+    CONTROL         "Broken",IDC_RADIO17,"Button",BS_AUTORADIOBUTTON,100,30,
+                    54,12
+    COMBOBOX        IDC_COMBO1,8,56,48,90,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CTEXT           "Placement",IDC_STATIC,10,48,44,8
+END
+
+IDD_PLAYER DIALOG DISCARDABLE  0, 0, 120, 88
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,8,70,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,64,70,50,14
+    CONTROL         "1 Super Star",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,6,
+                    6,50,10
+    EDITTEXT        IDC_EDIT3,48,49,30,12,ES_AUTOHSCROLL
+    CONTROL         "12 Energy",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,6,36,
+                    44,10
+    CONTROL         "15 Energy",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,52,
+                    36,44,10
+    CONTROL         "# Energy",IDC_RADIO18,"Button",BS_AUTORADIOBUTTON,6,49,
+                    40,10
+    CONTROL         "3 Super Star",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON,
+                    58,6,50,10
+    EDITTEXT        IDC_EDIT5,62,18,30,12,ES_AUTOHSCROLL
+    CONTROL         "# Super Stars",IDC_RADIO19,"Button",BS_AUTORADIOBUTTON,
+                    6,18,52,10
+END
+
+IDD_SETUPV2_DIALOG DIALOGEX 0, 0, 258, 254
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,49,236,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,103,236,50,14
+    CONTROL         "Midi",IDC_MIDI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,
+                    4,29,10
+    CONTROL         "Sound Fx",IDC_SNDFX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,16,44,10
+    LTEXT           "Game Speed",-1,6,30,42,8
+    CONTROL         "Slider1",IDC_GAMESPEED,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_ENABLESELRANGE | WS_TABSTOP,6,38,100,
+                    12
+    COMBOBOX        IDC_RES,146,46,80,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Res",-1,131,47,14,12,SS_CENTERIMAGE
+    CONTROL         "HotKey1",IDC_KEY_UP,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,38,144,44,12
+    CONTROL         "HotKey1",IDC_KEY_DOWN,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,38,158,44,12
+    CONTROL         "HotKey1",IDC_KEY_LEFT,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,38,172,44,12
+    CONTROL         "HotKey1",IDC_KEY_RIGHT,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,38,186,44,12
+    CONTROL         "HotKey1",IDC_KEY_B1,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,38,200,44,12
+    CONTROL         "HotKey1",IDC_KEY_B2,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,38,214,44,12
+    RTEXT           "Button 1",-1,100,104,25,8
+    RTEXT           "Button 2",-1,100,118,25,8
+    COMBOBOX        IDC_JOY1_B1,128,102,44,122,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_JOY1_B2,128,116,44,122,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Up",-1,23,146,12,8
+    RTEXT           "Down",-1,18,160,18,8
+    RTEXT           "Left",-1,22,174,14,8
+    RTEXT           "Right",-1,18,188,17,8
+    RTEXT           "Button 1",-1,10,202,25,8
+    RTEXT           "Button 2",-1,10,216,25,8
+    COMBOBOX        IDC_JOY1_P,128,88,44,122,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Player #",-1,100,90,26,8
+    RTEXT           "Button 1",-1,100,179,25,11,SS_CENTERIMAGE
+    RTEXT           "Button 2",-1,100,194,25,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_JOY2_B1,128,177,44,122,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_JOY2_B2,128,192,44,122,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_JOY2_P,128,162,44,122,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Player #",-1,100,164,26,8
+    COMBOBOX        IDC_KEY_P,38,129,44,122,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Player #",-1,10,131,26,8
+    CONTROL         "",-1,"Static",SS_BLACKRECT,6,65,242,1
+    LTEXT           "Fast",-1,4,50,14,8
+    LTEXT           "Slow",-1,94,50,16,8
+    GROUPBOX        "Joy Stick 1",-1,94,78,84,66
+    GROUPBOX        "Joy Stick 2",-1,94,152,84,72
+    GROUPBOX        "",-1,4,80,84,150
+    CONTROL         "HotKey1",IDC_KEY_ESC,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,38,88,44,12,WS_EX_NOPARENTNOTIFY
+    RTEXT           "Exit",-1,10,90,26,8
+    CONTROL         "HotKey1",IDC_KEY_SETUP,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,38,102,44,12
+    RTEXT           "Setup",-1,10,104,26,8
+    CTEXT           "Keyboard",-1,6,74,78,10,SS_CENTERIMAGE
+    PUSHBUTTON      "Reset",IDC_RESET,159,236,50,14
+    CTEXT           "",IDC_JOY1_STAT,98,130,76,10,SS_SUNKEN
+    CTEXT           "",IDC_JOY2_STAT,100,209,72,10,SS_SUNKEN
+    CONTROL         "Windowed",IDC_STRETCH2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,60,4,50,10
+    CONTROL         "Set Res",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,122,36,48,10
+    CONTROL         "HotKey1",IDC_KEY_SETUP2,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,38,115,44,12
+    RTEXT           "Help",-1,10,117,26,8
+    EDITTEXT        IDC_EDIT1,168,12,20,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,192,12,20,12,ES_AUTOHSCROLL
+    CONTROL         "Stretch to Fit",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,
+                    158,2,52,10
+    CONTROL         "Full Screen",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,158,
+                    28,50,10
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 262, 136
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,212,100,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,212,117,50,14
+    CONTROL         "Active",IDC_RADIO20,"Button",BS_AUTORADIOBUTTON,8,6,33,
+                    10
+    CONTROL         "Tag",IDC_RADIO21,"Button",BS_AUTORADIOBUTTON,8,18,34,10
+    CONTROL         "Blue",IDC_RADIO40,"Button",BS_AUTORADIOBUTTON,14,31,34,
+                    12
+    CONTROL         "Red",IDC_RADIO41,"Button",BS_AUTORADIOBUTTON,50,45,34,
+                    10
+    CONTROL         "White T",IDC_RADIO42,"Button",BS_AUTORADIOBUTTON,50,31,
+                    34,12
+    CONTROL         "White B",IDC_RADIO43,"Button",BS_AUTORADIOBUTTON,14,45,
+                    34,10
+    LISTBOX         IDC_LIST2,88,32,84,22,LBS_SORT | LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Human",IDC_RADIO29,"Button",BS_AUTORADIOBUTTON,174,30,
+                    42,12
+    CONTROL         "Computer",IDC_RADIO30,"Button",BS_AUTORADIOBUTTON,174,
+                    42,42,12
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Game Setup MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Game Setup\0"
+            VALUE "LegalCopyright", "Copyright (C) 1900\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Game Setup.EXE\0"
+            VALUE "ProductName", "Game Setup Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_GAMESETUP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 275
+    END
+
+    IDD_REF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 155
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_WEP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_PLAYER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 113
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+    END
+
+    IDD_SETUPV2_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 247
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 129
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_WEP DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 7, 0
+0x6152, 0x646e, 0x6d6f, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x654c, 0x7466, "\000" 
+    IDC_COMBO1, 0x403, 6, 0
+0x6952, 0x6867, 0x0074, 
+    IDC_COMBO1, 0x403, 7, 0
+0x6543, 0x746e, 0x7265, "\000" 
+    0
+END
+
+IDD_GAMESETUP_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO2, 0x403, 14, 0
+0x2031, 0x6e6f, 0x3120, 0x4c20, 0x6e69, 0x6165, 0x0072, 
+    IDC_COMBO2, 0x403, 12, 0
+0x2031, 0x6e6f, 0x3120, 0x5420, 0x6572, 0x0065, 
+    IDC_COMBO2, 0x403, 14, 0
+0x2032, 0x6e6f, 0x3220, 0x4c20, 0x6e69, 0x6165, 0x0072, 
+    IDC_COMBO2, 0x403, 12, 0
+0x2032, 0x6e6f, 0x3220, 0x5420, 0x6572, 0x0065, 
+    IDC_COMBO2, 0x403, 14, 0
+0x2031, 0x6e6f, 0x3220, 0x4c20, 0x6e69, 0x6165, 0x0072, 
+    IDC_COMBO2, 0x403, 12, 0
+0x2031, 0x6e6f, 0x3220, 0x5420, 0x6572, 0x0065, 
+    IDC_COMBO2, 0x403, 19, 0
+0x2031, 0x6e6f, 0x3120, 0x6f20, 0x206e, 0x2031, 0x694c, 0x656e, 0x7261, 
+"\000" 
+    IDC_COMBO2, 0x403, 17, 0
+0x2031, 0x6e6f, 0x3120, 0x6f20, 0x206e, 0x2031, 0x7254, 0x6565, "\000" 
+    IDC_COMBO2, 0x403, 13, 0
+0x6142, 0x7474, 0x656c, 0x5220, 0x796f, 0x6c61, "\000" 
+    IDC_COMBO2, 0x403, 13, 0
+0x6f52, 0x6179, 0x206c, 0x7552, 0x626d, 0x656c, "\000" 
+    IDC_COMBO2, 0x403, 9, 0
+0x7553, 0x7672, 0x7669, 0x726f, "\000" 
+    IDC_COMBO2, 0x403, 10, 0
+0x2033, 0x614d, 0x206e, 0x6154, 0x0067, 
+    IDC_COMBO3, 0x403, 5, 0
+0x6145, 0x7973, "\000" 
+    IDC_COMBO3, 0x403, 4, 0
+0x694d, 0x0064, 
+    IDC_COMBO3, 0x403, 5, 0
+0x6148, 0x6472, "\000" 
+    IDC_COMBO3, 0x403, 7, 0
+0x6152, 0x646e, 0x6d6f, "\000" 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Game Setup.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

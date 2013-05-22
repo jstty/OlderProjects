@@ -1,0 +1,32 @@
+<?php
+////////////////////////////////////////////////////////////////////////
+//	Program Name:   idbms.php
+//	Programmer:     Joseph E. Sutton, Casey Langen
+//	Description:    IDBMS Interface
+//	Creation date:  12/7/2006
+//	Last Updated:   
+//	Version:        1.00
+////////////////////////////////////////////////////////////////////////
+
+if( !defined('__IDBMS__') )
+{
+   define('__IDBMS__', 1);
+   
+   interface IDBMS
+   {
+      public function Error();
+      
+      public function Connect();
+      public function Disconnect();
+      
+      public function ExecSQL($sql, $add_row_func);
+      public function ExecSQLGetArray($sql);
+      public function ExecRowCount($sql);
+      
+      public function GetColNames($table_name);
+      
+   } // end class
+
+} // end if def __IDBMS__
+
+?>

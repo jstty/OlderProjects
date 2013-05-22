@@ -1,0 +1,3 @@
+FogDensity  = 0.09
+NumFlippers = 20
+WarpModel = models/warp/square.poly

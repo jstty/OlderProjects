@@ -1,0 +1,12 @@
+////////////////////////////////////////////////////////////////////////
+//	Program Name:	Controls.cpp
+//	Programmer:		Joseph Sutton
+//	Company:			Moggie Software
+//	Corporation:	Willy Wong Ping Pong Inc.
+//	Description:	Controls File
+//	Date: 
+////////////////////////////////////////////////////////////////////////
+
+#include "AlienMansion.h"
+#include "Controls.h"
+

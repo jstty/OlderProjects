@@ -1,0 +1,461 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x3L
+#else
+ FILEFLAGS 0x2L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Alien Mansion\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Alien Mansion\0"
+            VALUE "LegalCopyright", "Copyright © 1997\0"
+            VALUE "OriginalFilename", "Alien Mansion.exe\0"
+            VALUE "ProductName", "Alien Mansion\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TEXTS DIALOG DISCARDABLE  0, 0, 317, 47
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_TEXTBOX,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | ES_WANTRETURN | WS_BORDER | WS_VSCROLL,0,0,
+                    317,47
+END
+
+IDD_TEXTL DIALOG DISCARDABLE  0, 0, 423, 58
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_TEXTBOX,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | ES_WANTRETURN | WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,0,0,423,58
+END
+
+IDD_SAVEFILE DIALOG DISCARDABLE  0, 0, 190, 66
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Save Game"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,33,44,50,14
+    EDITTEXT        IDC_NAME,8,24,175,12,ES_WANTRETURN
+    CTEXT           "ENTER THE FILE NAME:",IDC_STATICNAME,8,4,176,10,
+                    SS_CENTERIMAGE
+    DEFPUSHBUTTON   "&Cancel",IDCANCEL,107,44,50,14
+END
+
+IDD_LOADFILE DIALOG DISCARDABLE  0, 0, 184, 103
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Load Game"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Ok",IDOK,20,84,45,15
+    LISTBOX         IDC_LIST,14,4,155,75,LBS_NOINTEGRALHEIGHT | WS_TABSTOP
+    PUSHBUTTON      "&DELETE",IDDEL,120,84,45,15
+    PUSHBUTTON      "&Cancel",IDCANCEL,70,84,45,15
+END
+
+IDD_CONTROLBARS DIALOG DISCARDABLE  0, 0, 319, 89
+STYLE DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "CLEAR",IDCLEAR,2,2,42,12
+    DEFPUSHBUTTON   "&USE",IDUSE,4,16,42,22
+    PUSHBUTTON      "&EXAMINE",IDEXAMINE,50,16,42,22
+    PUSHBUTTON      "&TALK TO",IDTALK,96,16,42,22
+    PUSHBUTTON      "&OPEN",IDOPEN,4,64,42,22
+    PUSHBUTTON      "&CLOSE",IDBCLOSE,50,64,42,22
+    PUSHBUTTON      "OPTIO&N",IDOPTION,96,64,42,22
+    PUSHBUTTON      "&GET",IDGET,4,40,42,22
+    PUSHBUTTON      "GI&VE",IDGIVE,50,40,42,22
+    PUSHBUTTON      "&PUSH/PULL",IDPUSHPULL,96,40,42,22
+    CONTROL         "List1",IDC_ITEMLIST,"SysListView32",LVS_SINGLESEL | 
+                    LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,142,16,174,70
+    LTEXT           "Static",IDC_TEXTBAR,46,2,272,12,SS_SUNKEN | WS_BORDER | 
+                    NOT WS_GROUP
+END
+
+IDD_CONTROLBARL DIALOG DISCARDABLE  0, 0, 425, 110
+STYLE DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "CLEAR",IDCLEAR,2,2,42,14
+    DEFPUSHBUTTON   "&USE",IDUSE,4,20,68,26
+    PUSHBUTTON      "&EXAMINE",IDEXAMINE,76,20,66,26
+    PUSHBUTTON      "&TALK TO",IDTALK,146,20,66,26
+    PUSHBUTTON      "&OPEN",IDOPEN,4,80,68,26
+    PUSHBUTTON      "&CLOSE",IDBCLOSE,76,80,66,26
+    PUSHBUTTON      "OPTIO&N",IDHELPBUTTON,146,80,66,26
+    PUSHBUTTON      "&GET",IDGET,4,50,68,26
+    PUSHBUTTON      "GI&VE",IDGIVE,76,50,66,26
+    PUSHBUTTON      "&PUSH/PULL",IDPUSHPULL,146,50,66,26
+    CONTROL         "List1",IDC_ITEMLIST,"SysListView32",LVS_SINGLESEL | 
+                    LVS_AUTOARRANGE | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,
+                    216,20,206,86
+    LTEXT           "Static",IDC_TEXTBAR,46,2,378,14,SS_SUNKEN | WS_BORDER | 
+                    NOT WS_GROUP
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 188, 104
+STYLE DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_TABBAR,"SysTabControl32",TCS_FIXEDWIDTH | 
+                    WS_TABSTOP,0,0,188,104
+    PUSHBUTTON      "&Help",IDHELPTXT,124,42,50,14
+    PUSHBUTTON      "E&xit Game",IDEXIT,124,24,50,14
+    PUSHBUTTON      "&Load Game",IDLOAD,26,34,58,14
+    PUSHBUTTON      "Sa&ve Game",IDSAVE,102,34,60,14
+    CONTROL         "&Midi Sound",IDMIDISND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,22,62,10
+    CONTROL         "&WAV Sound",IDWAVSND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,38,62,10
+    CONTROL         "&CD Sound",IDCDSND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,54,62,10
+    LTEXT           "Time :",IDC_S_TIME,6,68,20,10
+    EDITTEXT        IDC_TIME,28,64,38,16,ES_UPPERCASE | ES_READONLY,
+                    WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_TRACK,28,44,38,16,ES_UPPERCASE | ES_READONLY,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "Track :",IDC_S_TRACK,4,48,22,10
+    PUSHBUTTON      "Ca&ncel",IDCANCEL,68,86,50,14
+    CONTROL         "&<<",IDC_CD_RW,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,74,44,32,16
+    CONTROL         "&Play",IDC_CD_PLAY,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,110,44,36,16
+    CONTROL         "&Stop",IDC_CD_STOP,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,110,64,36,16
+    CONTROL         ">&>",IDC_CD_FF,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,150,44,32,16
+    CONTROL         "E&ject",IDC_CD_EJECT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,150,64,32,16
+    CONTROL         "Pa&use",IDC_CD_PAUSE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,74,64,32,16
+    EDITTEXT        IDC_PLAYLIST,38,18,86,22,ES_MULTILINE | ES_UPPERCASE,
+                    WS_EX_STATICEDGE
+    CONTROL         "Edit",IDC_EDIT_PL,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,4,18,30,10
+    CONTROL         "Repeat Disk",IDC_RDISK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,128,20,54,8
+    CONTROL         "Repeat Track",IDC_RTRACK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,128,30,54,8
+    CONTROL         "Shuffle",IDC_SHUF,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,4,30,30,10
+END
+
+IDD_CDPLAYER DIALOGEX 0, 0, 187, 120
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Time :",IDC_STATIC,6,68,20,10
+    EDITTEXT        IDC_EDIT1,28,64,38,16,ES_UPPERCASE | ES_READONLY,
+                    WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_EDIT2,28,44,38,16,ES_UPPERCASE | ES_READONLY,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "Track :",IDC_STATIC,4,48,22,10
+    EDITTEXT        IDC_PLAYLIST2,38,18,86,22,ES_MULTILINE | ES_UPPERCASE,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Cancel",IDCANCEL,68,86,50,14
+    CONTROL         "Edit",IDC_EDIT_PL2,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,4,18,30,10
+    CONTROL         "<<",IDC_CD_RW2,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,74,44,32,16
+    CONTROL         "Play",IDC_CD_PLAY2,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,110,44,36,16
+    CONTROL         "Stop",IDC_CD_STOP2,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,110,64,36,16
+    CONTROL         ">>",IDC_CD_FF2,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,150,44,32,16
+    CONTROL         "Eject",IDC_CD_EJECT2,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,150,64,32,16
+    CONTROL         "Pause",IDC_CD_PAUSE2,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,74,64,32,16
+    CONTROL         "Repeat Disk",IDC_RDISK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,128,20,54,8
+    CONTROL         "Repeat Track",IDC_RTRACK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,128,30,54,8
+    CONTROL         "Shuffle",IDC_SHUF_PL2,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,4,30,30,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TEXTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_TEXTL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 13
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_SAVEFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 184
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_LOADFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_CONTROLBARS, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 316
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_CONTROLBARL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 112
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_CDPLAYER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOAD1               BITMAP  DISCARDABLE     "load_1.bmp"
+IDB_LOAD2               BITMAP  DISCARDABLE     "load_2.bmp"
+IDB_EXIT1               BITMAP  DISCARDABLE     "exit_1.bmp"
+IDB_EXIT2               BITMAP  DISCARDABLE     "exit_2.bmp"
+IDB_NEW1                BITMAP  DISCARDABLE     "new_1.bmp"
+IDB_NEW2                BITMAP  DISCARDABLE     "new_2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON    DISCARDABLE     "icon.ico"
+IDI_STAKE               ICON    DISCARDABLE     "icon1.ico"
+IDI_ROBOARM             ICON    DISCARDABLE     "ico00001.ico"
+IDI_KEY                 ICON    DISCARDABLE     "ico00002.ico"
+IDI_VEGGY               ICON    DISCARDABLE     "ico00003.ico"
+IDI_CANDYBAR            ICON    DISCARDABLE     "ico00004.ico"
+IDI_SODA                ICON    DISCARDABLE     "ico00005.ico"
+IDI_SANTA               ICON    DISCARDABLE     "ico00006.ico"
+IDI_APP                 ICON    DISCARDABLE     "ico00007.ico"
+IDI_ENVELOP1            ICON    DISCARDABLE     "envalop.ico"
+IDI_REMOTE              ICON    DISCARDABLE     "ico00008.ico"
+IDI_STAMP               ICON    DISCARDABLE     "ico00009.ico"
+IDI_ENVELOP2            ICON    DISCARDABLE     "ico00010.ico"
+IDI_ENVELOP3            ICON    DISCARDABLE     "ico00011.ico"
+IDI_ENVELOP4            ICON    DISCARDABLE     "ico00012.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_CONTROLS ACCELERATORS DISCARDABLE 
+BEGIN
+    "C",            IDBCLOSE,               VIRTKEY, NOINVERT
+    "E",            IDEXAMINE,              VIRTKEY, NOINVERT
+    "G",            IDGET,                  VIRTKEY, NOINVERT
+    "N",            IDOPTION,               VIRTKEY, NOINVERT
+    "O",            IDOPEN,                 VIRTKEY, NOINVERT
+    "P",            IDPUSHPULL,             VIRTKEY, NOINVERT
+    "T",            IDTALK,                 VIRTKEY, NOINVERT
+    "U",            IDUSE,                  VIRTKEY, NOINVERT
+    "V",            IDGIVE,                 VIRTKEY, NOINVERT
+    VK_DOWN,        IDDOWN,                 VIRTKEY, NOINVERT
+    VK_LEFT,        IDLEFT,                 VIRTKEY, NOINVERT
+    VK_RIGHT,       IDRIGHT,                VIRTKEY, NOINVERT
+    VK_UP,          IDUP,                   VIRTKEY, NOINVERT
+END
+
+IDR_FILEUTILS ACCELERATORS DISCARDABLE 
+BEGIN
+    "C",            IDCANCEL,               VIRTKEY, NOINVERT
+    "D",            IDDEL,                  VIRTKEY, NOINVERT
+    "H",            IDHELPTXT,              VIRTKEY, NOINVERT
+    "L",            IDLOAD,                 VIRTKEY, NOINVERT
+    "O",            IDOK,                   VIRTKEY, NOINVERT
+    "S",            IDSAVE,                 VIRTKEY, NOINVERT
+    VK_DELETE,      IDDEL,                  VIRTKEY, NOINVERT
+    VK_ESCAPE,      IDCANCEL,               VIRTKEY, NOINVERT
+    "X",            IDEXIT,                 VIRTKEY, NOINVERT
+END
+
+IDR_OPTIONS ACCELERATORS DISCARDABLE 
+BEGIN
+    ",",            IDC_CD_RW,              ASCII,  NOINVERT
+    ".",            IDC_CD_FF,              ASCII,  NOINVERT
+    "C",            IDCDSND,                VIRTKEY, NOINVERT
+    "D",            IDC_EDIT_PL,            VIRTKEY, NOINVERT
+    "H",            IDHELPTXT,              VIRTKEY, NOINVERT
+    "J",            IDC_CD_EJECT,           VIRTKEY, NOINVERT
+    "K",            IDC_RDISK,              VIRTKEY, NOINVERT
+    "L",            IDLOAD,                 VIRTKEY, NOINVERT
+    "M",            IDMIDISND,              VIRTKEY, NOINVERT
+    "N",            IDCANCEL,               VIRTKEY, NOINVERT
+    "P",            IDC_CD_PLAY,            VIRTKEY, NOINVERT
+    "S",            IDC_CD_STOP,            VIRTKEY, NOINVERT
+    "T",            IDC_RTRACK,             VIRTKEY, NOINVERT
+    "U",            IDC_CD_PAUSE,           VIRTKEY, NOINVERT
+    "V",            IDSAVE,                 VIRTKEY, NOINVERT
+    VK_ESCAPE,      IDCANCEL,               VIRTKEY, NOINVERT
+    "W",            IDWAVSND,               VIRTKEY, NOINVERT
+    "X",            IDEXIT,                 VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDST_REPLACE            " is already in use.\nReplace existing name?"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
