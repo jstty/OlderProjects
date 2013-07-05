@@ -1,0 +1,10 @@
+WIDTH = 5
+HEIGHT = 5
+agent = 0,4
+target = 4,0
+configuration
+00000
+00000
+00000
+00000
+00000

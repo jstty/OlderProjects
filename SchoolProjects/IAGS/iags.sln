@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iags", "iags\iags.csproj", "{4D3A2DB8-BA5C-4850-B739-72399AF5656A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D3A2DB8-BA5C-4850-B739-72399AF5656A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D3A2DB8-BA5C-4850-B739-72399AF5656A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D3A2DB8-BA5C-4850-B739-72399AF5656A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D3A2DB8-BA5C-4850-B739-72399AF5656A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

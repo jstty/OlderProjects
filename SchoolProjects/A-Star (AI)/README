@@ -1,0 +1,39 @@
+Name:     Joseph E. Sutton
+ID:       7640466444
+CSCI 460: Project 2
+Date:     3/25/2010
+
+[Compiling]
+In the root(same directory as this file) run make.
+> make
+
+[Source]
+All the source code is located in the "source" directory.
+"global.h" includes all the required dependent classes. All cpp files include this file instead of including all the required files.
+"main.cpp" is the entry point and instantiates the Map and Astar class.
+"map.cpp" and "map.h" loads/gives access to the map data, this to abstract the real map from the A* algorithm. It allows the Astar class to call a dynamic map.
+"astar.cpp" and "astar.h" implement the A* algorithms(recursive forward, backwards, larger/smaller g-value, and adaptive).
+
+[Dependancies]
+The STL(Standard Template Library)
+
+[Running]
+Upon compiling the executable is create in the "output" directory.
+Change to this directory and run the executable
+> cd <project dir>/output
+> ./Astar -i inputfile0.txt
+
+[Command line]
+Format: Astar -i <filename> [-A] [-backwards] [-smallg] [-noprint-search] [-print-timestep]
+                            [-m <number> (filename is the string format)]
+Examples:
+   Forward   A*           > Astar -i inputfile0.txt
+   Adaptive  A*           > Astar -i inputfile0.txt -A
+   Backwards A*           > Astar -i inputfile0.txt -backwards
+   Favor Smaller G-Value  > Astar -i inputfile0.txt -smallg
+   Don't Display Searches > Astar -i inputfile0.txt -noprint-search
+   Display Time Step      > Astar -i inputfile0.txt -print-timestep
+   Multiple files & Don't Display Searches > Astar -i inputfile%d.txt -m 2 -noprint-search
+
+All flags can be used at the same time with the exception of "-noprint-search" and "-print-timestep".
+"-noprint-search" will NOT print search AND time steps.

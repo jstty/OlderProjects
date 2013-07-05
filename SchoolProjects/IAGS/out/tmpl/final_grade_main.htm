@@ -1,0 +1,116 @@
+<html>
+<title>%season% %year% - %course_name%: Final Grade Report</title>
+
+<style type="text/css">
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: normal;
+   font-size: 10pt;
+   color: #000000;
+   background-color: #FFFFFF;
+}
+
+.header	{
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: normal;
+   font-size: 11pt;
+   color: #000000;
+}
+
+.header_row	{
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 10pt;
+   color: #000000;
+   background-color: #FFFFFF;
+}
+
+.erow	{
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: normal;
+   font-size: 10pt;
+   color: #000000;
+   background-color: #DADADA;
+}
+
+.orow	{
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: normal;
+   font-size: 10pt;
+   color: #000000;
+   background-color: #F0F0F0;
+   border-top: 1px solid #000000;
+}
+
+.fcell
+{
+   border-bottom: 1px solid #000000;
+   border-right: 1px solid #808080;
+}
+
+.mcell
+{  
+   border-bottom: 1px solid #000000;
+   border-right: 1px solid #808080;
+}
+
+.lcell
+{  
+   border-bottom: 1px solid #000000;
+}
+</style>
+
+<body>
+<table cellpadding=0 cellspacing=0 border=0 width="100%"><tr>
+<td valign="top" align="center">
+
+<table cellpadding=0 cellspacing=0 border=0>
+
+<tr><td>
+<table cellpadding=0 cellspacing=0 border=0 class="header">
+<tr>
+   <td>Instructor:&nbsp;&nbsp;</td><td><b>%inst_name%</b></td>
+</tr>
+<tr>
+   <td>Quarter:</td><td><b>%season% %year%</b></td>
+</tr>
+<tr>
+   <td>Course:</td><td><b>%course_name%</b></td>
+</tr>
+</table>
+</td></tr>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr><td>
+<table cellpadding=0 cellspacing=0 border=0 width="100%">
+<tr class='header_row'>
+   <td width="50"  class="fcell" align="center">ID</td>
+   <td width="100" class="mcell" align="center">Grade Letter</td>
+   <td width="100" class="lcell" align="center">Grade Points</td>
+</tr>
+
+<%rows%>
+   <%erow%>
+   <tr class='erow'>
+      <td class="fcell" align="center">%id%</td>
+      <td class="mcell" align="center">%grade_letter%</td>
+      <td class="lcell" align="center">%grade_points%</td>
+   </tr>
+   </%erow%>
+   <%orow%>
+   <tr  class='orow'>
+      <td class="fcell" align="center">%id%</td>
+      <td class="mcell" align="center">%grade_letter%</td>
+      <td class="lcell" align="center">%grade_points%</td>
+   </tr>
+   </%orow%>
+</%rows%>
+</table>
+</td></tr>
+
+</table>
+
+</td></tr></table>
+</body>
+</html>

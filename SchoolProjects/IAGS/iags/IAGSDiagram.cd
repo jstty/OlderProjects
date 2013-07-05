@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="iags.AboutForm" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AboutForm.cs</FileName>
+      <HashCode>AAACAAAAECAAABAAABCAAAACAAAAEAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cBaseItem" Collapsed="true">
+    <Position X="6.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cBaseItem.cs</FileName>
+      <HashCode>AACAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEgQAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cControlsArgs" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cControlsArgs.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cDB" Collapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cDB.cs</FileName>
+      <HashCode>gAQAAEAABKAREgEABEEAQIQAIAUBQgQCAQAwQAAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cDB_MySQL" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cDB_MySQL.cs</FileName>
+      <HashCode>AAQAACAABAAAAAAAAAAAAKAAAAQAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="iags.cDB_Oracle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cDB_Oracle.cs</FileName>
+      <HashCode>AAQAACAABAAAAAAAAAAAAKAAAAQAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="iags.cDBItemList" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cDBItemList.cs</FileName>
+      <HashCode>AAAAAQBgACABUAAEDAAAYEVAgACBAMQAAIADAAJIFBg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cIAGS" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cIAGS.cs</FileName>
+      <HashCode>QCICBSADJJKBKGMBqBIgaeICUACWQMgQBAEWJUQoVhk=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cProgArgs" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cProgArgs.cs</FileName>
+      <HashCode>AAAAEAAAAAAQAAAAAAAAAAAAAAAAACAAAAQAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cSqlValueList" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cSqlValueList.cs</FileName>
+      <HashCode>AAoAAAAAAIAADQAABAAAAEAAAAAAAAAAQABAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cAssignment" Collapsed="true">
+    <Position X="12" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cAssignment.cs</FileName>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cAssignmentList" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cAssignmentList.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAABAEAAAAABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cCourseInfo" Collapsed="true">
+    <Position X="3.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cCourseInfo.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cCourseInfoList" Collapsed="true">
+    <Position X="3.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cCourseInfoList.cs</FileName>
+      <HashCode>AAAAAAAAAAABAgAIAAAAAAAAAAABAEAAAAADAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cGrade" Collapsed="true">
+    <Position X="6.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cGrade.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cGradeList" Collapsed="true">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cGradeList.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAEAAAAABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cInstructor" Collapsed="true">
+    <Position X="10" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cInstructor.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cInstructorList" Collapsed="true">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cInstructorList.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAEAAAAARAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cPerson" Collapsed="true">
+    <Position X="1" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cPerson.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cPersonList" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cPersonList.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABIEAAAAARAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cSection" Collapsed="true">
+    <Position X="5.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cSection.cs</FileName>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cSectionList" Collapsed="true">
+    <Position X="6" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cSectionList.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAEAAAAABAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cSignup" Collapsed="true">
+    <Position X="8.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cSignup.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cSignupList" Collapsed="true">
+    <Position X="10.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\List\cSignupList.cs</FileName>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAABAEAAAAABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cFinalGradeReport" Collapsed="true">
+    <Position X="13" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\Report\cFinalGradeReport.cs</FileName>
+      <HashCode>AAQAIAAAACAAAAAAAAAAAAAAAAAAAAAAAAABBAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cInstAssignView" Collapsed="true">
+    <Position X="1.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\Views\cInstAssignView.cs</FileName>
+      <HashCode>AAAAAABAACAAEAAQAAAAACQAAAABAEAAAAABAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cInstAssignViewRow" Collapsed="true">
+    <Position X="4.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\Views\cInstAssignViewRow.cs</FileName>
+      <HashCode>AAAAABAAAAAAgAAEAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cInstGradeView" Collapsed="true">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\Views\cInstGradeView.cs</FileName>
+      <HashCode>AAAAAABAACAAEAAAAAAAAAQAAAABAEAAAAADAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cGradeViewRow" Collapsed="true">
+    <Position X="8" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\Views\cInstGradeViewRow.cs</FileName>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cInstSectionView" Collapsed="true">
+    <Position X="8.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\Views\cInstSectionView.cs</FileName>
+      <HashCode>AAAAAABAACAAEAAQAAAAACQAAAABAEAAAAABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cInstSectionViewRow" Collapsed="true">
+    <Position X="11" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\Views\cInstSectionViewRow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAgAAEAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cInstSignupView" Collapsed="true">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\Views\cInstSignupView.cs</FileName>
+      <HashCode>AAAAAABAACAAEAAAAAAAAAQAAAABAEAAAAABAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.cInstSignupViewRow" Collapsed="true">
+    <Position X="2.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\Views\cInstSignupViewRow.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAACAAAAAAAAAAQAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.LoginForm" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>LoginForm.cs</FileName>
+      <HashCode>AAIAAAAAgCQAABCAAACEAAECAAAAEgAAAAEQAgAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.MainForm" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MainForm.cs</FileName>
+      <HashCode>hGIAaQGFASAJEEALCACEEYYSACGIEgYCQgRQQHEIBqw=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.Program" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Program.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iags.ReportForm" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ReportForm.cs</FileName>
+      <HashCode>AABCAAAAACAAAAAEAgCAAAQCAAAAECBAAAIAARAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="iags.cDB_Base" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cDB_base.cs</FileName>
+      <HashCode>AAQAAAAABAAAAAAAAAAAAIAAAAQAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="iags.ProgEventHandler" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cIAGS.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="iags.ControlsEventHandler" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>classes\cIAGS.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Delegate>
+</ClassDiagram>

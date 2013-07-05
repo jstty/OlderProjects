@@ -1,0 +1,148 @@
+Tastar
+v7
+r0
+t291292917.429263
+cCheck dependencies
+cCompileC build/astar.build/Debug/astar.build/Objects-normal/x86_64/main.o /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/astar.build/Debug/astar.build/Objects-normal/x86_64/astar.o /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/astar.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/astar.build/Debug/astar.build/Objects-normal/x86_64/map.o /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/map.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd ../../output/astar normal x86_64
+
+N../../output/astar
+t1269600056
+s298360
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004ABBF0FD00000000000000EE
+t1253830909
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004A5C14A70000000000004174
+t1247548583
+s16756
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
+c000000004A5C14A70000000000001731
+t1247548583
+s5937
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/time.h
+c000000004A73D6550000000000001E17
+t1249105493
+s7703
+
+N/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/astar.cpp
+c000000004BAC8F350000000000004145
+t1269600053
+s16709
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/main.cpp
+c000000004BAB654600000000000014CF
+t1269523782
+s5327
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/map.cpp
+c000000004BA9EABF000000000000052C
+t1269426879
+s1324
+i"global.h"
+
+N/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/Objects-normal/x86_64/astar.LinkFileList
+c000000004BAC859A00000000000001D4
+t1269597594
+s468
+
+N/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/Objects-normal/x86_64/astar.o
+t1269600054
+s692544
+
+N/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/Objects-normal/x86_64/main.o
+t1269599261
+s28040
+
+N/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/Objects-normal/x86_64/map.o
+t1269599261
+s19436
+
+N/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/source/astar.h
+c000000004BAC8B2600000000000011CC
+t1269599014
+s4556
+
+N/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/source/global.h
+c000000004BA9E19A00000000000001D9
+t1269424538
+s473
+i<stdio.h>
+i<string.h>
+i<string.h>
+i<vector>
+i<stack>
+i<queue>
+i<map>
+i<algorithm>
+i<sys/time.h>
+i"map.h"
+i"astar.h"
+
+N/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/source/map.h
+c000000004BA7EE62000000000000027F
+t1269296738
+s639
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies291292917#291292917#0(0"0(0#1#0"4300885448#0"0#
+
+CCompileC build/astar.build/Debug/astar.build/Objects-normal/x86_64/astar.o /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/astar.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s291292855.923492
+e291292855.925074
+r1
+xCompileC
+xbuild/astar.build/Debug/astar.build/Objects-normal/x86_64/astar.o
+x/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/astar.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@121"Compile /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/astar.cpp291292855#291292855#0(0"0(0#0#113"/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/astar.cpp4300885448#1709"    cd /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-generated-files.hmap -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/DerivedSources -c /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/astar.cpp -o /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/Objects-normal/x86_64/astar.o0#
+
+CCompileC build/astar.build/Debug/astar.build/Objects-normal/x86_64/main.o /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s291292060.502882
+e291292061.023623
+r1
+xCompileC
+xbuild/astar.build/Debug/astar.build/Objects-normal/x86_64/main.o
+x/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@120"Compile /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/main.cpp291292060#291292061#0(0"0(0#0#112"/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/main.cpp4300885448#1707"    cd /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-generated-files.hmap -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/DerivedSources -c /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/main.cpp -o /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/Objects-normal/x86_64/main.o0#
+
+CCompileC build/astar.build/Debug/astar.build/Objects-normal/x86_64/map.o /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/map.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s291292060.558240
+e291292061.035558
+r1
+xCompileC
+xbuild/astar.build/Debug/astar.build/Objects-normal/x86_64/map.o
+x/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/map.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@119"Compile /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/map.cpp291292060#291292061#0(0"0(0#0#111"/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/map.cpp4300885448#1705"    cd /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D_GLIBCXX_DEBUG=1 -D_GLIBCXX_DEBUG_PEDANTIC=1 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-generated-files.hmap -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-own-target-headers.hmap -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-all-target-headers.hmap -iquote /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/astar-project-headers.hmap -F../../output -I../../output/include -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/DerivedSources/x86_64 -I/data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/DerivedSources -c /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/../../source/map.cpp -o /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/Objects-normal/x86_64/map.o0#
+
+CLd ../../output/astar normal x86_64
+s291292855.925244
+e291292856.101270
+r1
+xLd
+x../../output/astar
+xnormal
+xx86_64
+lSLF07#2@23"Link ../../output/astar291292855#291292856#0(0"0(0#0#0"4300885448#480"    cd /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L../../output -F../../output -filelist /data/school/usc/2010_01_spring/cs460_ai/projects/prj02/Joseph_Sutton_project2/project/osx/build/astar.build/Debug/astar.build/Objects-normal/x86_64/astar.LinkFileList -mmacosx-version-min=10.6 -o ../../output/astar0#
+

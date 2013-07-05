@@ -1,0 +1,13 @@
+bin\Debug\iags.exe
+bin\Debug\iags.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\iags.Properties.Resources.resources
+obj\Debug\iags.csproj.GenerateResource.Cache
+obj\Debug\iags.exe
+obj\Debug\iags.pdb
+..\out\iags.exe
+..\out\iags.pdb
+obj\Debug\iags.MainForm.resources
+obj\Debug\iags.LoginForm.resources
+obj\Debug\iags.AboutForm.resources
+obj\Debug\iags.ReportForm.resources
