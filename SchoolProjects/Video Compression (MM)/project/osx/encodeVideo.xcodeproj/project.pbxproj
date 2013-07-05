@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F5B0BAD10A5B32E002DF25D /* c_dct_encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B0BAB10A5B32E002DF25D /* c_dct_encoder.cpp */; };
+		2F5B0BD510A5B58A002DF25D /* c_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B0BD410A5B58A002DF25D /* c_frame.cpp */; };
+		2F5B0BDE10A5B5A4002DF25D /* c_seg_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B0BDD10A5B5A4002DF25D /* c_seg_frame.cpp */; };
+		2F89B00A10AC408C00A36065 /* util.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F89B00910AC408C00A36065 /* util.h */; };
+		2F89B31E10B03A9A00A36065 /* c_dct_block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89B31D10B03A9A00A36065 /* c_dct_block.cpp */; };
+		2F89B40E10B047EF00A36065 /* libfftw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F89B40D10B047EF00A36065 /* libfftw3.a */; };
+		2F89B41210B0481D00A36065 /* ct2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89B41010B0481D00A36065 /* ct2.cpp */; };
+		2F95303B10A63302001DF632 /* c_segmentation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F95303A10A63302001DF632 /* c_segmentation.cpp */; };
+		2FA1654810A53A3B0057C1F2 /* encodeMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1654510A53A3B0057C1F2 /* encodeMain.cpp */; };
+		2FA1674010A569EA0057C1F2 /* c_dct_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1673F10A569EA0057C1F2 /* c_dct_frame.cpp */; };
+		2FA167A610A56DCC0057C1F2 /* c_video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FA167A410A56DCC0057C1F2 /* c_video.cpp */; };
+		2FDEC5AE10B40C2200781AA7 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDEC5AC10B40C2200781AA7 /* GLUT.framework */; };
+		2FDEC5AF10B40C2200781AA7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDEC5AD10B40C2200781AA7 /* OpenGL.framework */; };
+		8DD76F6A0486A84900D96B5E /* encodeVideo.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* encodeVideo.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F6A0486A84900D96B5E /* encodeVideo.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F5B0B7810A5A897002DF25D /* c_dct_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_dct_frame.h; path = ../../src/c_dct_frame.h; sourceTree = SOURCE_ROOT; };
+		2F5B0B7910A5A897002DF25D /* c_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_frame.h; path = ../../src/c_frame.h; sourceTree = SOURCE_ROOT; };
+		2F5B0B7D10A5AD5D002DF25D /* c_seg_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_seg_frame.h; path = ../../src/c_seg_frame.h; sourceTree = SOURCE_ROOT; };
+		2F5B0BAB10A5B32E002DF25D /* c_dct_encoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_dct_encoder.cpp; path = ../../src/c_dct_encoder.cpp; sourceTree = SOURCE_ROOT; };
+		2F5B0BAC10A5B32E002DF25D /* c_dct_encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_dct_encoder.h; path = ../../src/c_dct_encoder.h; sourceTree = SOURCE_ROOT; };
+		2F5B0BD410A5B58A002DF25D /* c_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_frame.cpp; path = ../../src/c_frame.cpp; sourceTree = SOURCE_ROOT; };
+		2F5B0BDD10A5B5A4002DF25D /* c_seg_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_seg_frame.cpp; path = ../../src/c_seg_frame.cpp; sourceTree = SOURCE_ROOT; };
+		2F89B00910AC408C00A36065 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = ../../src/util.h; sourceTree = SOURCE_ROOT; };
+		2F89B31D10B03A9A00A36065 /* c_dct_block.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_dct_block.cpp; path = ../../src/c_dct_block.cpp; sourceTree = SOURCE_ROOT; };
+		2F89B40D10B047EF00A36065 /* libfftw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfftw3.a; path = lib/libfftw3.a; sourceTree = "<group>"; };
+		2F89B41010B0481D00A36065 /* ct2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ct2.cpp; path = ../../src/ct2.cpp; sourceTree = SOURCE_ROOT; };
+		2F89B41110B0481D00A36065 /* ct2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ct2.h; path = ../../src/ct2.h; sourceTree = SOURCE_ROOT; };
+		2F952FFE10A6307A001DF632 /* c_segmentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_segmentation.h; path = ../../src/c_segmentation.h; sourceTree = SOURCE_ROOT; };
+		2F95303A10A63302001DF632 /* c_segmentation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_segmentation.cpp; path = ../../src/c_segmentation.cpp; sourceTree = SOURCE_ROOT; };
+		2FA1654510A53A3B0057C1F2 /* encodeMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = encodeMain.cpp; path = ../../src/encodeMain.cpp; sourceTree = SOURCE_ROOT; };
+		2FA1654610A53A3B0057C1F2 /* global_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = global_defs.h; path = ../../src/global_defs.h; sourceTree = SOURCE_ROOT; };
+		2FA1654710A53A3B0057C1F2 /* global_include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = global_include.h; path = ../../src/global_include.h; sourceTree = SOURCE_ROOT; };
+		2FA1665C10A55CA80057C1F2 /* c_dct_block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_dct_block.h; path = ../../src/c_dct_block.h; sourceTree = SOURCE_ROOT; };
+		2FA1665D10A55CA80057C1F2 /* c_seg_block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_seg_block.h; path = ../../src/c_seg_block.h; sourceTree = SOURCE_ROOT; };
+		2FA1673F10A569EA0057C1F2 /* c_dct_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_dct_frame.cpp; path = ../../src/c_dct_frame.cpp; sourceTree = SOURCE_ROOT; };
+		2FA167A410A56DCC0057C1F2 /* c_video.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_video.cpp; path = ../../src/c_video.cpp; sourceTree = SOURCE_ROOT; };
+		2FA167A510A56DCC0057C1F2 /* c_video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_video.h; path = ../../src/c_video.h; sourceTree = SOURCE_ROOT; };
+		2FDEC5AC10B40C2200781AA7 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		2FDEC5AD10B40C2200781AA7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		8DD76F6C0486A84900D96B5E /* encodeVideo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = encodeVideo; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6859E8B029090EE04C91782 /* encodeVideo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = encodeVideo.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F89B40E10B047EF00A36065 /* libfftw3.a in Frameworks */,
+				2FDEC5AE10B40C2200781AA7 /* GLUT.framework in Frameworks */,
+				2FDEC5AF10B40C2200781AA7 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* encodeVideo */ = {
+			isa = PBXGroup;
+			children = (
+				2F89B40D10B047EF00A36065 /* libfftw3.a */,
+				2FDEC5AC10B40C2200781AA7 /* GLUT.framework */,
+				2FDEC5AD10B40C2200781AA7 /* OpenGL.framework */,
+				2F5B0B7A10A5A89D002DF25D /* header */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = encodeVideo;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2FA1654510A53A3B0057C1F2 /* encodeMain.cpp */,
+				2FA167A410A56DCC0057C1F2 /* c_video.cpp */,
+				2F5B0BD410A5B58A002DF25D /* c_frame.cpp */,
+				2F95303A10A63302001DF632 /* c_segmentation.cpp */,
+				2F5B0BDD10A5B5A4002DF25D /* c_seg_frame.cpp */,
+				2F5B0BAB10A5B32E002DF25D /* c_dct_encoder.cpp */,
+				2FA1673F10A569EA0057C1F2 /* c_dct_frame.cpp */,
+				2F89B31D10B03A9A00A36065 /* c_dct_block.cpp */,
+				2F89B41010B0481D00A36065 /* ct2.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* encodeVideo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F5B0B7A10A5A89D002DF25D /* header */ = {
+			isa = PBXGroup;
+			children = (
+				2FA1654610A53A3B0057C1F2 /* global_defs.h */,
+				2FA1654710A53A3B0057C1F2 /* global_include.h */,
+				2FA167A510A56DCC0057C1F2 /* c_video.h */,
+				2F5B0B7910A5A897002DF25D /* c_frame.h */,
+				2F952FFE10A6307A001DF632 /* c_segmentation.h */,
+				2F5B0B7D10A5AD5D002DF25D /* c_seg_frame.h */,
+				2FA1665D10A55CA80057C1F2 /* c_seg_block.h */,
+				2F5B0BAC10A5B32E002DF25D /* c_dct_encoder.h */,
+				2F5B0B7810A5A897002DF25D /* c_dct_frame.h */,
+				2FA1665C10A55CA80057C1F2 /* c_dct_block.h */,
+				2F89B41110B0481D00A36065 /* ct2.h */,
+				2F89B00910AC408C00A36065 /* util.h */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* encodeVideo.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* encodeVideo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "encodeVideo" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = encodeVideo;
+			productInstallPath = "$(HOME)/bin";
+			productName = encodeVideo;
+			productReference = 8DD76F6C0486A84900D96B5E /* encodeVideo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "encodeVideo" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* encodeVideo */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* encodeVideo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FA1654810A53A3B0057C1F2 /* encodeMain.cpp in Sources */,
+				2FA1674010A569EA0057C1F2 /* c_dct_frame.cpp in Sources */,
+				2FA167A610A56DCC0057C1F2 /* c_video.cpp in Sources */,
+				2F5B0BAD10A5B32E002DF25D /* c_dct_encoder.cpp in Sources */,
+				2F5B0BD510A5B58A002DF25D /* c_frame.cpp in Sources */,
+				2F5B0BDE10A5B5A4002DF25D /* c_seg_frame.cpp in Sources */,
+				2F95303B10A63302001DF632 /* c_segmentation.cpp in Sources */,
+				2F89B00A10AC408C00A36065 /* util.h in Sources */,
+				2F89B31E10B03A9A00A36065 /* c_dct_block.cpp in Sources */,
+				2F89B41210B0481D00A36065 /* ct2.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/lib\"",
+				);
+				OBJROOT = build;
+				PRODUCT_NAME = encodeVideo;
+				SYMROOT = ../../output;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/lib\"",
+				);
+				PRODUCT_NAME = encodeVideo;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../include;
+				OBJROOT = build;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				SYMROOT = output;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "encodeVideo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "encodeVideo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

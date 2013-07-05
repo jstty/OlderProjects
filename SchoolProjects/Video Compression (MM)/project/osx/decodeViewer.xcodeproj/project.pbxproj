@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F89AF8E10AC1A8E00A36065 /* c_dct_encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89AF7E10AC1A8E00A36065 /* c_dct_encoder.cpp */; };
+		2F89AF8F10AC1A8F00A36065 /* c_dct_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89AF8010AC1A8E00A36065 /* c_dct_frame.cpp */; };
+		2F89AF9010AC1A8F00A36065 /* c_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89AF8210AC1A8E00A36065 /* c_frame.cpp */; };
+		2F89AF9110AC1A8F00A36065 /* c_seg_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89AF8510AC1A8E00A36065 /* c_seg_frame.cpp */; };
+		2F89AF9210AC1A8F00A36065 /* c_segmentation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89AF8710AC1A8E00A36065 /* c_segmentation.cpp */; };
+		2F89AF9310AC1A8F00A36065 /* c_video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89AF8910AC1A8E00A36065 /* c_video.cpp */; };
+		2F89AF9410AC1A8F00A36065 /* decodeMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89AF8B10AC1A8E00A36065 /* decodeMain.cpp */; };
+		2F89B40B10B047D900A36065 /* libfftw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F89B40A10B047D900A36065 /* libfftw3.a */; };
+		2F89B41B10B0484300A36065 /* ct2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89B41710B0484300A36065 /* ct2.cpp */; };
+		2F89B41C10B0484300A36065 /* c_dct_block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F89B41A10B0484300A36065 /* c_dct_block.cpp */; };
+		2FDEC3FA10B3E01E00781AA7 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDEC3F810B3E01E00781AA7 /* GLUT.framework */; };
+		2FDEC3FB10B3E01E00781AA7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDEC3F910B3E01E00781AA7 /* OpenGL.framework */; };
+		8DD76F6A0486A84900D96B5E /* decodeViewer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* decodeViewer.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F6A0486A84900D96B5E /* decodeViewer.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F89AF7D10AC1A8E00A36065 /* c_dct_block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_dct_block.h; path = ../../src/c_dct_block.h; sourceTree = SOURCE_ROOT; };
+		2F89AF7E10AC1A8E00A36065 /* c_dct_encoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_dct_encoder.cpp; path = ../../src/c_dct_encoder.cpp; sourceTree = SOURCE_ROOT; };
+		2F89AF7F10AC1A8E00A36065 /* c_dct_encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_dct_encoder.h; path = ../../src/c_dct_encoder.h; sourceTree = SOURCE_ROOT; };
+		2F89AF8010AC1A8E00A36065 /* c_dct_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_dct_frame.cpp; path = ../../src/c_dct_frame.cpp; sourceTree = SOURCE_ROOT; };
+		2F89AF8110AC1A8E00A36065 /* c_dct_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_dct_frame.h; path = ../../src/c_dct_frame.h; sourceTree = SOURCE_ROOT; };
+		2F89AF8210AC1A8E00A36065 /* c_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_frame.cpp; path = ../../src/c_frame.cpp; sourceTree = SOURCE_ROOT; };
+		2F89AF8310AC1A8E00A36065 /* c_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_frame.h; path = ../../src/c_frame.h; sourceTree = SOURCE_ROOT; };
+		2F89AF8410AC1A8E00A36065 /* c_seg_block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_seg_block.h; path = ../../src/c_seg_block.h; sourceTree = SOURCE_ROOT; };
+		2F89AF8510AC1A8E00A36065 /* c_seg_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_seg_frame.cpp; path = ../../src/c_seg_frame.cpp; sourceTree = SOURCE_ROOT; };
+		2F89AF8610AC1A8E00A36065 /* c_seg_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_seg_frame.h; path = ../../src/c_seg_frame.h; sourceTree = SOURCE_ROOT; };
+		2F89AF8710AC1A8E00A36065 /* c_segmentation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_segmentation.cpp; path = ../../src/c_segmentation.cpp; sourceTree = SOURCE_ROOT; };
+		2F89AF8810AC1A8E00A36065 /* c_segmentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_segmentation.h; path = ../../src/c_segmentation.h; sourceTree = SOURCE_ROOT; };
+		2F89AF8910AC1A8E00A36065 /* c_video.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_video.cpp; path = ../../src/c_video.cpp; sourceTree = SOURCE_ROOT; };
+		2F89AF8A10AC1A8E00A36065 /* c_video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_video.h; path = ../../src/c_video.h; sourceTree = SOURCE_ROOT; };
+		2F89AF8B10AC1A8E00A36065 /* decodeMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = decodeMain.cpp; path = ../../src/decodeMain.cpp; sourceTree = SOURCE_ROOT; };
+		2F89AF8C10AC1A8E00A36065 /* global_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = global_defs.h; path = ../../src/global_defs.h; sourceTree = SOURCE_ROOT; };
+		2F89AF8D10AC1A8E00A36065 /* global_include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = global_include.h; path = ../../src/global_include.h; sourceTree = SOURCE_ROOT; };
+		2F89B40A10B047D900A36065 /* libfftw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfftw3.a; path = lib/libfftw3.a; sourceTree = "<group>"; };
+		2F89B41710B0484300A36065 /* ct2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ct2.cpp; path = ../../src/ct2.cpp; sourceTree = SOURCE_ROOT; };
+		2F89B41810B0484300A36065 /* ct2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ct2.h; path = ../../src/ct2.h; sourceTree = SOURCE_ROOT; };
+		2F89B41910B0484300A36065 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = ../../src/util.h; sourceTree = SOURCE_ROOT; };
+		2F89B41A10B0484300A36065 /* c_dct_block.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_dct_block.cpp; path = ../../src/c_dct_block.cpp; sourceTree = SOURCE_ROOT; };
+		2FDEC3F810B3E01E00781AA7 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		2FDEC3F910B3E01E00781AA7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		8DD76F6C0486A84900D96B5E /* decodeViewer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = decodeViewer; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6859E8B029090EE04C91782 /* decodeViewer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = decodeViewer.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F89B40B10B047D900A36065 /* libfftw3.a in Frameworks */,
+				2FDEC3FA10B3E01E00781AA7 /* GLUT.framework in Frameworks */,
+				2FDEC3FB10B3E01E00781AA7 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* decodeViewer */ = {
+			isa = PBXGroup;
+			children = (
+				2F89B40A10B047D900A36065 /* libfftw3.a */,
+				2FDEC3F810B3E01E00781AA7 /* GLUT.framework */,
+				2FDEC3F910B3E01E00781AA7 /* OpenGL.framework */,
+				2F89AF9610AC1A9800A36065 /* header */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = decodeViewer;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2F89AF8B10AC1A8E00A36065 /* decodeMain.cpp */,
+				2F89AF8910AC1A8E00A36065 /* c_video.cpp */,
+				2F89AF8210AC1A8E00A36065 /* c_frame.cpp */,
+				2F89AF8710AC1A8E00A36065 /* c_segmentation.cpp */,
+				2F89AF8510AC1A8E00A36065 /* c_seg_frame.cpp */,
+				2F89AF7E10AC1A8E00A36065 /* c_dct_encoder.cpp */,
+				2F89AF8010AC1A8E00A36065 /* c_dct_frame.cpp */,
+				2F89B41A10B0484300A36065 /* c_dct_block.cpp */,
+				2F89B41710B0484300A36065 /* ct2.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* decodeViewer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F89AF9610AC1A9800A36065 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				2F89AF8C10AC1A8E00A36065 /* global_defs.h */,
+				2F89AF8D10AC1A8E00A36065 /* global_include.h */,
+				2F89AF8A10AC1A8E00A36065 /* c_video.h */,
+				2F89AF8310AC1A8E00A36065 /* c_frame.h */,
+				2F89AF8810AC1A8E00A36065 /* c_segmentation.h */,
+				2F89AF8610AC1A8E00A36065 /* c_seg_frame.h */,
+				2F89AF8410AC1A8E00A36065 /* c_seg_block.h */,
+				2F89AF7F10AC1A8E00A36065 /* c_dct_encoder.h */,
+				2F89AF8110AC1A8E00A36065 /* c_dct_frame.h */,
+				2F89AF7D10AC1A8E00A36065 /* c_dct_block.h */,
+				2F89B41810B0484300A36065 /* ct2.h */,
+				2F89B41910B0484300A36065 /* util.h */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* decodeViewer.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* decodeViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "decodeViewer" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = decodeViewer;
+			productInstallPath = "$(HOME)/bin";
+			productName = decodeViewer;
+			productReference = 8DD76F6C0486A84900D96B5E /* decodeViewer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "decodeViewer" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* decodeViewer */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* decodeViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F89AF8E10AC1A8E00A36065 /* c_dct_encoder.cpp in Sources */,
+				2F89AF8F10AC1A8F00A36065 /* c_dct_frame.cpp in Sources */,
+				2F89AF9010AC1A8F00A36065 /* c_frame.cpp in Sources */,
+				2F89AF9110AC1A8F00A36065 /* c_seg_frame.cpp in Sources */,
+				2F89AF9210AC1A8F00A36065 /* c_segmentation.cpp in Sources */,
+				2F89AF9310AC1A8F00A36065 /* c_video.cpp in Sources */,
+				2F89AF9410AC1A8F00A36065 /* decodeMain.cpp in Sources */,
+				2F89B41B10B0484300A36065 /* ct2.cpp in Sources */,
+				2F89B41C10B0484300A36065 /* c_dct_block.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
+				OBJROOT = build;
+				PRODUCT_NAME = decodeViewer;
+				SYMROOT = ../../output;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
+				PRODUCT_NAME = decodeViewer;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../include;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "decodeViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "decodeViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
