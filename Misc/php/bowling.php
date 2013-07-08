@@ -1,5 +1,44 @@
 <?php
 
+$bowl = new Bowl();
+
+$bowl->addRoll(10);
+$bowl->addRoll(7);
+$bowl->addRoll(3);
+$bowl->addRoll(9);
+$bowl->addRoll(0);
+$bowl->addRoll(10);
+$bowl->addRoll(0);
+$bowl->addRoll(8);
+$bowl->addRoll(8);
+$bowl->addRoll(2);
+$bowl->addRoll(0);
+$bowl->addRoll(6);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(8);
+$bowl->addRoll(1);
+
+/*
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+$bowl->addRoll(10);
+*/
+
+$bowl->printScore();
+
+
+// --------------------------------------
 class BowlFrameState
 {
 	const Playing = 0;
@@ -233,42 +272,5 @@ class Bowl {
 
 	}
 }
-
-$bowl = new Bowl();
-
-$bowl->addRoll(10);
-$bowl->addRoll(7);
-$bowl->addRoll(3);
-$bowl->addRoll(9);
-$bowl->addRoll(0);
-$bowl->addRoll(10);
-$bowl->addRoll(0);
-$bowl->addRoll(8);
-$bowl->addRoll(8);
-$bowl->addRoll(2);
-$bowl->addRoll(0);
-$bowl->addRoll(6);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(8);
-$bowl->addRoll(1);
-
-/*
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-$bowl->addRoll(10);
-*/
-
-$bowl->printScore();
 
 ?>
